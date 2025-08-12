@@ -1,0 +1,63 @@
+digraph DyPart_Workflow_Ternary {
+    // --- Global Graph, Node, and Edge Attributes ---
+    graph [
+        bgcolor="#FDFDFD", fontname="Helvetica Neue", fontsize=12,
+        splines=ortho, rankdir=TB, label="The Dy-Part Framework with Ternary Search Optimization",
+        labelloc=b, fontcolor="#333333"
+    ];
+    node [
+        shape=box, style="rounded,filled", fillcolor="#FFFFFF", color="#CCCCCC",
+        fontname="Helvetica Neue", fontsize=10, penwidth=1.5
+    ];
+    edge [color="#888888", arrowsize=0.7, penwidth=1.0];
+
+    // --- Nodes Definition ---
+    input_graph [label="Problem Graph G=(V, E)", shape=cylinder, fillcolor="#E3F2FD"];
+    input_noise [label="QPU Noise Profile ε", shape=cylinder, fillcolor="#E3F2FD"];
+
+    // Scheduler Subgraph
+    subgraph cluster_scheduler {
+        label="Classical Pre-computation: The Smart Scheduler";
+        bgcolor="#FFF9E9"; color="#FFDDBB"; style="rounded";
+        
+        node [fillcolor="#FFFFFF"];
+        
+        init_bounds [label="Initialize Search Bounds\n[low, high]", shape=Mdiamond, fillcolor="#FFF1C1"];
+        calc_midpoints [label="Calculate Midpoints m1, m2", shape=ellipse, fillcolor="#FFF1C1"];
+        cost_m1 [label="Evaluate Cost(m1)", shape=parallelogram, style="filled,dashed"];
+        cost_m2 [label="Evaluate Cost(m2)", shape=parallelogram, style="filled,dashed"];
+        compare [label="Cost(m1) < Cost(m2)?", shape=diamond, style=filled, fillcolor="#FFDDAA"];
+        update_high [label="Update: high = m2", shape=ellipse, fillcolor="#FFF1C1"];
+        update_low [label="Update: low = m1", shape=ellipse, fillcolor="#FFF1C1"];
+    }
+
+    // Connectors
+    input_graph -> init_bounds;
+    input_noise -> cost_m1;
+    input_noise -> cost_m2;
+
+    init_bounds -> calc_midpoints [label=" O(log N) iterations"];
+    calc_midpoints -> cost_m1;
+    calc_midpoints -> cost_m2;
+    cost_m1 -> compare;
+    cost_m2 -> compare;
+    compare -> update_high [label=" Yes"];
+    compare -> update_low [label=" No"];
+    update_high -> calc_midpoints [tailport=e, headport=e];
+    update_low -> calc_midpoints [tailport=e, headport=e];
+
+    // Final Linear Scan
+    final_scan [label="Final Linear Scan\non small interval [low, high]", shape=cds, fillcolor="#FFDDAA"];
+    compare -> final_scan [label=" Interval is small"];
+
+    // Best Plan Node & VQE Part (same as before)
+    best_plan [label="Optimal Partition Plan P*", shape=folder, fillcolor="#D1F2EB", height=0.6];
+    final_scan -> best_plan [label=" Select min cost"];
+    
+    // VQE Subgraph (unchanged)
+    subgraph cluster_vqe { label="Hybrid Execution..."; bgcolor="#F0E6FF"; color="#D0B0FF"; style="rounded"; vqe_executor [label="... (VQE Executor as before) ...", shape=plaintext]; }
+    best_plan -> vqe_executor;
+    
+    final_solution [label="Final Solution", shape=note, fillcolor="#C8E6C9"];
+    vqe_executor -> final_solution;
+}
