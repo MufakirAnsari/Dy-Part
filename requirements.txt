@@ -1,0 +1,23 @@
+# Dy-Part: Dynamic Qubit Partitioning for Quantum Circuit Execution
+# Core dependencies and requirements
+
+# Quantum Framework
+qiskit==1.1.0
+qiskit-aer==0.14.0
+qiskit-algorithms==0.3.0
+
+# Scientific Computing & Data Analysis
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+networkx>=3.0
+
+# Graph Partitioning Baselines
+pymetis>=2023.1
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+
+# Testing
+pytest>=7.0
