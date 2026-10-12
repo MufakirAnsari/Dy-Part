@@ -51,8 +51,8 @@ fi
 echo "Installing Python packages..."
 pip install --upgrade pip
 pip install qiskit==1.1.0
-pip install qiskit-aer==0.14.0
-pip install qiskit-algorithms==0.3.0
+pip install "qiskit-aer>=0.14.0,<0.15.0"
+pip install "qiskit-algorithms>=0.3.0"
 pip install "numpy>=1.24" "pandas>=2.0" "scipy>=1.10" "networkx>=3.0"
 pip install "matplotlib>=3.7" "seaborn>=0.12"
 pip install "pymetis>=2023.1"
