@@ -64,18 +64,15 @@ def partition_graph_greedy(graph: nx.Graph, n_sub: int) -> Tuple[List[nx.Graph],
         
     # Now that we have the subgraphs, add the internal edges
     for subg in subgraphs:
-        for u in subg.nodes():
-            for v in subg.nodes():
-                if u > v and graph.has_edge(u, v):
+        subg_nodes = sorted(subg.nodes())
+        for i, u in enumerate(subg_nodes):
+            for v in subg_nodes[i + 1:]:
+                if graph.has_edge(u, v):
                     subg.add_edge(u, v)
 
-    # Finally, calculate the number of cut edges
-    num_cuts = 0
-    original_edges = set(graph.edges())
-    internal_edges = set()
-    for subg in subgraphs:
-        internal_edges.update(subg.edges())
-        
+    # Finally, calculate the number of cut edges using canonical edge tuples
+    original_edges = {tuple(sorted(e)) for e in graph.edges()}
+    internal_edges = {tuple(sorted(e)) for subg in subgraphs for e in subg.edges()}
     num_cuts = len(original_edges - internal_edges)
     
     return subgraphs, num_cuts
