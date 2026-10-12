@@ -76,29 +76,39 @@ def run_single_experiment(graph: nx.Graph, noise_level: float, method: str, vqe_
     }
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Dy-Part final benchmark reproduction runner.")
+    parser.add_argument("--start-seed", type=int, default=0, help="Starting seed ID (inclusive, default: 0)")
+    parser.add_argument("--end-seed", type=int, default=30, help="Ending seed ID (exclusive, default: 30)")
+    parser.add_argument("--output", type=str, default="results/final_benchmark_data_averaged.csv", help="Path to output CSV")
+    args = parser.parse_args()
+
     # --- EXPERIMENT CONFIGURATION ---
     NODE_SIZES = [8, 10, 12]
     NOISE_LEVELS = np.logspace(-3.5, -1.5, 8)
     
-    # *** Statistical averaging over multiple random seeds ***
-    NUM_SEEDS = 30 # Set to 30 for the full run. Use a smaller number (e.g., 3) for quick tests.
+    start_seed = args.start_seed
+    end_seed = args.end_seed
+    output_path = args.output
+    
+    COLUMNS = [
+        "method", "num_nodes", "noise_level", "chosen_n_sub",
+        "final_energy", "true_energy", "approximation_ratio", "runtime_seconds", "seed_id"
+    ]
 
     all_results = []
     
-    # Get the path to the output CSV file
-    output_path = "results/final_benchmark_data_averaged.csv"
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else "results", exist_ok=True)
     
     # Initialize CSV with header if file does not exist
     if not os.path.exists(output_path):
-        pd.DataFrame(columns=[
-            "seed_id", "method", "num_nodes", "noise_level", "chosen_n_sub",
-            "final_energy", "true_energy", "approximation_ratio", "runtime_seconds"
-        ]).to_csv(output_path, index=False)
+        pd.DataFrame(columns=COLUMNS).to_csv(output_path, index=False)
     
+    logger.info(f"=== Benchmark Starting: Seeds {start_seed} to {end_seed} -> {output_path} ===")
+
     # --- Outer loop for statistical averaging ---
-    for seed_id in range(NUM_SEEDS):
-        logger.info(f"\n{'='*20} RUNNING SEED {seed_id + 1}/{NUM_SEEDS} {'='*20}\n")
+    for seed_id in range(start_seed, end_seed):
+        logger.info(f"\n{'='*20} RUNNING SEED {seed_id} (Range [{start_seed}, {end_seed})) {'='*20}\n")
         
         for nodes in NODE_SIZES:
             # Generate a reproducible random graph for each seed
@@ -113,7 +123,7 @@ if __name__ == "__main__":
                     dypart_result = run_single_experiment(graph, noise, 'dypart', vqe_seed=123 + seed_id)
                     dypart_result.update(base_info)
                     all_results.append(dypart_result)
-                    pd.DataFrame([dypart_result]).to_csv(output_path, mode='a', header=False, index=False)
+                    pd.DataFrame([dypart_result])[COLUMNS].to_csv(output_path, mode='a', header=False, index=False)
                 except Exception as e:
                     logger.error(f"Dy-Part failed for seed {seed_id}, {nodes} nodes, noise {noise:.2e}: {e}")
 
@@ -122,7 +132,7 @@ if __name__ == "__main__":
                     static_result = run_single_experiment(graph, noise, 'static', vqe_seed=123 + seed_id)
                     static_result.update(base_info)
                     all_results.append(static_result)
-                    pd.DataFrame([static_result]).to_csv(output_path, mode='a', header=False, index=False)
+                    pd.DataFrame([static_result])[COLUMNS].to_csv(output_path, mode='a', header=False, index=False)
                 except Exception as e:
                     logger.error(f"Static failed for seed {seed_id}, {nodes} nodes, noise {noise:.2e}: {e}")
     
@@ -135,4 +145,4 @@ if __name__ == "__main__":
     print(f"All data saved incrementally to: {output_path} (Total runs: {len(results_df)})")
     if not results_df.empty:
         print("\nFinal Averaged Results DataFrame (head):")
-        print(results_df.head())
+        print(results_df[COLUMNS].head())
