@@ -37,7 +37,7 @@ def partition_graph_greedy(graph: nx.Graph, n_sub: int) -> Tuple[List[nx.Graph],
         new_subgraph.add_node(seed_node)
         
         # Use a queue for breadth-first expansion from the seed
-        queue = list(graph.neighbors(seed_node))
+        queue = sorted(graph.neighbors(seed_node))
         
         while len(new_subgraph.nodes()) < n_sub and nodes_to_assign:
             # Find a node in the queue that is still unassigned
@@ -51,8 +51,8 @@ def partition_graph_greedy(graph: nx.Graph, n_sub: int) -> Tuple[List[nx.Graph],
                 queue.remove(candidate_node)
                 nodes_to_assign.remove(candidate_node)
                 new_subgraph.add_node(candidate_node)
-                # Add new neighbors to the back of the queue
-                for neighbor in graph.neighbors(candidate_node):
+                # Add new neighbors to the back of the queue (sorted for determinism)
+                for neighbor in sorted(graph.neighbors(candidate_node)):
                     if neighbor in nodes_to_assign and neighbor not in queue:
                         queue.append(neighbor)
             else:
