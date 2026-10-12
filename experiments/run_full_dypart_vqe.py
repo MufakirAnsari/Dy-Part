@@ -68,23 +68,18 @@ if __name__ == '__main__':
     
     # --- 4. Analyze and Report Results ---
     final_energy = result['final_energy']
-    
-    # The true ground state energy is complex for a random graph.
-    # Let's find it with a classical solver to get the approximation ratio.
-    from qiskit_algorithms import NumPyMinimumEigensolver
-    exact_solver = NumPyMinimumEigensolver()
-    full_hamiltonian = get_maxcut_hamiltonian(problem_graph)
-    exact_result = exact_solver.compute_minimum_eigenvalue(full_hamiltonian)
-    true_min_energy = exact_result.eigenvalue.real
-    
-    approximation_ratio = final_energy / true_min_energy
+    expected_cut = result.get('expected_cut', 0.0)
+    max_cut = result.get('max_cut', 1)
+    approximation_ratio = result['approximation_ratio']
+    true_min_energy = -float(max_cut)
     
     print("\n--- FINAL RESULTS ---")
     print(f"Problem Graph: {problem_graph.number_of_nodes()} nodes, {problem_graph.number_of_edges()} edges")
     print(f"Scheduler's Optimal Partition Size: {partition_plan['optimal_n_sub']}")
-    print(f"True Ground State Energy (Classical Solver): {true_min_energy:.4f}")
+    print(f"MaxCut Ground Truth (Exact): {max_cut}")
+    print(f"Expected Cut Achieved: {expected_cut:.2f}")
     print(f"Dy-Part VQE Final Energy: {final_energy:.4f}")
-    print(f"Approximation Ratio: {approximation_ratio:.4f}")
+    print(f"Bounded Approximation Ratio: {approximation_ratio:.4f}")
     
     end_time = time.time()
     print(f"\nTotal End-to-End Runtime: {end_time - start_time:.2f} seconds.")

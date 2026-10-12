@@ -28,11 +28,6 @@ def run_single_experiment(graph: nx.Graph, noise_level: float, method: str, vqe_
     start_time = time.time()
     logger.info(f"--- Starting Exp: Method={method}, Nodes={graph.number_of_nodes()}, Noise={noise_level:.2e}, Seed={vqe_seed} ---")
 
-    # Get True Ground State Energy
-    exact_solver = NumPyMinimumEigensolver()
-    full_hamiltonian = get_maxcut_hamiltonian(graph)
-    true_min_energy = exact_solver.compute_minimum_eigenvalue(full_hamiltonian).eigenvalue.real
-
     # Determine Partition Plan
     if method == 'dypart':
         cost_model = HeuristicCostModel(gate_error_rate=noise_level, alpha=0.95, beta=1.5, gamma=0.1)
@@ -55,12 +50,15 @@ def run_single_experiment(graph: nx.Graph, noise_level: float, method: str, vqe_
     result = vqe.run(partition_plan)
     
     final_energy = result['final_energy']
-    approximation_ratio = final_energy / true_min_energy
+    expected_cut = result.get('expected_cut', 0.0)
+    max_cut = result.get('max_cut', 1)
+    approximation_ratio = result['approximation_ratio']
+    true_min_energy = -float(max_cut)
     
     end_time = time.time()
     runtime = end_time - start_time
     
-    logger.info(f"--- Finished Exp: AR={approximation_ratio:.4f}, Time={runtime:.2f}s ---")
+    logger.info(f"--- Finished Exp: Cut={expected_cut:.2f}/{max_cut}, AR={approximation_ratio:.4f}, Time={runtime:.2f}s ---")
     
     return {
         "method": method,
@@ -78,20 +76,28 @@ if __name__ == "__main__":
     NODE_SIZES = [8, 10, 12]
     NOISE_LEVELS = np.logspace(-3.5, -1.5, 8)
     
-    # *** NEW: Number of seeds for statistical averaging ***
-    NUM_SEEDS = 30 # Set to 30 for the final run. Use a smaller number (e.g., 3) for testing.
+    # *** Statistical averaging over multiple random seeds ***
+    NUM_SEEDS = 30 # Set to 30 for the full run. Use a smaller number (e.g., 3) for quick tests.
 
     all_results = []
     
     # Get the path to the output CSV file
     output_path = "results/final_benchmark_data_averaged.csv"
+    os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else "results", exist_ok=True)
+    
+    # Initialize CSV with header if file does not exist
+    if not os.path.exists(output_path):
+        pd.DataFrame(columns=[
+            "seed_id", "method", "num_nodes", "noise_level", "chosen_n_sub",
+            "final_energy", "true_energy", "approximation_ratio", "runtime_seconds"
+        ]).to_csv(output_path, index=False)
     
     # --- Outer loop for statistical averaging ---
     for seed_id in range(NUM_SEEDS):
         logger.info(f"\n{'='*20} RUNNING SEED {seed_id + 1}/{NUM_SEEDS} {'='*20}\n")
         
         for nodes in NODE_SIZES:
-            # *** NEW: Generate a different graph for each seed ***
+            # Generate a reproducible random graph for each seed
             graph = nx.random_regular_graph(d=3, n=nodes, seed=42 + seed_id)
             
             for noise in NOISE_LEVELS:
@@ -100,10 +106,10 @@ if __name__ == "__main__":
 
                 # Run Dy-Part
                 try:
-                    # The VQE seed is for the initial parameters, graph seed is for graph generation
                     dypart_result = run_single_experiment(graph, noise, 'dypart', vqe_seed=123 + seed_id)
                     dypart_result.update(base_info)
                     all_results.append(dypart_result)
+                    pd.DataFrame([dypart_result]).to_csv(output_path, mode='a', header=False, index=False)
                 except Exception as e:
                     logger.error(f"Dy-Part failed for seed {seed_id}, {nodes} nodes, noise {noise:.2e}: {e}")
 
@@ -112,20 +118,17 @@ if __name__ == "__main__":
                     static_result = run_single_experiment(graph, noise, 'static', vqe_seed=123 + seed_id)
                     static_result.update(base_info)
                     all_results.append(static_result)
+                    pd.DataFrame([static_result]).to_csv(output_path, mode='a', header=False, index=False)
                 except Exception as e:
                     logger.error(f"Static failed for seed {seed_id}, {nodes} nodes, noise {noise:.2e}: {e}")
     
-    # --- Save All Results to a New CSV ---
+    # --- Final summary ---
     results_df = pd.DataFrame(all_results)
-    
-    if not os.path.exists("results"):
-        os.makedirs("results")
-        
-    results_df.to_csv(output_path, index=False)
     
     print("\n\n" + "="*50)
     print("      FINAL AVERAGED BENCHMARK COMPLETE")
     print("="*50)
-    print(f"All data saved to: {output_path}")
-    print("\nFinal Averaged Results DataFrame (head):")
-    print(results_df.head())
+    print(f"All data saved incrementally to: {output_path} (Total runs: {len(results_df)})")
+    if not results_df.empty:
+        print("\nFinal Averaged Results DataFrame (head):")
+        print(results_df.head())

@@ -33,6 +33,9 @@ elif [ -f "/apps/miniconda3/etc/profile.d/conda.sh" ]; then
     source "/apps/miniconda3/etc/profile.d/conda.sh"
 fi
 source activate dypart 2>/dev/null || conda activate dypart 2>/dev/null || true
+if [ -d "$HOME/.conda/envs/dypart/bin" ]; then
+    export PATH="$HOME/.conda/envs/dypart/bin:$PATH"
+fi
 
 export DYPART_LOG_DIR="${PROJECT_DIR}/logs/phase1_baseline"
 export DYPART_LOG_LEVEL="DEBUG"

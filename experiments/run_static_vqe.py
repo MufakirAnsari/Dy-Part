@@ -39,17 +39,15 @@ if __name__ == '__main__':
     
     # --- 4. Analyze and Report Results ---
     final_energy = result['final_energy']
-    
-    # Get the true ground state energy for AR calculation
-    exact_solver = NumPyMinimumEigensolver()
-    full_hamiltonian = get_maxcut_hamiltonian(graph)
-    true_min_energy = exact_solver.compute_minimum_eigenvalue(full_hamiltonian).eigenvalue.real
-    
-    approximation_ratio = final_energy / true_min_energy
+    expected_cut = result.get('expected_cut', 0.0)
+    max_cut = result.get('max_cut', 1)
+    approximation_ratio = result['approximation_ratio']
     
     print("\n--- FINAL RESULTS (STATIC VQE) ---")
+    print(f"MaxCut Ground Truth (Exact): {max_cut}")
+    print(f"Expected Cut Achieved: {expected_cut:.2f}")
     print(f"Static VQE Final Energy: {final_energy:.4f}")
-    print(f"Approximation Ratio: {approximation_ratio:.4f}")
+    print(f"Bounded Approximation Ratio: {approximation_ratio:.4f}")
     
     end_time = time.time()
     print(f"\nTotal Static VQE Runtime: {end_time - start_time:.2f} seconds.")

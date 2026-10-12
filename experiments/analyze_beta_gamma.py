@@ -65,7 +65,7 @@ def run_in_depth_beta_gamma_analysis(graph: nx.Graph, noise_level: float, alpha:
             vqe_result = vqe.run(partition_plan)
             
             final_energy = vqe_result['final_energy']
-            approximation_ratio = final_energy / true_min_energy
+            approximation_ratio = vqe_result['approximation_ratio']
             runtime = time.time() - exp_start_time
             
             logger.info(f"VQE finished with AR = {approximation_ratio:.4f} in {runtime:.2f}s")

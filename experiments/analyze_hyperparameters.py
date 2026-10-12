@@ -65,7 +65,7 @@ def run_in_depth_analysis(graph: nx.Graph, noise_level: float, alpha_values: lis
         vqe_result = vqe.run(partition_plan)
         
         final_energy = vqe_result['final_energy']
-        approximation_ratio = final_energy / true_min_energy
+        approximation_ratio = vqe_result['approximation_ratio']
         
         logger.info(f"VQE with n_sub={chosen_n_sub} finished with AR = {approximation_ratio:.4f}")
         

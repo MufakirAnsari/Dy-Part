@@ -25,7 +25,8 @@ Thumbs.db
 Desktop.ini
 
 # === Logs ===
-logs/
+logs/*
+!logs/**/.gitkeep
 *.log
 
 # === Data / Results (track selectively) ===
