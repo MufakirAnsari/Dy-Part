@@ -12,8 +12,8 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="${DYPART_PROJECT_DIR:-$(dirname "$SCRIPT_DIR")}"
+PROJECT_DIR="${DYPART_PROJECT_DIR:-${SLURM_SUBMIT_DIR:-$HOME/Dy-Part}}"
+cd "${PROJECT_DIR}"
 
 echo "=== PHASE 1: BASELINE REPRODUCTION ==="
 echo "Job ID:      ${SLURM_JOB_ID:-local}"
@@ -25,18 +25,18 @@ echo ""
 if [ -f /etc/profile.d/lmod.sh ]; then
     source /etc/profile.d/lmod.sh 2>/dev/null || true
 fi
-module load miniconda3 2>/dev/null || module load miniconda3/24.1.2-py310 2>/dev/null || true
+module load miniconda3/24.1.2-py310 2>/dev/null || module load miniconda3 2>/dev/null || true
 
 if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
     source "$HOME/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "/apps/miniconda3/etc/profile.d/conda.sh" ]; then
+    source "/apps/miniconda3/etc/profile.d/conda.sh"
 fi
-conda activate dypart 2>/dev/null || source activate dypart 2>/dev/null || true
+source activate dypart 2>/dev/null || conda activate dypart 2>/dev/null || true
 
 export DYPART_LOG_DIR="${PROJECT_DIR}/logs/phase1_baseline"
 export DYPART_LOG_LEVEL="DEBUG"
 mkdir -p "$DYPART_LOG_DIR"
-
-cd "$PROJECT_DIR"
 
 echo "--- Running baseline reproduction experiment ---"
 python -u experiments/run_final_benchmark.py \

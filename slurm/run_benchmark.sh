@@ -13,8 +13,8 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="${DYPART_PROJECT_DIR:-$(dirname "$SCRIPT_DIR")}"
+PROJECT_DIR="${DYPART_PROJECT_DIR:-${SLURM_SUBMIT_DIR:-$HOME/Dy-Part}}"
+cd "${PROJECT_DIR}"
 
 echo "=== PHASE 2b: FULL BENCHMARK ==="
 echo "Job ID:      ${SLURM_ARRAY_JOB_ID:-local}, Task: ${SLURM_ARRAY_TASK_ID:-0}"
@@ -27,19 +27,19 @@ echo ""
 if [ -f /etc/profile.d/lmod.sh ]; then
     source /etc/profile.d/lmod.sh 2>/dev/null || true
 fi
-module load miniconda3 2>/dev/null || module load miniconda3/24.1.2-py310 2>/dev/null || true
+module load miniconda3/24.1.2-py310 2>/dev/null || module load miniconda3 2>/dev/null || true
 
 if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
     source "$HOME/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "/apps/miniconda3/etc/profile.d/conda.sh" ]; then
+    source "/apps/miniconda3/etc/profile.d/conda.sh"
 fi
-conda activate dypart 2>/dev/null || source activate dypart 2>/dev/null || true
+source activate dypart 2>/dev/null || conda activate dypart 2>/dev/null || true
 
 export DYPART_LOG_DIR="${PROJECT_DIR}/logs/phase2_benchmark"
 export DYPART_LOG_LEVEL="INFO"
 mkdir -p "$DYPART_LOG_DIR"
 mkdir -p "${PROJECT_DIR}/results"
-
-cd "$PROJECT_DIR"
 
 python -u experiments/run_corrected_benchmark.py \
   --task-id ${SLURM_ARRAY_TASK_ID:-0} \

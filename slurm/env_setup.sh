@@ -12,8 +12,9 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="${DYPART_PROJECT_DIR:-$(dirname "$SCRIPT_DIR")}"
+# In SLURM, SLURM_SUBMIT_DIR is the directory where sbatch was executed
+PROJECT_DIR="${DYPART_PROJECT_DIR:-${SLURM_SUBMIT_DIR:-$HOME/Dy-Part}}"
+cd "${PROJECT_DIR}"
 mkdir -p "${PROJECT_DIR}/logs"
 
 echo "=== DY-PART ENVIRONMENT SETUP ==="
@@ -27,21 +28,23 @@ echo ""
 if [ -f /etc/profile.d/lmod.sh ]; then
     source /etc/profile.d/lmod.sh 2>/dev/null || true
 fi
-module load miniconda3 2>/dev/null || module load miniconda3/24.1.2-py310 2>/dev/null || true
+module load miniconda3/24.1.2-py310 2>/dev/null || module load miniconda3 2>/dev/null || true
 
-# Initialize conda functions in current bash session
+# Initialize conda in subshell
 if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
     source "$HOME/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "/apps/miniconda3/etc/profile.d/conda.sh" ]; then
+    source "/apps/miniconda3/etc/profile.d/conda.sh"
 fi
 
 # Create environment (skip if exists)
 if conda info --envs 2>/dev/null | grep -q '\bdypart\b'; then
     echo "Environment 'dypart' already exists, updating dependencies..."
-    conda activate dypart || source activate dypart
+    source activate dypart || conda activate dypart
 else
     echo "Creating new environment 'dypart' with Python 3.10..."
     conda create -n dypart python=3.10 -y
-    conda activate dypart || source activate dypart
+    source activate dypart || conda activate dypart
 fi
 
 # Install dependencies
@@ -52,8 +55,8 @@ pip install qiskit-aer==0.14.0
 pip install qiskit-algorithms==0.3.0
 pip install "numpy>=1.24" "pandas>=2.0" "scipy>=1.10" "networkx>=3.0"
 pip install "matplotlib>=3.7" "seaborn>=0.12"
-pip install "pymetis>=2023.1"  # METIS baseline
-pip install "pytest>=7.0"      # Testing framework
+pip install "pymetis>=2023.1"
+pip install "pytest>=7.0"
 
 # Install Dy-Part framework in editable mode
 echo "Installing dypart_framework from: ${PROJECT_DIR}"
