@@ -50,9 +50,10 @@ class HeuristicCostModel:
 
     def _calculate_classical_cost(self, graph: nx.Graph, num_cuts: int) -> float:
         """
-        Calculates classical cost.
-        *** NOW INCLUDES GAMMA SCALING ***
-        Cost = gamma * (num_cuts / total_edges)^beta
+        Calculates classical cost representing knitting / communication penalty.
+        Corrected per DEC-001 (Option A) to resolve inversion bug (ISS-004):
+        Cost = gamma * (num_cuts / total_edges) ** (1.0 / beta)
+        Guarantees that for any fixed num_cuts > 0, higher beta strictly increases cost.
         """
         total_edges = graph.number_of_edges()
         if total_edges == 0 or num_cuts == 0:
@@ -60,8 +61,8 @@ class HeuristicCostModel:
         
         normalized_cuts = num_cuts / total_edges
         
-        # Apply the polynomial model and the new scaling factor
-        return self.gamma * (normalized_cuts**self.beta)
+        # Inverted exponent fix: higher beta makes cost increase faster with cuts
+        return float(self.gamma * (normalized_cuts ** (1.0 / self.beta)))
 
     def calculate_total_cost(self, graph: nx.Graph, n_sub: int, num_cuts: int) -> dict:
         """Calculates the total heuristic cost for a partitioning scheme."""

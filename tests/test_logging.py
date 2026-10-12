@@ -11,6 +11,8 @@ from vqe_framework.logging_config import setup_logging
 
 class TestLoggingConfig(unittest.TestCase):
     def setUp(self):
+        import logging
+        logging.getLogger("DyPart").handlers.clear()
         self.temp_dir = tempfile.mkdtemp()
         self.orig_log_dir = os.environ.get("DYPART_LOG_DIR")
         self.orig_job_id = os.environ.get("SLURM_JOB_ID")
