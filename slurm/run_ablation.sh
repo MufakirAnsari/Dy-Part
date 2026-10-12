@@ -2,7 +2,7 @@
 # slurm/run_ablation.sh — Phase 3: Ablation studies and supplementary experiments
 # Usage: sbatch slurm/run_ablation.sh
 #SBATCH --job-name=dypart_ablation
-# #SBATCH --account=<YOUR_OSC_PROJECT>  # Uncomment and set if required by your OSC project
+#SBATCH --account=PWSU0516
 #SBATCH --time=04:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4

@@ -28,7 +28,8 @@ for arg in "$@"; do
     esac
 done
 
-if [ -n "${SLURM_ACCOUNT:-}" ] && [[ "$SBATCH_EXTRA_ARGS" != *"--account="* ]]; then
+SLURM_ACCOUNT="${SLURM_ACCOUNT:-PWSU0516}"
+if [ -n "${SLURM_ACCOUNT}" ] && [[ "$SBATCH_EXTRA_ARGS" != *"--account="* ]]; then
     SBATCH_EXTRA_ARGS="${SBATCH_EXTRA_ARGS} --account=${SLURM_ACCOUNT}"
 fi
 

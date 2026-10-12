@@ -15,7 +15,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REMOTE_HOST=""
-ACCOUNT_FLAG=""
+ACCOUNT_FLAG="--account=PWSU0516"
 LOCAL_TEST=false
 
 for arg in "$@"; do

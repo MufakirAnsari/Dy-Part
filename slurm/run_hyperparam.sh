@@ -2,7 +2,7 @@
 # slurm/run_hyperparam.sh — Phase 2a: Grid search over (alpha, beta, gamma)
 # Usage: sbatch slurm/run_hyperparam.sh
 #SBATCH --job-name=dypart_hyper
-# #SBATCH --account=<YOUR_OSC_PROJECT>  # Uncomment and set if required by your OSC project
+#SBATCH --account=PWSU0516
 #SBATCH --time=02:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4

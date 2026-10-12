@@ -2,7 +2,7 @@
 # slurm/run_benchmark.sh — Phase 2b: Full corrected benchmark
 # Usage: sbatch slurm/run_benchmark.sh
 #SBATCH --job-name=dypart_bench
-# #SBATCH --account=<YOUR_OSC_PROJECT>  # Uncomment and set if required by your OSC project
+#SBATCH --account=PWSU0516
 #SBATCH --time=08:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8

@@ -2,7 +2,7 @@
 # slurm/run_baseline.sh — Phase 1: Reproduce original results
 # Usage: sbatch slurm/run_baseline.sh
 #SBATCH --job-name=dypart_baseline
-# #SBATCH --account=<YOUR_OSC_PROJECT>  # Uncomment and set if required by your OSC project
+#SBATCH --account=PWSU0516
 #SBATCH --time=04:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4

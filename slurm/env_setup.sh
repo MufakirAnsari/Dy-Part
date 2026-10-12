@@ -2,7 +2,7 @@
 # slurm/env_setup.sh — One-time conda environment setup on OSC (Ascend / Pitzer)
 # Usage: sbatch slurm/env_setup.sh
 #SBATCH --job-name=dypart_env_setup
-# #SBATCH --account=<YOUR_OSC_PROJECT>  # Uncomment and set if required by your OSC project
+#SBATCH --account=PWSU0516
 #SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
