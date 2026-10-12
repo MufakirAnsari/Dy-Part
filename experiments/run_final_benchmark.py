@@ -1,6 +1,11 @@
 # experiments/run_final_benchmark.py
 # VERSION 2: Includes statistical averaging over multiple random seeds.
 
+import qiskit.circuit.library
+if not hasattr(qiskit.circuit.library, "evolved_operator_ansatz"):
+    if hasattr(qiskit.circuit.library, "EvolvedOperatorAnsatz"):
+        setattr(qiskit.circuit.library, "evolved_operator_ansatz", qiskit.circuit.library.EvolvedOperatorAnsatz)
+
 import networkx as nx
 import numpy as np
 import pandas as pd
@@ -15,7 +20,6 @@ from vqe_framework.cost_model import HeuristicCostModel
 from vqe_framework.scheduler import DyPartScheduler
 from vqe_framework.vqe_executor import PartitionedVQE
 from vqe_framework.utils.hamiltonian_constructor import get_maxcut_hamiltonian
-from qiskit_algorithms import NumPyMinimumEigensolver
 from qiskit_algorithms.optimizers import COBYLA
 
 # Setup logger for this experiment

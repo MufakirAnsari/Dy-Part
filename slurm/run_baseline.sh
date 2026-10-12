@@ -41,6 +41,9 @@ export DYPART_LOG_DIR="${PROJECT_DIR}/logs/phase1_baseline"
 export DYPART_LOG_LEVEL="DEBUG"
 mkdir -p "$DYPART_LOG_DIR"
 
+# Ensure qiskit-algorithms (<0.4.0) compatibility with qiskit 1.1.0
+pip install "qiskit-algorithms>=0.3.0,<0.4.0" 2>/dev/null || true
+
 echo "--- Running baseline reproduction experiment ---"
 python -u experiments/run_final_benchmark.py \
   2>&1 | tee "${DYPART_LOG_DIR}/baseline_${SLURM_JOB_ID:-local}.log"

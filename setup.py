@@ -10,7 +10,7 @@ setup(
     install_requires=[
         "qiskit==1.1.0",
         "qiskit-aer>=0.14.0,<0.15.0",
-        "qiskit-algorithms>=0.3.0",
+        "qiskit-algorithms>=0.3.0,<0.4.0",
         "numpy>=1.24",
         "pandas>=2.0",
         "scipy>=1.10",

@@ -9,9 +9,18 @@ exact-bounded Approximation Ratio (ACT-009, ISS-003, ISS-009).
 from typing import Any, Dict, List, Optional
 import networkx as nx
 import numpy as np
+import qiskit.circuit.library
+if not hasattr(qiskit.circuit.library, "evolved_operator_ansatz"):
+    if hasattr(qiskit.circuit.library, "EvolvedOperatorAnsatz"):
+        setattr(qiskit.circuit.library, "evolved_operator_ansatz", qiskit.circuit.library.EvolvedOperatorAnsatz)
+
 from qiskit.circuit.library import TwoLocal
 from qiskit.quantum_info import SparsePauliOp
-from qiskit_algorithms.optimizers.optimizer import Optimizer
+
+try:
+    from qiskit_algorithms.optimizers import Optimizer
+except (ImportError, AttributeError):
+    Optimizer = Any  # type: ignore
 
 from .logging_config import setup_logging
 from .qpu_interface import NoisyQPU
