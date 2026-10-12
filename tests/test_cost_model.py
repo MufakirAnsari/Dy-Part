@@ -53,19 +53,19 @@ class TestHeuristicCostModel(unittest.TestCase):
         self.assertNotEqual(costs['total_cost'], 0)
 
     def test_beta_exponent_effect(self):
-        """Verify that a higher beta penalizes cuts more severely."""
+        """Verify that a higher beta penalizes cuts more severely (DEC-001 fix)."""
         model_beta_2 = HeuristicCostModel(gate_error_rate=1e-3, beta=2.0)
         model_beta_3 = HeuristicCostModel(gate_error_rate=1e-3, beta=3.0)
         
         cost_beta_2 = model_beta_2._calculate_classical_cost(self.graph, num_cuts=5)
         cost_beta_3 = model_beta_3._calculate_classical_cost(self.graph, num_cuts=5)
         
-        # Since normalized_cuts < 1, a higher exponent will result in a lower cost
-        self.assertLess(cost_beta_3, cost_beta_2)
+        # With corrected formula (cuts/edges)**(1/beta), higher beta strictly increases cost
+        self.assertGreater(cost_beta_3, cost_beta_2)
         # Let's check with more cuts to be sure
         cost_beta_2_more_cuts = model_beta_2._calculate_classical_cost(self.graph, num_cuts=20)
         cost_beta_3_more_cuts = model_beta_3._calculate_classical_cost(self.graph, num_cuts=20)
-        self.assertLess(cost_beta_3_more_cuts, cost_beta_2_more_cuts)
+        self.assertGreater(cost_beta_3_more_cuts, cost_beta_2_more_cuts)
 
 if __name__ == '__main__':
     unittest.main()
