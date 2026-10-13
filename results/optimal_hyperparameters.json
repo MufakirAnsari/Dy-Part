@@ -1,0 +1,94 @@
+{
+  "optimal_hyperparameters": {
+    "config_id": 120,
+    "alpha": 0.7,
+    "beta": 1.0,
+    "gamma": 0.1,
+    "mean_approximation_ratio": 0.9114943774846884,
+    "std_approximation_ratio": 0.002520215293821956,
+    "mean_chosen_n_sub": 2.0,
+    "mean_num_cuts": 10.8,
+    "mean_runtime_seconds": 38.01547355651856,
+    "sample_size": 10
+  },
+  "legacy_comparison": {
+    "alpha": 0.95,
+    "beta": 1.5,
+    "gamma": 0.1,
+    "mean_ar": 0.8900677307293965,
+    "std_ar": 0.04140379743072024,
+    "ar_difference": 0.021426646755291934
+  },
+  "top_5_configurations": [
+    {
+      "config_id": 120,
+      "alpha": 0.7,
+      "beta": 1.0,
+      "gamma": 0.1,
+      "mean_ar": 0.9114943774846884,
+      "std_ar": 0.002520215293821956,
+      "min_ar": 0.9071493309277756,
+      "max_ar": 0.9157979694696572,
+      "mean_n_sub": 2.0,
+      "mean_cuts": 10.8,
+      "mean_runtime": 38.01547355651856,
+      "sample_size": 10
+    },
+    {
+      "config_id": 135,
+      "alpha": 0.7,
+      "beta": 3.0,
+      "gamma": 0.1,
+      "mean_ar": 0.910377913254958,
+      "std_ar": 0.0034100215393062403,
+      "min_ar": 0.905125352052542,
+      "max_ar": 0.9142391291948464,
+      "mean_n_sub": 2.0,
+      "mean_cuts": 10.8,
+      "mean_runtime": 36.879993200302124,
+      "sample_size": 10
+    },
+    {
+      "config_id": 105,
+      "alpha": 0.6,
+      "beta": 1.5,
+      "gamma": 0.1,
+      "mean_ar": 0.9100388744702705,
+      "std_ar": 0.003734724878563583,
+      "min_ar": 0.9035182641102716,
+      "max_ar": 0.9155437900469854,
+      "mean_n_sub": 2.4,
+      "mean_cuts": 9.6,
+      "mean_runtime": 34.6984379529953,
+      "sample_size": 10
+    },
+    {
+      "config_id": 110,
+      "alpha": 0.6,
+      "beta": 2.0,
+      "gamma": 0.1,
+      "mean_ar": 0.9093917181858651,
+      "std_ar": 0.003158838002308844,
+      "min_ar": 0.9039162213985736,
+      "max_ar": 0.9136033952236176,
+      "mean_n_sub": 2.0,
+      "mean_cuts": 10.8,
+      "mean_runtime": 37.86766958236694,
+      "sample_size": 10
+    },
+    {
+      "config_id": 161,
+      "alpha": 0.9,
+      "beta": 1.0,
+      "gamma": 0.5,
+      "mean_ar": 0.9090276741064512,
+      "std_ar": 0.004129178683040046,
+      "min_ar": 0.9008910701825068,
+      "max_ar": 0.9150201013455024,
+      "mean_n_sub": 2.4,
+      "mean_cuts": 9.6,
+      "mean_runtime": 34.22158081531525,
+      "sample_size": 10
+    }
+  ]
+}

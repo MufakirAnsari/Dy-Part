@@ -35,7 +35,15 @@ logger = setup_logging()
 
 
 class PartitionedVQE:
-    """Executes partitioned VQE for MaxCut across subgraphs."""
+    """Unified partitioned VQE executor for MaxCut across subgraphs (ACT-021, ISS-037).
+
+    Supports:
+    - Cut-aware energy reconstruction (reconstruct_cuts=True)
+    - Blind energy evaluation (reconstruct_cuts=False)
+    - Configurable estimator shots (shots=8192)
+    - Multiple graph partitioners ('greedy', 'metis', 'random')
+    - Deterministic random seed handling
+    """
 
     def __init__(
         self,
@@ -43,11 +51,15 @@ class PartitionedVQE:
         qpu: NoisyQPU,
         optimizer: Optimizer,
         seed: Optional[int] = None,
+        shots: int = 8192,
+        reconstruct_cuts: bool = True,
     ):
         self.graph = graph
         self.qpu = qpu
         self.optimizer = optimizer
         self.seed = seed
+        self.shots = shots
+        self.reconstruct_cuts = reconstruct_cuts
         self.intermediate_results: Dict[str, List] = {"iters": [], "vals": []}
         self.subgraphs: List[nx.Graph] = []
         self.cut_edges: List = []
@@ -77,20 +89,21 @@ class PartitionedVQE:
                 observables_batch.append(subg_hamiltonian)
                 params_batch.append(subg_params)
 
-            # Single Z measurements for product-state cut-edge reconstruction
-            for local_idx in range(num_subg_nodes):
-                pauli_op_str = ["I"] * num_subg_nodes
-                pauli_op_str[local_idx] = "Z"
-                z_observable = SparsePauliOp("".join(pauli_op_str))
+            # Single Z measurements for product-state cut-edge reconstruction (if enabled)
+            if self.reconstruct_cuts:
+                for local_idx in range(num_subg_nodes):
+                    pauli_op_str = ["I"] * num_subg_nodes
+                    pauli_op_str[local_idx] = "Z"
+                    z_observable = SparsePauliOp("".join(pauli_op_str))
 
-                circuits_batch.append(subg_ansatz)
-                observables_batch.append(z_observable)
-                params_batch.append(subg_params)
+                    circuits_batch.append(subg_ansatz)
+                    observables_batch.append(z_observable)
+                    params_batch.append(subg_params)
 
         if not circuits_batch:
             return 0.0
 
-        estimator = self.qpu.get_estimator(shots=8192)
+        estimator = self.qpu.get_estimator(shots=self.shots)
         job_result = estimator.run(
             circuits=circuits_batch,
             observables=observables_batch,
@@ -108,14 +121,16 @@ class PartitionedVQE:
                 internal_energy += all_exp_vals[result_idx]
                 result_idx += 1
 
-            for local_idx in range(subg.number_of_nodes()):
-                global_idx = node_maps[i][local_idx]
-                single_z_exp_vals[global_idx] = all_exp_vals[result_idx]
-                result_idx += 1
+            if self.reconstruct_cuts:
+                for local_idx in range(subg.number_of_nodes()):
+                    global_idx = node_maps[i][local_idx]
+                    single_z_exp_vals[global_idx] = all_exp_vals[result_idx]
+                    result_idx += 1
 
         cut_energy = 0.0
-        for u, v in self.cut_edges:
-            cut_energy += single_z_exp_vals[u] * single_z_exp_vals[v]
+        if self.reconstruct_cuts:
+            for u, v in self.cut_edges:
+                cut_energy += single_z_exp_vals[u] * single_z_exp_vals[v]
 
         total_energy = float(internal_energy + cut_energy)
 
@@ -196,3 +211,83 @@ class PartitionedVQE:
             "approximation_ratio": ar,
             "convergence_data": self.intermediate_results,
         }
+
+
+class PartitionedVQE_Blind(PartitionedVQE):
+    """Backwards-compatibility wrapper for blind partitioned VQE (ISS-037, ACT-021).
+
+    Ignores inter-subgraph cut edges in energy evaluation.
+    """
+
+    def __init__(
+        self,
+        graph: nx.Graph,
+        qpu: NoisyQPU,
+        optimizer: Optimizer,
+        seed: Optional[int] = 42,
+        shots: int = 8192,
+    ):
+        super().__init__(
+            graph=graph,
+            qpu=qpu,
+            optimizer=optimizer,
+            seed=seed,
+            shots=shots,
+            reconstruct_cuts=False,
+        )
+
+
+class PartitionedVQE_Deterministic(PartitionedVQE):
+    """Backwards-compatibility wrapper for deterministic partitioned VQE (ISS-037, ACT-021).
+
+    Uses cut-aware energy reconstruction with deterministic seed and configurable shots.
+    """
+
+    def __init__(
+        self,
+        graph: nx.Graph,
+        qpu: NoisyQPU,
+        optimizer: Optimizer,
+        shots: int = 4096,
+        seed: Optional[int] = 42,
+    ):
+        super().__init__(
+            graph=graph,
+            qpu=qpu,
+            optimizer=optimizer,
+            seed=seed,
+            shots=shots,
+            reconstruct_cuts=True,
+        )
+
+
+class PartitionedVQE_Blind_Deterministic(PartitionedVQE):
+    """Backwards-compatibility wrapper for deterministic blind partitioned VQE (ISS-037, ACT-021).
+
+    Ignores inter-subgraph cut edges with deterministic seed and configurable shots.
+    """
+
+    def __init__(
+        self,
+        graph: nx.Graph,
+        qpu: NoisyQPU,
+        optimizer: Optimizer,
+        shots: int = 4096,
+        seed: Optional[int] = 42,
+    ):
+        super().__init__(
+            graph=graph,
+            qpu=qpu,
+            optimizer=optimizer,
+            seed=seed,
+            shots=shots,
+            reconstruct_cuts=False,
+        )
+
+
+__all__ = [
+    "PartitionedVQE",
+    "PartitionedVQE_Blind",
+    "PartitionedVQE_Deterministic",
+    "PartitionedVQE_Blind_Deterministic",
+]
