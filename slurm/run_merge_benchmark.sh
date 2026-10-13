@@ -41,5 +41,12 @@ python -u scripts/merge_corrected_benchmark_results.py \
     --output-file results/corrected_benchmark.csv
 
 echo ""
+echo "--> Step 2: Running Statistical Significance Analysis (ACT-019)..."
+python -u experiments/run_statistical_analysis.py \
+    --input results/corrected_benchmark.csv \
+    --output-csv results/statistical_analysis_results.csv \
+    --output-report results/statistical_significance_report.md
+
+echo ""
 echo "=== BENCHMARK MERGE COMPLETE ==="
 echo "End: $(date -u +%Y-%m-%dT%H:%M:%SZ)"

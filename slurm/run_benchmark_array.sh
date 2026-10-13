@@ -3,11 +3,12 @@
 # Usage: sbatch slurm/run_benchmark_array.sh
 #SBATCH --job-name=dypart_bm_arr
 #SBATCH --account=PWSU0516
-#SBATCH --time=04:00:00
+#SBATCH --time=02:30:00
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
-#SBATCH --mem=16G
-#SBATCH --array=0-9
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=8G
+#SBATCH --array=0-29
 #SBATCH --output=logs/phase2_benchmark/slurm_bm_%A_%a.out
 #SBATCH --error=logs/phase2_benchmark/slurm_bm_%A_%a.err
 
@@ -18,10 +19,9 @@ cd "${PROJECT_DIR}"
 
 TASK_ID="${SLURM_ARRAY_TASK_ID:-0}"
 
-# 10 workers over 30 seeds -> 3 seeds per worker
-SEEDS_PER_TASK=3
-START_SEED=$(( TASK_ID * SEEDS_PER_TASK ))
-END_SEED=$(( START_SEED + SEEDS_PER_TASK ))
+# 30 workers over 30 seeds -> exactly 1 seed per worker
+START_SEED=${TASK_ID}
+END_SEED=$(( TASK_ID + 1 ))
 OUTPUT_CSV="results/benchmark_part_${TASK_ID}.csv"
 
 echo "=== PHASE 2: FULL CORRECTED BENCHMARK (ACT-018) ==="
