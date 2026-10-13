@@ -1,6 +1,7 @@
 
 \documentclass[pdflatex,sn-mathphys-num]{sn-jnl}
 \usepackage{appendix}
+\geometry{left=22mm, right=22mm, top=25mm, bottom=25mm, headheight=12pt, footskip=10mm}
 
 \usepackage{graphicx}%
 \usepackage{multirow}%
@@ -47,9 +48,11 @@
 
 \author*[1]{\fnm{Mufakir} \sur{Qamar Ansari}}\email{mufakir.ansari@utoledo.edu}
 
-%\author[1]{\fnm{Fayeq} \sur{Jeelani Syed}}\email{sjeelan@utoledo.edu}
+\author[2]{\fnm{Mudabir} \sur{Qamar Ansari}}\email{mansari2@lamar.edu}
 
 \affil*[1]{\orgdiv{Department of Electrical Engineering and Computer Science}, \orgname{The University of Toledo}, \orgaddress{\street{2801 W. Bancroft St.}, \city{Toledo}, \postcode{43606}, \state{OH}, \country{USA}}}
+
+\affil[2]{\orgdiv{Department of Information Systems}, \orgname{Lamar University}, \orgaddress{\city{Beaumont}, \state{TX}, \country{USA}}}
 %%==================================%%
 %% Sample for unstructured abstract %%
 %%==================================%%
@@ -71,7 +74,7 @@ Quantum computing holds immense promise for tackling intractable combinatorial o
 \begin{figure}[h!]
     \centering
     % Ensure you have the image file in your project directory
-    \includegraphics[width=\columnwidth]{results/day2_noise_impact.png}
+    \includegraphics[width=\textwidth]{results/day2_noise_impact.png}
     \caption{Performance degradation of a baseline, non-partitioned Variational Quantum Eigensolver (VQE) on the full 4-node Max-Cut problem as a function of the simulated 2-qubit gate error rate. The sharp decline in the approximation ratio motivates the need for noise-aware workload management.}
     \label{fig:noise_impact}
 \end{figure}
@@ -134,7 +137,7 @@ Our proposed framework, Dy-Part, addresses the static partitioning problem by in
 \begin{figure}[h!]
     \centering
     % Ensure you have the image file in your project directory
-    \includegraphics[width=0.6\columnwidth]{results/graphviz.png}
+    \includegraphics[width=\textwidth]{results/graphviz.png}
     \caption{The Dy-Part framework workflow. An offline classical scheduler first uses a noise-aware cost model to find the optimal partition size, $n_{\text{sub}}^*$. This plan then configures a partitioned VQE executor for the online hybrid computation. Within the scheduler's search loop, the results of the computationally intensive \texttt{PartitionGraph} function are cached to ensure efficiency.}
     \label{fig:dypart_workflow}
 \end{figure}
@@ -180,7 +183,7 @@ The composite objective function in Equation~\eqref{eq:total_cost} couples a str
 
 \begin{figure}[t!]
     \centering
-    \includegraphics[width=\columnwidth]{results/Figure_Scheduler_Decisions_with_Inset.png}
+    \includegraphics[width=\textwidth]{results/Figure_Scheduler_Decisions_with_Inset.png}
     \caption{The mean optimal subgraph size ($n_{\text{sub}}^*$) selected by the Dy-Part scheduler across varying 2-qubit gate error rates. The scheduler dynamically transitions from full-sized partitions in low-noise regimes to compact, noise-resilient subgraphs as gate noise increases. \textbf{(Inset)} Deconstruction of the heuristic cost model for a representative 12-node problem, confirming the unimodal objective landscape that underpins the ternary search heuristic.}
     \label{fig:unimodality_validation}
 \end{figure}
@@ -232,7 +235,7 @@ $\mathcal{C} \leftarrow \text{new HashTable()}$ \tcp*{Partition evaluation cache
 \While{$high - low \geq 3$}{
     $m_1 \leftarrow low + \lfloor (high - low) / 3 \rfloor$\;
     $m_2 \leftarrow high - \lfloor (high - low) / 3 \rfloor$\;
-    \If{\FHelper{$m_1$} $<$ \FHelper{$m_2$}}{
+    \If{\FHelper{$m_1$} $\le$ \FHelper{$m_2$}}{
         $high \leftarrow m_2 - 1$\;
     }\Else{
         $low \leftarrow m_1 + 1$\;
@@ -326,7 +329,7 @@ To rigorously evaluate the optimality of our heuristic cost model, we compare th
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{results/Figure_Oracle_Comparison_Detailed_10_nodes.png}
+    \includegraphics[width=\textwidth]{results/Figure_Oracle_Comparison_Detailed_10_nodes.png}
     \caption{Performance comparison on 10-node graphs including the Static Oracle baseline. (Top) Mean approximation ratio across 2-qubit gate error rates. (Bottom) Optimality gap relative to the oracle ($\text{AR}_{\text{Oracle}} - \text{AR}$). Dy-Part closely tracks the oracle's upper bound across the entire noise spectrum, maintaining a significantly smaller optimality gap than the static baseline in the high-noise regime.}
     \label{fig:oracle_comparison}
 \end{figure}
@@ -401,7 +404,7 @@ Figure~\ref{fig:scheduler_decisions} plots the mean optimal partition size ($n_{
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{results/Figure_Scheduler_Decisions_Averaged.png}
+    \includegraphics[width=\textwidth]{results/Figure_Scheduler_Decisions_Averaged.png}
     \caption{Mean optimal partition size ($n_{\text{sub}}^*$) selected by Dy-Part as a function of 2-qubit gate error rate across graph dimensions. The scheduler automatically reduces partition sizes as hardware noise increases to preserve quantum execution fidelity.}
     \label{fig:scheduler_decisions}
 \end{figure}
@@ -415,7 +418,7 @@ The scheduler's decision landscape is governed by the fidelity weight $\alpha$ a
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\columnwidth]{results/Figure_In_Depth_Analysis.png}
+    \includegraphics[width=\textwidth]{results/Figure_In_Depth_Analysis.png}
     \caption{Final VQE Approximation Ratio as a function of the scheduler hyperparameter $\alpha$ on a 10-node graph ($\epsilon_{\text{gate}} = 5 \times 10^{-3}$). The gold marker indicates the optimal performance configuration.}
     \label{fig:sensitivity_alpha_performance}
 \end{figure}
@@ -429,7 +432,7 @@ A critical requirement of an online scheduler is that pre-execution optimization
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{results/Figure_Runtime_Breakdown.png}
+    \includegraphics[width=\textwidth]{results/Figure_Runtime_Breakdown.png}
     \caption{Mean wall-clock runtime breakdown for Dy-Part vs. Static VQE on 12-node graphs. Scheduling overhead is negligible compared to iterative quantum circuit execution.}
     \label{fig:runtime_breakdown}
 \end{figure}
@@ -486,7 +489,7 @@ The Dy-Part framework establishes several promising avenues for future research.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\columnwidth]{results/Figure_Hyperparameter_Sensitivity.png}
+    \includegraphics[width=\textwidth]{results/Figure_Hyperparameter_Sensitivity.png}
     \caption{The Dy-Part scheduler's decision landscape for a 12-node graph under a fixed noise profile across five distinct $\alpha$ values. The gold stars denote the optimal subgraph size ($n_{\text{sub}}^*$) selected by the scheduler.}
     \label{fig:sensitivity_alpha_landscape}
 \end{figure}
@@ -520,7 +523,7 @@ To contextualize our findings, several methodological limitations must be acknow
 
 \bmhead{Data and Code Availability} The source code for the Dy-Part framework, all experimental scripts, and the datasets generated and analyzed during the current study are available in a public GitHub repository: \url{https://github.com/MufakirAnsari/Dy-Part}.
 \bmhead{Funding Declaration} This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
-\bmhead{Author Contributions} M.Q.A. conceived the project, developed the theoretical models, wrote the software, performed the experiments and data analysis, and wrote the manuscript.
+\bmhead{Author Contributions} M.Q.A. (Mufakir Qamar Ansari) conceived the research, developed theoretical cost formulations, designed and implemented the software framework, carried out computational experiments and statistical analysis, and drafted the manuscript. M.Q.A. (Mudabir Qamar Ansari) contributed to formal analysis, methodological verification, data curation, and critical review and editing of the manuscript. Both authors reviewed and approved the final manuscript.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APPENDIX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -535,7 +538,7 @@ To establish the validity of our experimental framework, we first performed a ba
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\columnwidth]{results/day1_ansatz_circuit.png}
+    \includegraphics[width=\textwidth]{results/day1_ansatz_circuit.png}
     \caption{The \texttt{TwoLocal} ansatz circuit (\texttt{reps=2}) used for the 4-qubit baseline VQE.}
     \label{fig:appendix_ansatz_circuit}
 \end{figure}
@@ -543,27 +546,28 @@ To establish the validity of our experimental framework, we first performed a ba
 
 
 
-% First figure
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.45\linewidth]{results/day1_problem_graph.png}
-    \caption{Problem Definition: $C_4$ Graph}
-    \label{fig:appendix_problem_graph}
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{results/day1_problem_graph.png}
+        \caption{Problem Definition: $C_4$ Graph}
+        \label{fig:appendix_problem_graph}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{results/day1_solution_graph.png}
+        \caption{Final Solution (Bitstring '0101')}
+        \label{fig:appendix_solution_graph}
+    \end{minipage}
 \end{figure}
 
-% Second figure
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.45\linewidth]{results/day1_solution_graph.png}
-    \caption{Final Solution (Bitstring '0101')}
-    \label{fig:appendix_solution_graph}
-\end{figure}
-
 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{results/day1_vqe_convergence.png}
+    \includegraphics[width=0.85\textwidth]{results/day1_vqe_convergence.png}
     \caption{Convergence profile of the baseline VQE on a noiseless simulator.}
     \label{fig:appendix_convergence}
 \end{figure}
@@ -605,40 +609,37 @@ $nodes\_to\_assign \leftarrow V$\;
 $subgraphs \leftarrow \emptyset$\;
 \While{$nodes\_to\_assign \neq \emptyset$}{
     $subgraph_k \leftarrow \text{new empty graph}$\;
-    $seed\_node \leftarrow \text{pop randomly from } nodes\_to\_assign$\;
+    $seed\_node \leftarrow \text{pop lowest-index unassigned node from } nodes\_to\_assign$\;
     Add $seed\_node$ to $V(subgraph_k)$\;
 
-    \tcp{Initialize queue for Breadth-First Search (BFS)}
-    $queue \leftarrow \text{new Queue()}$\;
-    \ForEach{$neighbor$ of $seed\_node$ in $G$}{
-        $queue.\text{enqueue}(neighbor)$\;
-    } % end foreach (neighbors of seed)
+    \tcp{Initialize queue with sorted neighbors for determinism}
+    $queue \leftarrow \text{sorted neighbors of } seed\_node \text{ in } G$\;
 
     \While{$|V(subgraph_k)| < n_{\text{sub}} \text{ and not } queue.\text{is\_empty()}$}{
         $candidate \leftarrow queue.\text{dequeue}()$\;
         \If{$candidate \in nodes\_to\_assign$}{
             Remove $candidate$ from $nodes\_to\_assign$\;
             Add $candidate$ to $V(subgraph_k)$\;
-            \ForEach{$neighbor$ of $candidate$ in $G$}{
-                \If{$neighbor \in nodes\_to\_assign$}{
+            \ForEach{$neighbor \in \text{sorted}(\text{Adj}_G(candidate))$}{
+                \If{$neighbor \in nodes\_to\_assign \text{ and } neighbor \notin queue$}{
                     $queue.\text{enqueue}(neighbor)$\;
-                } % end if (neighbor in nodes_to_assign)
-            } % end foreach (neighbors of candidate)
-        } % end if (candidate in nodes_to_assign)
-    } % end while (BFS expansion)
+                }
+            }
+        }
+    }
 
     Add $subgraph_k$ to $subgraphs$\;
-} % end while (nodes_to_assign not empty)
+}
 
 \tcp{Reconstruct internal edges and count cuts}
 $internal\_edges \leftarrow \emptyset$\;
-\ForEach{$G_k$ in $subgraphs$}{
+\ForEach{$G_k \in subgraphs$}{
     Add all edges from $E$ between nodes in $V(G_k)$ to $E(G_k)$\;
     $internal\_edges \leftarrow internal\_edges \cup E(G_k)$\;
-} % end foreach (subgraphs)
+}
 
 $N_{\text{cuts}} \leftarrow |E| - |internal\_edges|$\;
-\Return{$subgraphs, N_{\text{cuts}}$}\;
+\KwRet{$subgraphs, N_{\text{cuts}}$}\;
 \end{algorithm}
 
 \section{Empirical Cost Model Validation and Cut Distributions}
@@ -664,7 +665,7 @@ Furthermore, Figure~\ref{fig:cut_distribution} illustrates the distribution of c
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.85\textwidth]{results/Figure_Cut_Distribution_Comparison.png}
+    \includegraphics[width=\textwidth]{results/Figure_Cut_Distribution_Comparison.png}
     \caption{Distribution of inter-subgraph cuts across graph sizes ($N = 8$ to $20$ nodes) for Dy-Part, METIS, Random, and Static partitioning. Dy-Part dynamically adapts cut density based on noise severity, contrasting with fixed-topology partitioning.}
     \label{fig:cut_distribution}
 \end{figure}

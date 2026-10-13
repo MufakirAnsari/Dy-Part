@@ -2,7 +2,9 @@
 
 **Manuscript Title:** Dy-Part: A Dynamic, Noise-Aware Scheduler for Optimizing Hybrid Quantum-Classical Algorithms  
 **Target Journal:** *Quantum Machine Intelligence* (Springer Nature)  
-**Corresponding Author:** Mufakir Qamar Ansari (Department of Electrical Engineering and Computer Science, The University of Toledo)  
+**Authors:** Mufakir Qamar Ansari$^1$ (Corresponding Author) and Mudabir Qamar Ansari$^2$  
+**Affiliations:** $^1$Department of Electrical Engineering and Computer Science, The University of Toledo, Toledo, OH, USA; $^2$Department of Information Systems, Lamar University, Beaumont, TX, USA  
+**Corresponding Email:** mufakir.ansari@utoledo.edu  
 **Date:** October 13, 2026  
 
 ---
