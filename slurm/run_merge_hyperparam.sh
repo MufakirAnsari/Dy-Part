@@ -34,6 +34,7 @@ source activate dypart 2>/dev/null || conda activate dypart 2>/dev/null || true
 if [ -d "$HOME/.conda/envs/dypart/bin" ]; then
     export PATH="$HOME/.conda/envs/dypart/bin:$PATH"
 fi
+export PYTHONPATH="${PROJECT_DIR}:${PYTHONPATH:-}"
 
 echo "--> Step 1: Merging all hyperparameter partitions..."
 python -u scripts/merge_hyperparam_results.py \

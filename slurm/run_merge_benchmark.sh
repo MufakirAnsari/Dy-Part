@@ -34,6 +34,7 @@ source activate dypart 2>/dev/null || conda activate dypart 2>/dev/null || true
 if [ -d "$HOME/.conda/envs/dypart/bin" ]; then
     export PATH="$HOME/.conda/envs/dypart/bin:$PATH"
 fi
+export PYTHONPATH="${PROJECT_DIR}:${PYTHONPATH:-}"
 
 python -u scripts/merge_corrected_benchmark_results.py \
     --pattern "results/benchmark_part_*.csv" \

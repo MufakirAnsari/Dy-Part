@@ -14,7 +14,12 @@ import os
 import sys
 import pandas as pd
 
-from experiments.run_hyperparam_search import COLUMNS
+# Self-contained column schema (ACT-014)
+COLUMNS = [
+    "config_id", "alpha", "beta", "gamma", "seed_id", "num_nodes", "noise_level",
+    "chosen_n_sub", "num_cuts", "quantum_cost", "classical_cost", "total_cost",
+    "final_energy", "true_energy", "approximation_ratio", "runtime_seconds"
+]
 
 EXPECTED_TOTAL_CONFIGS = 200
 EXPECTED_SEEDS_PER_CONFIG = 10

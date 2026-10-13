@@ -13,7 +13,11 @@ import os
 import sys
 import pandas as pd
 
-from experiments.run_corrected_benchmark import COLUMNS
+# Self-contained column schema (ACT-018)
+COLUMNS = [
+    "method", "num_nodes", "noise_level", "chosen_n_sub", "num_cuts",
+    "final_energy", "true_energy", "approximation_ratio", "runtime_seconds", "seed_id"
+]
 
 
 def validate_benchmark_dataframe(df: pd.DataFrame, source_name: str) -> None:
