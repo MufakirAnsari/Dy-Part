@@ -164,6 +164,10 @@ class DyPartScheduler:
         return {
             "optimal_n_sub": optimal_n_sub,
             "best_cost": best_result["total_cost"],
+            "min_cost": best_result["total_cost"],
+            "quantum_cost": best_result["quantum_cost"],
+            "classical_cost": best_result["classical_cost"],
+            "num_cuts": best_result["num_cuts"],
             "search_method_used": method_used,
             "num_evaluations": len(cache),
             "search_results": search_results,

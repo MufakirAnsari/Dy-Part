@@ -78,3 +78,9 @@ class HeuristicCostModel:
             "n_sub": n_sub,
             "num_cuts": num_cuts
         }
+
+    def evaluate_cost(self, graph: nx.Graph, n_sub: int) -> dict:
+        """Evaluates cost for a given subgraph size using greedy partitioning."""
+        from vqe_framework.graph_utils import partition_graph_greedy
+        _, num_cuts = partition_graph_greedy(graph, n_sub)
+        return self.calculate_total_cost(graph, n_sub, num_cuts)

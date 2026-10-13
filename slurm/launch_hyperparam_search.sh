@@ -7,6 +7,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${SCRIPT_DIR}/.."
 
 mkdir -p logs/phase2_hyperparam results
+rm -f results/hyperparam_part_*.csv
 
 echo "Submitting 50-worker array job for Hyperparameter Grid Search (200 configs x 10 seeds = 2,000 runs)..."
 ARRAY_JOB_ID=$(sbatch --parsable slurm/run_hyperparam_array.sh)

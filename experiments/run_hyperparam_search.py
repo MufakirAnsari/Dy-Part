@@ -81,14 +81,18 @@ def run_single_hyperparam_run(
     scheduler = DyPartScheduler(cost_model=cost_model)
     partition_plan = scheduler.find_optimal_partition(graph)
 
-    optimal_n_sub = partition_plan["optimal_n_sub"]
-    min_cost = partition_plan["min_cost"]
+    optimal_n_sub = partition_plan.get("optimal_n_sub", 10)
+    min_cost = partition_plan.get("best_cost", partition_plan.get("min_cost", 0.0))
 
     # Retrieve cost breakdown for the chosen n_sub
-    cost_breakdown = cost_model.evaluate_cost(graph, optimal_n_sub)
-    q_cost = cost_breakdown["quantum_cost"]
-    c_cost = cost_breakdown["classical_cost"]
-    num_cuts = cost_breakdown["num_cuts"]
+    q_cost = partition_plan.get("quantum_cost")
+    c_cost = partition_plan.get("classical_cost")
+    num_cuts = partition_plan.get("num_cuts")
+    if q_cost is None or c_cost is None or num_cuts is None:
+        cost_breakdown = cost_model.evaluate_cost(graph, optimal_n_sub)
+        q_cost = cost_breakdown["quantum_cost"]
+        c_cost = cost_breakdown["classical_cost"]
+        num_cuts = cost_breakdown["num_cuts"]
 
     # 3. Execute VQE
     from vqe_framework.qpu_interface import NoisyQPU
@@ -186,6 +190,10 @@ def main() -> None:
                 pd.DataFrame([res])[COLUMNS].to_csv(output_path, mode="a", header=False, index=False)
             except Exception as exc:
                 logger.error("Run failed for config %d, seed %d: %s", cfg_id, seed_id, exc)
+                raise exc
+
+    if len(all_results) < total_runs:
+        raise RuntimeError(f"Expected {total_runs} runs but only completed {len(all_results)}.")
 
     logger.info("Grid search completed successfully! Saved %d runs to %s", len(all_results), output_path)
 
