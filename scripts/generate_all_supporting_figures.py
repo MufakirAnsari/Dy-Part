@@ -186,8 +186,8 @@ def generate_day1_solution_graph():
   <line x1="480" y1="{height - 72}" x2="515" y2="{height - 72}" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="4,3"/>
   <text x="525" y="{height - 68}" font-size="11.5" font-weight="600" fill="#b45309">Cut Edge (|E_cut| = 4)</text>
 
-  <!-- Verified Ground State Banner -->
-  <text x="{width/2}" y="{height - 25}" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">&#10004; Verified Ground State: AR = 1.0000 | Ground State Energy = -4.0000</text>
+  <!-- Max-Cut Ground State Summary -->
+  <text x="{width/2}" y="{height - 25}" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">Max-Cut Solution: AR = 1.0000 | Ground State Energy E₀ = -4.0000</text>
 </svg>'''
     
     save_svg_and_png("day1_solution_graph", svg)
@@ -502,7 +502,7 @@ def generate_day2_noise_impact():
 def generate_graphviz_architecture():
     print("Generating graphviz architecture diagram...")
     width = 1350
-    height = 930
+    height = 890
     
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
   <defs>
@@ -737,10 +737,6 @@ def generate_graphviz_architecture():
   </g>
 
   <line x1="1020" y1="745" x2="1070" y2="745" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
-
-  <!-- Bottom Verification Bar -->
-  <rect x="60" y="895" width="1230" height="26" rx="5" fill="#f8fafc" stroke="#e2e8f0"/>
-  <text x="{width/2}" y="912" text-anchor="middle" font-size="11" fill="#64748b">Verified Structural Property: Unimodal Heuristic Cost ensures O(log |V|) Ternary Search identifies optimal partition size n_sub*</text>
 </svg>'''
 
     save_svg_and_png("graphviz", svg)

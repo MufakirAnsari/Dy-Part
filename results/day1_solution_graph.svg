@@ -57,6 +57,6 @@
   <line x1="480" y1="578" x2="515" y2="578" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="4,3"/>
   <text x="525" y="582" font-size="11.5" font-weight="600" fill="#b45309">Cut Edge (|E_cut| = 4)</text>
 
-  <!-- Verified Ground State Banner -->
-  <text x="340.0" y="625" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">&#10004; Verified Ground State: AR = 1.0000 | Ground State Energy = -4.0000</text>
+  <!-- Max-Cut Ground State Summary -->
+  <text x="340.0" y="625" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">Max-Cut Solution: AR = 1.0000 | Ground State Energy E₀ = -4.0000</text>
 </svg>
