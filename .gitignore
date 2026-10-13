@@ -38,5 +38,6 @@ results/.~lock.*
 
 # === Temporary ===
 *.tmp
+results/*_part_*.csv
 *.bak
 scratch/

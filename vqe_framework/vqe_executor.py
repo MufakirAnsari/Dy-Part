@@ -129,10 +129,24 @@ class PartitionedVQE:
 
     def run(self, partition_plan: Dict[str, Any]) -> Dict[str, Any]:
         """Runs partitioned VQE using the optimal subgraph size from the partition plan."""
-        n_sub = partition_plan["optimal_n_sub"]
-        logger.info("--- VQE Executor: Starting run with partition size n_sub = %d ---", n_sub)
+        partition_method = partition_plan.get("partition_method", "greedy")
 
-        self.subgraphs, self.num_cuts = partition_graph_greedy(self.graph, n_sub)
+        if "subgraphs" in partition_plan and "num_cuts" in partition_plan:
+            self.subgraphs = partition_plan["subgraphs"]
+            self.num_cuts = partition_plan["num_cuts"]
+            n_sub = partition_plan.get("optimal_n_sub", max(s.number_of_nodes() for s in self.subgraphs) if self.subgraphs else 1)
+        else:
+            n_sub = partition_plan["optimal_n_sub"]
+            if partition_method == "metis":
+                from vqe_framework.utils.metis_partitioner import partition_graph_metis
+                self.subgraphs, self.num_cuts = partition_graph_metis(self.graph, n_sub)
+            elif partition_method == "random":
+                from vqe_framework.utils.random_partitioner import partition_graph_random
+                self.subgraphs, self.num_cuts = partition_graph_random(self.graph, n_sub, seed=self.seed)
+            else:
+                self.subgraphs, self.num_cuts = partition_graph_greedy(self.graph, n_sub)
+
+        logger.info("--- VQE Executor: Starting run with method=%s, n_sub=%d ---", partition_method, n_sub)
 
         # Canonical edge sets to prevent tuple orientation bugs
         original_edges = {tuple(sorted(e)) for e in self.graph.edges()}
