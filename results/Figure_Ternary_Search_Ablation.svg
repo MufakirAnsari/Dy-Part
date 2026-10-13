@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" style="background:#ffffff; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
+<text x="500" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Ternary Search vs. Exhaustive Linear Scan: Algorithmic Ablation Study</text>
+<rect x="70" y="60" width="410" height="340" fill="#f8fafc" stroke="#cbd5e1"/>
+<text x="275" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Partition Evaluations & Query Savings (%)</text>
+<rect x="520" y="60" width="410" height="340" fill="#f8fafc" stroke="#cbd5e1"/>
+<text x="725" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Wall-Clock Latency & Speedup Factor</text>
+<rect x="63" y="400" width="14" height="0" fill="#6ee7b7" opacity="0.35"/>
+<rect x="97.16666666666666" y="254.276" width="14" height="145.724" fill="#6ee7b7" opacity="0.35"/>
+<rect x="131.33333333333331" y="248.90400000000002" width="14" height="151.09599999999998" fill="#6ee7b7" opacity="0.35"/>
+<rect x="165.5" y="245.47" width="14" height="154.53" fill="#6ee7b7" opacity="0.35"/>
+<rect x="199.66666666666666" y="243.09" width="14" height="156.91" fill="#6ee7b7" opacity="0.35"/>
+<rect x="233.83333333333334" y="241.322" width="14" height="158.678" fill="#6ee7b7" opacity="0.35"/>
+<rect x="268" y="179.98600000000005" width="14" height="220.01399999999995" fill="#6ee7b7" opacity="0.35"/>
+<rect x="302.1666666666667" y="203.174" width="14" height="196.826" fill="#6ee7b7" opacity="0.35"/>
+<rect x="370.5" y="178.252" width="14" height="221.748" fill="#6ee7b7" opacity="0.35"/>
+<rect x="473" y="177.232" width="14" height="222.768" fill="#6ee7b7" opacity="0.35"/>
+<path d="M 70.0 346.9 L 104.2 325.6 L 138.3 304.4 L 172.5 283.1 L 206.7 261.9 L 240.8 240.6 L 275.0 219.4 L 309.2 198.1 L 377.5 155.6 L 480.0 91.9" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4,4"/>
+<path d="M 70.0 346.9 L 104.2 357.5 L 138.3 346.9 L 172.5 336.3 L 206.7 325.6 L 240.8 315.0 L 275.0 336.3 L 309.2 315.0 L 377.5 315.0 L 480.0 293.8" fill="none" stroke="#10b981" stroke-width="2.4"/>
+<circle cx="70.0" cy="346.9" r="4" fill="#dc2626"/>
+<circle cx="70.0" cy="346.9" r="4" fill="#10b981"/>
+<circle cx="104.2" cy="325.6" r="4" fill="#dc2626"/>
+<circle cx="104.2" cy="357.5" r="4" fill="#10b981"/>
+<circle cx="138.3" cy="304.4" r="4" fill="#dc2626"/>
+<circle cx="138.3" cy="346.9" r="4" fill="#10b981"/>
+<circle cx="172.5" cy="283.1" r="4" fill="#dc2626"/>
+<circle cx="172.5" cy="336.3" r="4" fill="#10b981"/>
+<circle cx="206.7" cy="261.9" r="4" fill="#dc2626"/>
+<circle cx="206.7" cy="325.6" r="4" fill="#10b981"/>
+<circle cx="240.8" cy="240.6" r="4" fill="#dc2626"/>
+<circle cx="240.8" cy="315.0" r="4" fill="#10b981"/>
+<circle cx="275.0" cy="219.4" r="4" fill="#dc2626"/>
+<circle cx="275.0" cy="336.3" r="4" fill="#10b981"/>
+<circle cx="309.2" cy="198.1" r="4" fill="#dc2626"/>
+<circle cx="309.2" cy="315.0" r="4" fill="#10b981"/>
+<circle cx="377.5" cy="155.6" r="4" fill="#dc2626"/>
+<circle cx="377.5" cy="315.0" r="4" fill="#10b981"/>
+<circle cx="480.0" cy="91.9" r="4" fill="#dc2626"/>
+<circle cx="480.0" cy="293.8" r="4" fill="#10b981"/>
+<path d="M 520.0 369.8 L 554.2 361.7 L 588.3 351.5 L 622.5 329.5 L 656.7 316.1 L 690.8 298.0 L 725.0 191.3 L 759.2 252.1 L 827.5 198.7 L 930.0 104.6" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4,4"/>
+<path d="M 520.0 370.8 L 554.2 370.0 L 588.3 363.8 L 622.5 356.9 L 656.7 344.4 L 690.8 331.6 L 725.0 346.3 L 759.2 233.9 L 827.5 312.8 L 930.0 271.8" fill="none" stroke="#10b981" stroke-width="2.4"/>
+<path d="M 520.0 354.1 L 554.2 333.7 L 588.3 328.6 L 622.5 303.9 L 656.7 314.1 L 690.8 315.9 L 725.0 111.8 L 759.2 366.9 L 827.5 246.2 L 930.0 246.2" fill="none" stroke="#2563eb" stroke-width="2.0"/>
+<circle cx="520.0" cy="369.8" r="3.5" fill="#dc2626"/>
+<circle cx="520.0" cy="370.8" r="3.5" fill="#10b981"/>
+<polygon points="520,350.1 524,357.1 516,357.1" fill="#2563eb"/>
+<circle cx="554.2" cy="361.7" r="3.5" fill="#dc2626"/>
+<circle cx="554.2" cy="370.0" r="3.5" fill="#10b981"/>
+<polygon points="554.1666666666666,329.7 558.1666666666666,336.7 550.1666666666666,336.7" fill="#2563eb"/>
+<circle cx="588.3" cy="351.5" r="3.5" fill="#dc2626"/>
+<circle cx="588.3" cy="363.8" r="3.5" fill="#10b981"/>
+<polygon points="588.3333333333334,324.6 592.3333333333334,331.6 584.3333333333334,331.6" fill="#2563eb"/>
+<circle cx="622.5" cy="329.5" r="3.5" fill="#dc2626"/>
+<circle cx="622.5" cy="356.9" r="3.5" fill="#10b981"/>
+<polygon points="622.5,299.95 626.5,306.95 618.5,306.95" fill="#2563eb"/>
+<circle cx="656.7" cy="316.1" r="3.5" fill="#dc2626"/>
+<circle cx="656.7" cy="344.4" r="3.5" fill="#10b981"/>
+<polygon points="656.6666666666666,310.15 660.6666666666666,317.15 652.6666666666666,317.15" fill="#2563eb"/>
+<circle cx="690.8" cy="298.0" r="3.5" fill="#dc2626"/>
+<circle cx="690.8" cy="331.6" r="3.5" fill="#10b981"/>
+<polygon points="690.8333333333334,311.85 694.8333333333334,318.85 686.8333333333334,318.85" fill="#2563eb"/>
+<circle cx="725.0" cy="191.3" r="3.5" fill="#dc2626"/>
+<circle cx="725.0" cy="346.3" r="3.5" fill="#10b981"/>
+<polygon points="725,107.84999999999997 729,114.84999999999997 721,114.84999999999997" fill="#2563eb"/>
+<circle cx="759.2" cy="252.1" r="3.5" fill="#dc2626"/>
+<circle cx="759.2" cy="233.9" r="3.5" fill="#10b981"/>
+<polygon points="759.1666666666667,362.85 763.1666666666667,369.85 755.1666666666667,369.85" fill="#2563eb"/>
+<circle cx="827.5" cy="198.7" r="3.5" fill="#dc2626"/>
+<circle cx="827.5" cy="312.8" r="3.5" fill="#10b981"/>
+<polygon points="827.5,242.15 831.5,249.15 823.5,249.15" fill="#2563eb"/>
+<circle cx="930.0" cy="104.6" r="3.5" fill="#dc2626"/>
+<circle cx="930.0" cy="271.8" r="3.5" fill="#10b981"/>
+<polygon points="930,242.15 934,249.15 926,249.15" fill="#2563eb"/>
+<text x="70" y="418" text-anchor="middle" font-size="11" fill="#64748b">6</text>
+<text x="520" y="418" text-anchor="middle" font-size="11" fill="#64748b">6</text>
+<text x="138.33333333333331" y="418" text-anchor="middle" font-size="11" fill="#64748b">10</text>
+<text x="588.3333333333334" y="418" text-anchor="middle" font-size="11" fill="#64748b">10</text>
+<text x="206.66666666666666" y="418" text-anchor="middle" font-size="11" fill="#64748b">14</text>
+<text x="656.6666666666666" y="418" text-anchor="middle" font-size="11" fill="#64748b">14</text>
+<text x="275" y="418" text-anchor="middle" font-size="11" fill="#64748b">18</text>
+<text x="725" y="418" text-anchor="middle" font-size="11" fill="#64748b">18</text>
+<text x="343.3333333333333" y="418" text-anchor="middle" font-size="11" fill="#64748b">22</text>
+<text x="793.3333333333333" y="418" text-anchor="middle" font-size="11" fill="#64748b">22</text>
+<text x="411.6666666666667" y="418" text-anchor="middle" font-size="11" fill="#64748b">26</text>
+<text x="861.6666666666667" y="418" text-anchor="middle" font-size="11" fill="#64748b">26</text>
+<text x="480" y="418" text-anchor="middle" font-size="11" fill="#64748b">30</text>
+<text x="930" y="418" text-anchor="middle" font-size="11" fill="#64748b">30</text>
+<text x="275" y="445" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Graph Dimension (|V|)</text>
+<text x="725" y="445" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Graph Dimension (|V|)</text>
+</svg>

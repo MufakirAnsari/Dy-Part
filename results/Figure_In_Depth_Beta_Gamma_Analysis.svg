@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" style="background:#ffffff; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
+<text x="500" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Classical Hyperparameter Sensitivity: β and γ Landscape at α* = 0.70</text>
+<text x="275" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Scheduler Choice (n_sub*)</text>
+<text x="725" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Resulting Mean AR (±1σ)</text>
+<rect x="80" y="60" width="95.5" height="66" fill="#10b981" rx="3"/>
+<text x="128.75" y="99" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2.0</text>
+<rect x="530" y="60" width="95.5" height="66" fill="rgb(192, 92, 92)" rx="3"/>
+<text x="578.75" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.9115</text>
+<text x="578.75" y="107" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.003</text>
+<rect x="177.5" y="60" width="95.5" height="66" fill="#10b981" rx="3"/>
+<text x="226.25" y="99" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2.0</text>
+<rect x="627.5" y="60" width="95.5" height="66" fill="rgb(157, 76, 115)" rx="3"/>
+<text x="676.25" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.9047</text>
+<text x="676.25" y="107" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.020</text>
+<rect x="275" y="60" width="95.5" height="66" fill="#10b981" rx="3"/>
+<text x="323.75" y="99" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2.0</text>
+<rect x="725" y="60" width="95.5" height="66" fill="rgb(97, 50, 155)" rx="3"/>
+<text x="773.75" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8930</text>
+<text x="773.75" y="107" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.042</text>
+<rect x="372.5" y="60" width="95.5" height="66" fill="#10b981" rx="3"/>
+<text x="421.25" y="99" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2.0</text>
+<rect x="822.5" y="60" width="95.5" height="66" fill="rgb(186, 89, 96)" rx="3"/>
+<text x="871.25" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.9104</text>
+<text x="871.25" y="107" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.003</text>
+<text x="70" y="98" text-anchor="end" font-size="11" fill="#64748b">γ = 0.1</text>
+<text x="520" y="98" text-anchor="end" font-size="11" fill="#64748b">γ = 0.1</text>
+<rect x="80" y="128" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="128.75" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">8.1</text>
+<rect x="530" y="128" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="578.75" y="160" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8774</text>
+<text x="578.75" y="175" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.040</text>
+<rect x="177.5" y="128" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="226.25" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">7.4</text>
+<rect x="627.5" y="128" width="95.5" height="66" fill="rgb(38, 23, 195)" rx="3"/>
+<text x="676.25" y="160" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8815</text>
+<text x="676.25" y="175" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.039</text>
+<rect x="275" y="128" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="323.75" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">5.8</text>
+<rect x="725" y="128" width="95.5" height="66" fill="rgb(109, 55, 147)" rx="3"/>
+<text x="773.75" y="160" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8953</text>
+<text x="773.75" y="175" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.020</text>
+<rect x="372.5" y="128" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="421.25" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">3.9</text>
+<rect x="822.5" y="128" width="95.5" height="66" fill="rgb(79, 42, 167)" rx="3"/>
+<text x="871.25" y="160" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8896</text>
+<text x="871.25" y="175" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.025</text>
+<text x="70" y="166" text-anchor="end" font-size="11" fill="#64748b">γ = 0.5</text>
+<text x="520" y="166" text-anchor="end" font-size="11" fill="#64748b">γ = 0.5</text>
+<rect x="80" y="196" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="128.75" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="530" y="196" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="578.75" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8782</text>
+<text x="578.75" y="243" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.040</text>
+<rect x="177.5" y="196" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="226.25" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="627.5" y="196" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="676.25" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8754</text>
+<text x="676.25" y="243" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.042</text>
+<rect x="275" y="196" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="323.75" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="725" y="196" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="773.75" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8749</text>
+<text x="773.75" y="243" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.040</text>
+<rect x="372.5" y="196" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="421.25" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">9.2</text>
+<rect x="822.5" y="196" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="871.25" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8629</text>
+<text x="871.25" y="243" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.051</text>
+<text x="70" y="234" text-anchor="end" font-size="11" fill="#64748b">γ = 1</text>
+<text x="520" y="234" text-anchor="end" font-size="11" fill="#64748b">γ = 1</text>
+<rect x="80" y="264" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="128.75" y="303" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="530" y="264" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="578.75" y="296" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8797</text>
+<text x="578.75" y="311" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.039</text>
+<rect x="177.5" y="264" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="226.25" y="303" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="627.5" y="264" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="676.25" y="296" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8761</text>
+<text x="676.25" y="311" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.040</text>
+<rect x="275" y="264" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="323.75" y="303" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="725" y="264" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="773.75" y="296" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8740</text>
+<text x="773.75" y="311" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.039</text>
+<rect x="372.5" y="264" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="421.25" y="303" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="822.5" y="264" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="871.25" y="296" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8794</text>
+<text x="871.25" y="311" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.038</text>
+<text x="70" y="302" text-anchor="end" font-size="11" fill="#64748b">γ = 2</text>
+<text x="520" y="302" text-anchor="end" font-size="11" fill="#64748b">γ = 2</text>
+<rect x="80" y="332" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="128.75" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="530" y="332" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="578.75" y="364" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8753</text>
+<text x="578.75" y="379" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.041</text>
+<rect x="177.5" y="332" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="226.25" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="627.5" y="332" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="676.25" y="364" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8730</text>
+<text x="676.25" y="379" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.041</text>
+<rect x="275" y="332" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="323.75" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="725" y="332" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="773.75" y="364" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8715</text>
+<text x="773.75" y="379" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.043</text>
+<rect x="372.5" y="332" width="95.5" height="66" fill="#f59e0b" rx="3"/>
+<text x="421.25" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">10.0</text>
+<rect x="822.5" y="332" width="95.5" height="66" fill="rgb(30, 20, 200)" rx="3"/>
+<text x="871.25" y="364" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">0.8755</text>
+<text x="871.25" y="379" text-anchor="middle" font-size="9" fill="#f1f5f9">±0.039</text>
+<text x="70" y="370" text-anchor="end" font-size="11" fill="#64748b">γ = 5</text>
+<text x="520" y="370" text-anchor="end" font-size="11" fill="#64748b">γ = 5</text>
+<text x="128.75" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 1</text>
+<text x="578.75" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 1</text>
+<text x="226.25" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 1.5</text>
+<text x="676.25" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 1.5</text>
+<text x="323.75" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 2</text>
+<text x="773.75" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 2</text>
+<text x="421.25" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 3</text>
+<text x="871.25" y="420" text-anchor="middle" font-size="11" fill="#64748b">β = 3</text>
+</svg>
