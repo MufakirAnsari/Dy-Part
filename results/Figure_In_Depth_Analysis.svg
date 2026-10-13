@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 500" width="850" height="500" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
-<text x="425" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">VQE Solution Quality vs. Scheduler Cost Weight α (10-Node Graph)</text>
-<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Grid Search Across 2,000 Total Runs (10 Seeds per Point, ε = 5×10⁻³)</text>
+<text x="425" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">VQE Solution Quality vs. Scheduler Cost Weight &#945; (10-Node Graph)</text>
+<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Grid Search Across 2,000 Total Runs (10 Seeds per Point, &#949; = 5&#215;10&#8315;&#179;)</text>
 <rect x="80" y="75" width="730" height="365" fill="#f8fafc" stroke="#cbd5e1"/>
 <line x1="80" y1="440" x2="810" y2="440" stroke="#e2e8f0" stroke-dasharray="3,3"/>
 <text x="72" y="444" text-anchor="end" font-size="11" fill="#64748b">0.70</text>
@@ -26,8 +26,8 @@
 <circle cx="810.0" cy="153.1" r="4" fill="#2563eb"/>
 <polygon points="595.2941176470589,160.87220099361957 605.2941176470589,180.87220099361957 585.2941176470589,180.87220099361957" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
 <rect x="485.2941176470589" y="117.87220099361957" width="220" height="34" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
-<text x="595.2941176470589" y="131.87220099361957" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f">Pareto Optimum (α* = 0.70)</text>
-<text x="595.2941176470589" y="145.87220099361957" text-anchor="middle" font-size="10" fill="#92400e">Mean AR = 0.8830 ± 0.0371</text>
+<text x="595.2941176470589" y="131.87220099361957" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f">Pareto Optimum (&#945;* = 0.70)</text>
+<text x="595.2941176470589" y="145.87220099361957" text-anchor="middle" font-size="10" fill="#92400e">Mean AR = 0.8830 &#177; 0.0371</text>
 <line x1="80" y1="440" x2="80" y2="445" stroke="#94a3b8"/>
 <text x="80" y="460" text-anchor="middle" font-size="11" fill="#64748b">0.10</text>
 <line x1="165.88235294117646" y1="440" x2="165.88235294117646" y2="445" stroke="#94a3b8"/>
@@ -49,5 +49,5 @@
 <line x1="810" y1="440" x2="810" y2="445" stroke="#94a3b8"/>
 <text x="810" y="460" text-anchor="middle" font-size="11" fill="#64748b">0.95</text>
 <text x="35" y="257.5" text-anchor="middle" transform="rotate(-90 35 257.5)" font-size="13" font-weight="600" fill="#334155">Empirical Approximation Ratio (AR)</text>
-<text x="425" y="485" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">Scheduler Hyperparameter α (Weight on Quantum Cost)</text>
+<text x="425" y="485" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">Scheduler Hyperparameter &#945; (Weight on Quantum Cost)</text>
 </svg>

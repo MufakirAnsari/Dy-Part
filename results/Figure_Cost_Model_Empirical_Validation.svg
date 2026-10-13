@@ -200,7 +200,7 @@
 <line x1="92.77777777777779" y1="87.40000000000003" x2="430.5555555555556" y2="323" stroke="#047857" stroke-width="2.5"/>
 <rect x="326.6666666666667" y="90" width="165" height="42" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
 <text x="336.6666666666667" y="107" font-size="11" font-weight="bold" fill="#065f46">Pearson r = -0.9071</text>
-<text x="336.6666666666667" y="123" font-size="10" fill="#64748b">R² = 0.8227 (p &lt; 10⁻¹²)</text>
+<text x="336.6666666666667" y="123" font-size="10" fill="#64748b">R&#178; = 0.8227 (p &lt; 10&#8315;&#185;&#178;)</text>
 <text x="745.0000000000001" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Quantum Infidelity vs. Runtime</text>
 <rect x="531.6666666666667" y="75" width="426.6666666666667" height="310" fill="#f8fafc" stroke="#cbd5e1"/>
 <line x1="617.0000000000001" y1="75" x2="617.0000000000001" y2="385" stroke="#e2e8f0" stroke-dasharray="3,3"/>
@@ -389,7 +389,7 @@
 <line x1="553.0000000000001" y1="343.6666666666667" x2="915.6666666666667" y2="116.33333333333331" stroke="#1d4ed8" stroke-width="2.5"/>
 <rect x="546.6666666666667" y="90" width="165" height="42" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
 <text x="556.6666666666667" y="107" font-size="11" font-weight="bold" fill="#1e40af">Pearson r = +0.9163</text>
-<text x="556.6666666666667" y="123" font-size="10" fill="#64748b">R² = 0.8396 (p &lt; 10⁻¹²)</text>
+<text x="556.6666666666667" y="123" font-size="10" fill="#64748b">R&#178; = 0.8396 (p &lt; 10&#8315;&#185;&#178;)</text>
 <text x="1201.6666666666667" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(c) Classical Penalty vs. Cut Edges</text>
 <rect x="988.3333333333334" y="75" width="426.6666666666667" height="310" fill="#f8fafc" stroke="#cbd5e1"/>
 <line x1="1049.2857142857142" y1="75" x2="1049.2857142857142" y2="385" stroke="#e2e8f0" stroke-dasharray="3,3"/>
@@ -581,7 +581,7 @@
 <circle cx="1201.7" cy="-11637.7" r="2.8" fill="#f59e0b" opacity="0.6"/>
 <line x1="988.3333333333334" y1="385" x2="1354.047619047619" y2="137.00000000000003" stroke="#b45309" stroke-width="2.5"/>
 <rect x="1003.3333333333334" y="90" width="165" height="42" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
-<text x="1013.3333333333334" y="107" font-size="11" font-weight="bold" fill="#92400e">Spearman ρ = +0.9486</text>
+<text x="1013.3333333333334" y="107" font-size="11" font-weight="bold" fill="#92400e">Spearman &#961; = +0.9486</text>
 <text x="1013.3333333333334" y="123" font-size="10" fill="#64748b">Monotonic Rank Alignment</text>
 <text x="288.33333333333337" y="435" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Predicted Total Heuristic Cost</text>
 <text x="745.0000000000001" y="435" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Predicted Quantum Infidelity Cost (Q)</text>
