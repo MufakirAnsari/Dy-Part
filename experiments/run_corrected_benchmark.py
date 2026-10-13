@@ -178,6 +178,11 @@ def main() -> None:
                         pd.DataFrame([res])[COLUMNS].to_csv(output_path, mode="a", header=False, index=False)
                     except Exception as exc:
                         logger.error("Failed for method=%s, nodes=%d, noise=%.2e, seed=%d: %s", method, nodes, noise, seed_id, exc)
+                        raise exc
+
+    expected_runs = (end_seed - start_seed) * len(node_sizes) * len(noise_levels) * len(methods)
+    if len(all_results) < expected_runs:
+        raise RuntimeError(f"Expected {expected_runs} benchmark runs, but only completed {len(all_results)}.")
 
     logger.info("Benchmark complete! Saved %d runs to %s", len(all_results), output_path)
 
