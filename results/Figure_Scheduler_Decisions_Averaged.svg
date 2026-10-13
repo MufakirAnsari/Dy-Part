@@ -1,101 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" style="background:#ffffff; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
-<text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Dy-Part Dynamic Scheduler Decisions (10-Point Noise Sweep)</text>
-<rect x="80" y="60" width="680" height="380" fill="#f8fafc" stroke="#cbd5e1"/>
-<line x1="80" y1="420" x2="760" y2="420" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="424" text-anchor="end" font-size="11" fill="#64748b">2</text>
-<line x1="80" y1="380" x2="760" y2="380" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="384" text-anchor="end" font-size="11" fill="#64748b">4</text>
-<line x1="80" y1="340" x2="760" y2="340" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="344" text-anchor="end" font-size="11" fill="#64748b">6</text>
-<line x1="80" y1="300" x2="760" y2="300" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="304" text-anchor="end" font-size="11" fill="#64748b">8</text>
-<line x1="80" y1="260" x2="760" y2="260" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="264" text-anchor="end" font-size="11" fill="#64748b">10</text>
-<line x1="80" y1="220" x2="760" y2="220" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="224" text-anchor="end" font-size="11" fill="#64748b">12</text>
-<line x1="80" y1="180" x2="760" y2="180" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="184" text-anchor="end" font-size="11" fill="#64748b">14</text>
-<line x1="80" y1="140" x2="760" y2="140" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="144" text-anchor="end" font-size="11" fill="#64748b">16</text>
-<line x1="80" y1="100" x2="760" y2="100" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="104" text-anchor="end" font-size="11" fill="#64748b">18</text>
-<line x1="80" y1="60" x2="760" y2="60" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="64" text-anchor="end" font-size="11" fill="#64748b">20</text>
-<polygon points="193.3,331.2 258.1,331.2 322.9,331.2 387.6,374.1 452.4,379.8 517.1,407.2 581.9,420.0 646.7,420.0 646.7,420.0 581.9,420.0 517.1,427.5 452.4,417.6 387.6,403.2 322.9,388.8 258.1,388.8 193.3,388.8" fill="#6366f1" opacity="0.15"/>
-<path d="M 193.3 360.0 L 258.1 360.0 L 322.9 360.0 L 387.6 388.7 L 452.4 398.7 L 517.1 417.3 L 581.9 420.0 L 646.7 420.0" fill="none" stroke="#6366f1" stroke-width="2.3"/>
-<circle cx="193.3" cy="360.0" r="4" fill="#6366f1"/>
-<circle cx="258.1" cy="360.0" r="4" fill="#6366f1"/>
-<circle cx="322.9" cy="360.0" r="4" fill="#6366f1"/>
-<circle cx="387.6" cy="388.7" r="4" fill="#6366f1"/>
-<circle cx="452.4" cy="398.7" r="4" fill="#6366f1"/>
-<circle cx="517.1" cy="417.3" r="4" fill="#6366f1"/>
-<circle cx="581.9" cy="420.0" r="4" fill="#6366f1"/>
-<circle cx="646.7" cy="420.0" r="4" fill="#6366f1"/>
-<polygon points="193.3,248.1 258.1,249.1 322.9,285.0 387.6,367.3 452.4,415.7 517.1,420.0 581.9,420.0 646.7,420.0 646.7,420.0 581.9,420.0 517.1,420.0 452.4,423.0 387.6,408.7 322.9,380.4 258.1,329.6 193.3,277.3" fill="#3b82f6" opacity="0.15"/>
-<path d="M 193.3 262.7 L 258.1 289.3 L 322.9 332.7 L 387.6 388.0 L 452.4 419.3 L 517.1 420.0 L 581.9 420.0 L 646.7 420.0" fill="none" stroke="#3b82f6" stroke-width="2.3"/>
-<circle cx="193.3" cy="262.7" r="4" fill="#3b82f6"/>
-<circle cx="258.1" cy="289.3" r="4" fill="#3b82f6"/>
-<circle cx="322.9" cy="332.7" r="4" fill="#3b82f6"/>
-<circle cx="387.6" cy="388.0" r="4" fill="#3b82f6"/>
-<circle cx="452.4" cy="419.3" r="4" fill="#3b82f6"/>
-<circle cx="517.1" cy="420.0" r="4" fill="#3b82f6"/>
-<circle cx="581.9" cy="420.0" r="4" fill="#3b82f6"/>
-<circle cx="646.7" cy="420.0" r="4" fill="#3b82f6"/>
-<polygon points="193.3,218.9 258.1,221.2 322.9,238.4 387.6,349.0 452.4,400.1 517.1,420.0 581.9,420.0 646.7,420.0 646.7,420.0 581.9,420.0 517.1,420.0 452.4,426.6 387.6,400.4 322.9,366.9 258.1,345.5 193.3,329.1" fill="#06b6d4" opacity="0.15"/>
-<path d="M 193.3 274.0 L 258.1 283.3 L 322.9 302.7 L 387.6 374.7 L 452.4 413.3 L 517.1 420.0 L 581.9 420.0 L 646.7 420.0" fill="none" stroke="#06b6d4" stroke-width="2.3"/>
-<circle cx="193.3" cy="274.0" r="4" fill="#06b6d4"/>
-<circle cx="258.1" cy="283.3" r="4" fill="#06b6d4"/>
-<circle cx="322.9" cy="302.7" r="4" fill="#06b6d4"/>
-<circle cx="387.6" cy="374.7" r="4" fill="#06b6d4"/>
-<circle cx="452.4" cy="413.3" r="4" fill="#06b6d4"/>
-<circle cx="517.1" cy="420.0" r="4" fill="#06b6d4"/>
-<circle cx="581.9" cy="420.0" r="4" fill="#06b6d4"/>
-<circle cx="646.7" cy="420.0" r="4" fill="#06b6d4"/>
-<polygon points="193.3,225.4 258.1,246.9 322.9,306.3 387.6,364.2 452.4,420.0 517.1,420.0 581.9,420.0 646.7,420.0 646.7,420.0 581.9,420.0 517.1,420.0 452.4,420.0 387.6,408.6 322.9,368.9 258.1,346.7 193.3,321.8" fill="#10b981" opacity="0.15"/>
-<path d="M 193.3 273.6 L 258.1 296.8 L 322.9 337.6 L 387.6 386.4 L 452.4 420.0 L 517.1 420.0 L 581.9 420.0 L 646.7 420.0" fill="none" stroke="#10b981" stroke-width="2.3"/>
-<circle cx="193.3" cy="273.6" r="4" fill="#10b981"/>
-<circle cx="258.1" cy="296.8" r="4" fill="#10b981"/>
-<circle cx="322.9" cy="337.6" r="4" fill="#10b981"/>
-<circle cx="387.6" cy="386.4" r="4" fill="#10b981"/>
-<circle cx="452.4" cy="420.0" r="4" fill="#10b981"/>
-<circle cx="517.1" cy="420.0" r="4" fill="#10b981"/>
-<circle cx="581.9" cy="420.0" r="4" fill="#10b981"/>
-<circle cx="646.7" cy="420.0" r="4" fill="#10b981"/>
-<polygon points="193.3,211.8 258.1,225.8 322.9,329.8 387.6,378.7 452.4,420.0 517.1,420.0 581.9,420.0 646.7,420.0 646.7,420.0 581.9,420.0 517.1,420.0 452.4,420.0 387.6,410.6 322.9,376.8 258.1,342.2 193.3,300.2" fill="#f59e0b" opacity="0.15"/>
-<path d="M 193.3 256.0 L 258.1 284.0 L 322.9 353.3 L 387.6 394.7 L 452.4 420.0 L 517.1 420.0 L 581.9 420.0 L 646.7 420.0" fill="none" stroke="#f59e0b" stroke-width="2.3"/>
-<circle cx="193.3" cy="256.0" r="4" fill="#f59e0b"/>
-<circle cx="258.1" cy="284.0" r="4" fill="#f59e0b"/>
-<circle cx="322.9" cy="353.3" r="4" fill="#f59e0b"/>
-<circle cx="387.6" cy="394.7" r="4" fill="#f59e0b"/>
-<circle cx="452.4" cy="420.0" r="4" fill="#f59e0b"/>
-<circle cx="517.1" cy="420.0" r="4" fill="#f59e0b"/>
-<circle cx="581.9" cy="420.0" r="4" fill="#f59e0b"/>
-<circle cx="646.7" cy="420.0" r="4" fill="#f59e0b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 500" width="850" height="500" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
+<text x="425" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Dy-Part Dynamic Scheduler Decisions Across 10-Point Noise Sweeps</text>
+<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Mean Optimal Partition Size n_sub* (±1σ Shading) Transitioning with Hardware Error Rate</text>
+<rect x="80" y="75" width="730" height="365" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="80" y1="420.7894736842105" x2="810" y2="420.7894736842105" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="424.7894736842105" text-anchor="end" font-size="11" fill="#64748b">2</text>
+<line x1="80" y1="382.36842105263156" x2="810" y2="382.36842105263156" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="386.36842105263156" text-anchor="end" font-size="11" fill="#64748b">4</text>
+<line x1="80" y1="343.9473684210526" x2="810" y2="343.9473684210526" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="347.9473684210526" text-anchor="end" font-size="11" fill="#64748b">6</text>
+<line x1="80" y1="305.5263157894737" x2="810" y2="305.5263157894737" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="309.5263157894737" text-anchor="end" font-size="11" fill="#64748b">8</text>
+<line x1="80" y1="267.10526315789474" x2="810" y2="267.10526315789474" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="271.10526315789474" text-anchor="end" font-size="11" fill="#64748b">10</text>
+<line x1="80" y1="228.68421052631578" x2="810" y2="228.68421052631578" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="232.68421052631578" text-anchor="end" font-size="11" fill="#64748b">12</text>
+<line x1="80" y1="190.26315789473685" x2="810" y2="190.26315789473685" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="194.26315789473685" text-anchor="end" font-size="11" fill="#64748b">14</text>
+<line x1="80" y1="151.84210526315792" x2="810" y2="151.84210526315792" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="155.84210526315792" text-anchor="end" font-size="11" fill="#64748b">16</text>
+<line x1="80" y1="113.42105263157896" x2="810" y2="113.42105263157896" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="117.42105263157896" text-anchor="end" font-size="11" fill="#64748b">18</text>
+<line x1="80" y1="75" x2="810" y2="75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="79" text-anchor="end" font-size="11" fill="#64748b">20</text>
+<polygon points="201.7,335.5 271.2,335.5 340.7,335.5 410.2,376.7 479.8,382.2 549.3,408.5 618.8,420.8 688.3,420.8 688.3,420.8 618.8,420.8 549.3,428.0 479.8,418.4 410.2,404.7 340.7,390.8 271.2,390.8 201.7,390.8" fill="#6366f1" opacity="0.15"/>
+<path d="M 201.7 363.2 L 271.2 363.2 L 340.7 363.2 L 410.2 390.7 L 479.8 400.3 L 549.3 418.2 L 618.8 420.8 L 688.3 420.8" fill="none" stroke="#6366f1" stroke-width="2.3"/>
+<circle cx="201.7" cy="363.2" r="4" fill="#6366f1"/>
+<circle cx="271.2" cy="363.2" r="4" fill="#6366f1"/>
+<circle cx="340.7" cy="363.2" r="4" fill="#6366f1"/>
+<circle cx="410.2" cy="390.7" r="4" fill="#6366f1"/>
+<circle cx="479.8" cy="400.3" r="4" fill="#6366f1"/>
+<circle cx="549.3" cy="418.2" r="4" fill="#6366f1"/>
+<circle cx="618.8" cy="420.8" r="4" fill="#6366f1"/>
+<circle cx="688.3" cy="420.8" r="4" fill="#6366f1"/>
+<polygon points="201.7,255.6 271.2,256.6 340.7,291.1 410.2,370.1 479.8,416.6 549.3,420.8 618.8,420.8 688.3,420.8 688.3,420.8 618.8,420.8 549.3,420.8 479.8,423.7 410.2,410.0 340.7,382.7 271.2,333.9 201.7,283.7" fill="#3b82f6" opacity="0.15"/>
+<path d="M 201.7 269.7 L 271.2 295.3 L 340.7 336.9 L 410.2 390.1 L 479.8 420.1 L 549.3 420.8 L 618.8 420.8 L 688.3 420.8" fill="none" stroke="#3b82f6" stroke-width="2.3"/>
+<circle cx="201.7" cy="269.7" r="4" fill="#3b82f6"/>
+<circle cx="271.2" cy="295.3" r="4" fill="#3b82f6"/>
+<circle cx="340.7" cy="336.9" r="4" fill="#3b82f6"/>
+<circle cx="410.2" cy="390.1" r="4" fill="#3b82f6"/>
+<circle cx="479.8" cy="420.1" r="4" fill="#3b82f6"/>
+<circle cx="549.3" cy="420.8" r="4" fill="#3b82f6"/>
+<circle cx="618.8" cy="420.8" r="4" fill="#3b82f6"/>
+<circle cx="688.3" cy="420.8" r="4" fill="#3b82f6"/>
+<polygon points="201.7,227.6 271.2,229.8 340.7,246.4 410.2,352.6 479.8,401.7 549.3,420.8 618.8,420.8 688.3,420.8 688.3,420.8 618.8,420.8 549.3,420.8 479.8,427.1 410.2,401.9 340.7,369.8 271.2,349.2 201.7,333.5" fill="#06b6d4" opacity="0.15"/>
+<path d="M 201.7 280.6 L 271.2 289.5 L 340.7 308.1 L 410.2 377.2 L 479.8 414.4 L 549.3 420.8 L 618.8 420.8 L 688.3 420.8" fill="none" stroke="#06b6d4" stroke-width="2.3"/>
+<circle cx="201.7" cy="280.6" r="4" fill="#06b6d4"/>
+<circle cx="271.2" cy="289.5" r="4" fill="#06b6d4"/>
+<circle cx="340.7" cy="308.1" r="4" fill="#06b6d4"/>
+<circle cx="410.2" cy="377.2" r="4" fill="#06b6d4"/>
+<circle cx="479.8" cy="414.4" r="4" fill="#06b6d4"/>
+<circle cx="549.3" cy="420.8" r="4" fill="#06b6d4"/>
+<circle cx="618.8" cy="420.8" r="4" fill="#06b6d4"/>
+<circle cx="688.3" cy="420.8" r="4" fill="#06b6d4"/>
+<polygon points="201.7,233.9 271.2,254.5 340.7,311.6 410.2,367.2 479.8,420.8 549.3,420.8 618.8,420.8 688.3,420.8 688.3,420.8 618.8,420.8 549.3,420.8 479.8,420.8 410.2,409.8 340.7,371.7 271.2,350.4 201.7,326.5" fill="#10b981" opacity="0.15"/>
+<path d="M 201.7 280.2 L 271.2 302.5 L 340.7 341.6 L 410.2 388.5 L 479.8 420.8 L 549.3 420.8 L 618.8 420.8 L 688.3 420.8" fill="none" stroke="#10b981" stroke-width="2.3"/>
+<circle cx="201.7" cy="280.2" r="4" fill="#10b981"/>
+<circle cx="271.2" cy="302.5" r="4" fill="#10b981"/>
+<circle cx="340.7" cy="341.6" r="4" fill="#10b981"/>
+<circle cx="410.2" cy="388.5" r="4" fill="#10b981"/>
+<circle cx="479.8" cy="420.8" r="4" fill="#10b981"/>
+<circle cx="549.3" cy="420.8" r="4" fill="#10b981"/>
+<circle cx="618.8" cy="420.8" r="4" fill="#10b981"/>
+<circle cx="688.3" cy="420.8" r="4" fill="#10b981"/>
+<polygon points="201.7,220.8 271.2,234.3 340.7,334.2 410.2,381.1 479.8,420.8 549.3,420.8 618.8,420.8 688.3,420.8 688.3,420.8 618.8,420.8 549.3,420.8 479.8,420.8 410.2,411.8 340.7,379.3 271.2,346.0 201.7,305.7" fill="#f59e0b" opacity="0.15"/>
+<path d="M 201.7 263.3 L 271.2 290.2 L 340.7 356.8 L 410.2 396.5 L 479.8 420.8 L 549.3 420.8 L 618.8 420.8 L 688.3 420.8" fill="none" stroke="#f59e0b" stroke-width="2.3"/>
+<circle cx="201.7" cy="263.3" r="4" fill="#f59e0b"/>
+<circle cx="271.2" cy="290.2" r="4" fill="#f59e0b"/>
+<circle cx="340.7" cy="356.8" r="4" fill="#f59e0b"/>
+<circle cx="410.2" cy="396.5" r="4" fill="#f59e0b"/>
+<circle cx="479.8" cy="420.8" r="4" fill="#f59e0b"/>
+<circle cx="549.3" cy="420.8" r="4" fill="#f59e0b"/>
+<circle cx="618.8" cy="420.8" r="4" fill="#f59e0b"/>
+<circle cx="688.3" cy="420.8" r="4" fill="#f59e0b"/>
 <line x1="80" y1="440" x2="80" y2="445" stroke="#94a3b8"/>
 <text x="80" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻⁴</text>
-<line x1="306.66666666666663" y1="440" x2="306.66666666666663" y2="445" stroke="#94a3b8"/>
-<text x="306.66666666666663" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻³</text>
-<line x1="533.3333333333333" y1="440" x2="533.3333333333333" y2="445" stroke="#94a3b8"/>
-<text x="533.3333333333333" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻²</text>
-<line x1="760" y1="440" x2="760" y2="445" stroke="#94a3b8"/>
-<text x="760" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻¹</text>
-<text x="35" y="250" text-anchor="middle" transform="rotate(-90 35 250)" font-size="13" font-weight="600" fill="#334155">Mean Optimal Partition Size (n_sub*)</text>
-<text x="400" y="485" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">2-Qubit Gate Error Rate (ε_gate)</text>
-<rect x="620" y="76" width="160" height="130" rx="4" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
-<text x="635" y="96" font-size="11" font-weight="bold" fill="#64748b">Problem Size (|V|)</text>
-<line x1="635" y1="116" x2="655" y2="116" stroke="#6366f1" stroke-width="2.5"/>
-<circle cx="645" cy="116" r="3.5" fill="#6366f1"/>
-<text x="665" y="120" font-size="11" fill="#1e293b">8 Nodes</text>
-<line x1="635" y1="136" x2="655" y2="136" stroke="#3b82f6" stroke-width="2.5"/>
-<circle cx="645" cy="136" r="3.5" fill="#3b82f6"/>
-<text x="665" y="140" font-size="11" fill="#1e293b">10 Nodes</text>
-<line x1="635" y1="156" x2="655" y2="156" stroke="#06b6d4" stroke-width="2.5"/>
-<circle cx="645" cy="156" r="3.5" fill="#06b6d4"/>
-<text x="665" y="160" font-size="11" fill="#1e293b">12 Nodes</text>
-<line x1="635" y1="176" x2="655" y2="176" stroke="#10b981" stroke-width="2.5"/>
-<circle cx="645" cy="176" r="3.5" fill="#10b981"/>
-<text x="665" y="180" font-size="11" fill="#1e293b">16 Nodes</text>
-<line x1="635" y1="196" x2="655" y2="196" stroke="#f59e0b" stroke-width="2.5"/>
-<circle cx="645" cy="196" r="3.5" fill="#f59e0b"/>
-<text x="665" y="200" font-size="11" fill="#1e293b">20 Nodes</text>
+<line x1="323.3333333333333" y1="440" x2="323.3333333333333" y2="445" stroke="#94a3b8"/>
+<text x="323.3333333333333" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻³</text>
+<line x1="566.6666666666666" y1="440" x2="566.6666666666666" y2="445" stroke="#94a3b8"/>
+<text x="566.6666666666666" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻²</text>
+<line x1="810" y1="440" x2="810" y2="445" stroke="#94a3b8"/>
+<text x="810" y="460" text-anchor="middle" font-size="11" fill="#64748b">10⁻¹</text>
+<text x="35" y="257.5" text-anchor="middle" transform="rotate(-90 35 257.5)" font-size="13" font-weight="600" fill="#334155">Optimal Partition Size (n_sub*)</text>
+<text x="425" y="485" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">2-Qubit Gate Error Rate (ε_gate)</text>
+<rect x="660" y="91" width="140" height="130" rx="4" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
+<line x1="672" y1="116" x2="688" y2="116" stroke="#6366f1" stroke-width="2.5"/>
+<circle cx="680" cy="116" r="3.5" fill="#6366f1"/>
+<text x="698" y="120" font-size="11" fill="#1e293b">8 Nodes</text>
+<line x1="672" y1="136" x2="688" y2="136" stroke="#3b82f6" stroke-width="2.5"/>
+<circle cx="680" cy="136" r="3.5" fill="#3b82f6"/>
+<text x="698" y="140" font-size="11" fill="#1e293b">10 Nodes</text>
+<line x1="672" y1="156" x2="688" y2="156" stroke="#06b6d4" stroke-width="2.5"/>
+<circle cx="680" cy="156" r="3.5" fill="#06b6d4"/>
+<text x="698" y="160" font-size="11" fill="#1e293b">12 Nodes</text>
+<line x1="672" y1="176" x2="688" y2="176" stroke="#10b981" stroke-width="2.5"/>
+<circle cx="680" cy="176" r="3.5" fill="#10b981"/>
+<text x="698" y="180" font-size="11" fill="#1e293b">16 Nodes</text>
+<line x1="672" y1="196" x2="688" y2="196" stroke="#f59e0b" stroke-width="2.5"/>
+<circle cx="680" cy="196" r="3.5" fill="#f59e0b"/>
+<text x="698" y="200" font-size="11" fill="#1e293b">20 Nodes</text>
 </svg>

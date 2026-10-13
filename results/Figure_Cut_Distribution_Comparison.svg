@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480" width="850" height="480" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
+<text x="425" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Inter-Subgraph Cut Edge Distribution Across Partitioning Strategies</text>
+<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Comparison of Graph Cuts (|E_cut|) Severed by Each Method Across Problem Dimensions</text>
+<rect x="80" y="75" width="730" height="345" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="80" y1="420" x2="810" y2="420" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="424" text-anchor="end" font-size="11" fill="#64748b">0</text>
+<line x1="80" y1="362.5" x2="810" y2="362.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="366.5" text-anchor="end" font-size="11" fill="#64748b">4</text>
+<line x1="80" y1="305" x2="810" y2="305" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="309" text-anchor="end" font-size="11" fill="#64748b">8</text>
+<line x1="80" y1="247.5" x2="810" y2="247.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="251.5" text-anchor="end" font-size="11" fill="#64748b">12</text>
+<line x1="80" y1="190" x2="810" y2="190" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="194" text-anchor="end" font-size="11" fill="#64748b">16</text>
+<line x1="80" y1="132.5" x2="810" y2="132.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="136.5" text-anchor="end" font-size="11" fill="#64748b">20</text>
+<line x1="80" y1="75" x2="810" y2="75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="79" text-anchor="end" font-size="11" fill="#64748b">24</text>
+<rect x="100.44" y="338.78125" width="24.279999999999998" height="81.21875000000001" fill="#10b981" rx="2"/>
+<text x="112.58" y="334.78125" text-anchor="middle" font-size="9" font-weight="600" fill="#10b981">5.7</text>
+<rect x="126.72" y="355.7916666666667" width="24.279999999999998" height="64.20833333333333" fill="#3b82f6" rx="2"/>
+<text x="138.85999999999999" y="351.7916666666667" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">4.5</text>
+<rect x="153" y="366.3333333333333" width="24.279999999999998" height="53.666666666666664" fill="#f59e0b" rx="2"/>
+<text x="165.14" y="362.3333333333333" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">3.7</text>
+<rect x="179.27999999999997" y="315.5416666666667" width="24.279999999999998" height="104.45833333333333" fill="#ef4444" rx="2"/>
+<text x="191.41999999999996" y="311.5416666666667" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">7.3</text>
+<text x="153" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">8 Nodes</text>
+<rect x="246.44" y="322.8489583333333" width="24.279999999999998" height="97.15104166666667" fill="#10b981" rx="2"/>
+<text x="258.58" y="318.8489583333333" text-anchor="middle" font-size="9" font-weight="600" fill="#10b981">6.8</text>
+<rect x="272.71999999999997" y="315.0625" width="24.279999999999998" height="104.93749999999999" fill="#3b82f6" rx="2"/>
+<text x="284.85999999999996" y="311.0625" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">7.3</text>
+<rect x="299" y="331.8333333333333" width="24.279999999999998" height="88.16666666666669" fill="#f59e0b" rx="2"/>
+<text x="311.14" y="327.8333333333333" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">6.1</text>
+<rect x="325.28" y="263.79166666666663" width="24.279999999999998" height="156.20833333333334" fill="#ef4444" rx="2"/>
+<text x="337.41999999999996" y="259.79166666666663" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">10.9</text>
+<text x="299" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">10 Nodes</text>
+<rect x="392.44" y="303.921875" width="24.279999999999998" height="116.07812499999999" fill="#10b981" rx="2"/>
+<text x="404.58" y="299.921875" text-anchor="middle" font-size="9" font-weight="600" fill="#10b981">8.1</text>
+<rect x="418.71999999999997" y="299.25" width="24.279999999999998" height="120.75000000000001" fill="#3b82f6" rx="2"/>
+<text x="430.85999999999996" y="295.25" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">8.4</text>
+<rect x="445" y="324.6458333333333" width="24.279999999999998" height="95.35416666666667" fill="#f59e0b" rx="2"/>
+<text x="457.14" y="320.6458333333333" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">6.6</text>
+<rect x="471.28" y="230.72916666666669" width="24.279999999999998" height="189.27083333333331" fill="#ef4444" rx="2"/>
+<text x="483.41999999999996" y="226.72916666666669" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">13.2</text>
+<text x="445" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">12 Nodes</text>
+<rect x="538.44" y="242.684375" width="24.279999999999998" height="177.315625" fill="#10b981" rx="2"/>
+<text x="550.58" y="238.684375" text-anchor="middle" font-size="9" font-weight="600" fill="#10b981">12.3</text>
+<rect x="564.72" y="253.825" width="24.279999999999998" height="166.175" fill="#3b82f6" rx="2"/>
+<text x="576.86" y="249.825" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">11.6</text>
+<rect x="591" y="282.575" width="24.279999999999998" height="137.425" fill="#f59e0b" rx="2"/>
+<text x="603.14" y="278.575" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">9.6</text>
+<rect x="617.2800000000001" y="149.175" width="24.279999999999998" height="270.825" fill="#ef4444" rx="2"/>
+<text x="629.4200000000001" y="145.175" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">18.8</text>
+<text x="591" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">16 Nodes</text>
+<rect x="684.44" y="191.31770833333331" width="24.279999999999998" height="228.68229166666669" fill="#10b981" rx="2"/>
+<text x="696.58" y="187.31770833333331" text-anchor="middle" font-size="9" font-weight="600" fill="#10b981">15.9</text>
+<rect x="710.72" y="205.33333333333334" width="24.279999999999998" height="214.66666666666666" fill="#3b82f6" rx="2"/>
+<text x="722.86" y="201.33333333333334" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">14.9</text>
+<rect x="737" y="250.375" width="24.279999999999998" height="169.625" fill="#f59e0b" rx="2"/>
+<text x="749.14" y="246.375" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">11.8</text>
+<rect x="763.2800000000001" y="57.75" width="24.279999999999998" height="362.25" fill="#ef4444" rx="2"/>
+<text x="775.4200000000001" y="53.75" text-anchor="middle" font-size="9" font-weight="600" fill="#ef4444">25.2</text>
+<text x="737" y="440" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">20 Nodes</text>
+<text x="35" y="247.5" text-anchor="middle" transform="rotate(-90 35 247.5)" font-size="13" font-weight="600" fill="#334155">Mean Number of Cut Edges</text>
+<rect x="370" y="87" width="430" height="28" rx="4" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
+<rect x="382" y="95" width="14" height="12" fill="#10b981"/>
+<text x="402" y="105" font-size="11" font-weight="600" fill="#334155">Dy-Part</text>
+<rect x="487" y="95" width="14" height="12" fill="#3b82f6"/>
+<text x="507" y="105" font-size="11" font-weight="600" fill="#334155">Static (n=4)</text>
+<rect x="592" y="95" width="14" height="12" fill="#f59e0b"/>
+<text x="612" y="105" font-size="11" font-weight="600" fill="#334155">METIS Baseline</text>
+<rect x="697" y="95" width="14" height="12" fill="#ef4444"/>
+<text x="717" y="105" font-size="11" font-weight="600" fill="#334155">Random Baseline</text>
+</svg>

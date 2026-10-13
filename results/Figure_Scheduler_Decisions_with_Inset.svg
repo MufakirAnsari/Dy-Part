@@ -1,91 +1,166 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" style="background:#ffffff; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
-<text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Optimal Subgraph Size Chosen by Scheduler vs Gate Error Rate</text>
-<rect x="80" y="60" width="680" height="400" fill="#f8fafc" stroke="#cbd5e1"/>
-<line x1="80" y1="438.94736842105266" x2="760" y2="438.94736842105266" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="442.94736842105266" text-anchor="end" font-size="11" fill="#64748b">2</text>
-<line x1="80" y1="375.7894736842105" x2="760" y2="375.7894736842105" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="379.7894736842105" text-anchor="end" font-size="11" fill="#64748b">5</text>
-<line x1="80" y1="312.63157894736844" x2="760" y2="312.63157894736844" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="316.63157894736844" text-anchor="end" font-size="11" fill="#64748b">8</text>
-<line x1="80" y1="249.47368421052633" x2="760" y2="249.47368421052633" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="253.47368421052633" text-anchor="end" font-size="11" fill="#64748b">11</text>
-<line x1="80" y1="186.31578947368422" x2="760" y2="186.31578947368422" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="190.31578947368422" text-anchor="end" font-size="11" fill="#64748b">14</text>
-<line x1="80" y1="123.15789473684214" x2="760" y2="123.15789473684214" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="127.15789473684214" text-anchor="end" font-size="11" fill="#64748b">17</text>
-<line x1="80" y1="60" x2="760" y2="60" stroke="#e2e8f0" stroke-dasharray="3,3"/>
-<text x="72" y="64" text-anchor="end" font-size="11" fill="#64748b">20</text>
-<path d="M 193.3 375.8 L 258.1 375.8 L 322.9 375.8 L 387.6 406.0 L 452.4 416.5 L 517.1 436.1 L 581.9 438.9 L 646.7 438.9" fill="none" stroke="#6366f1" stroke-width="2.3"/>
-<circle cx="193.3" cy="375.8" r="3.5" fill="#6366f1"/>
-<circle cx="258.1" cy="375.8" r="3.5" fill="#6366f1"/>
-<circle cx="322.9" cy="375.8" r="3.5" fill="#6366f1"/>
-<circle cx="387.6" cy="406.0" r="3.5" fill="#6366f1"/>
-<circle cx="452.4" cy="416.5" r="3.5" fill="#6366f1"/>
-<circle cx="517.1" cy="436.1" r="3.5" fill="#6366f1"/>
-<circle cx="581.9" cy="438.9" r="3.5" fill="#6366f1"/>
-<circle cx="646.7" cy="438.9" r="3.5" fill="#6366f1"/>
-<path d="M 193.3 273.3 L 258.1 301.4 L 322.9 347.0 L 387.6 405.3 L 452.4 438.2 L 517.1 438.9 L 581.9 438.9 L 646.7 438.9" fill="none" stroke="#3b82f6" stroke-width="2.3"/>
-<circle cx="193.3" cy="273.3" r="3.5" fill="#3b82f6"/>
-<circle cx="258.1" cy="301.4" r="3.5" fill="#3b82f6"/>
-<circle cx="322.9" cy="347.0" r="3.5" fill="#3b82f6"/>
-<circle cx="387.6" cy="405.3" r="3.5" fill="#3b82f6"/>
-<circle cx="452.4" cy="438.2" r="3.5" fill="#3b82f6"/>
-<circle cx="517.1" cy="438.9" r="3.5" fill="#3b82f6"/>
-<circle cx="581.9" cy="438.9" r="3.5" fill="#3b82f6"/>
-<circle cx="646.7" cy="438.9" r="3.5" fill="#3b82f6"/>
-<path d="M 193.3 285.3 L 258.1 295.1 L 322.9 315.4 L 387.6 391.2 L 452.4 431.9 L 517.1 438.9 L 581.9 438.9 L 646.7 438.9" fill="none" stroke="#06b6d4" stroke-width="2.3"/>
-<circle cx="193.3" cy="285.3" r="3.5" fill="#06b6d4"/>
-<circle cx="258.1" cy="295.1" r="3.5" fill="#06b6d4"/>
-<circle cx="322.9" cy="315.4" r="3.5" fill="#06b6d4"/>
-<circle cx="387.6" cy="391.2" r="3.5" fill="#06b6d4"/>
-<circle cx="452.4" cy="431.9" r="3.5" fill="#06b6d4"/>
-<circle cx="517.1" cy="438.9" r="3.5" fill="#06b6d4"/>
-<circle cx="581.9" cy="438.9" r="3.5" fill="#06b6d4"/>
-<circle cx="646.7" cy="438.9" r="3.5" fill="#06b6d4"/>
-<path d="M 193.3 284.8 L 258.1 309.3 L 322.9 352.2 L 387.6 403.6 L 452.4 438.9 L 517.1 438.9 L 581.9 438.9 L 646.7 438.9" fill="none" stroke="#10b981" stroke-width="2.3"/>
-<circle cx="193.3" cy="284.8" r="3.5" fill="#10b981"/>
-<circle cx="258.1" cy="309.3" r="3.5" fill="#10b981"/>
-<circle cx="322.9" cy="352.2" r="3.5" fill="#10b981"/>
-<circle cx="387.6" cy="403.6" r="3.5" fill="#10b981"/>
-<circle cx="452.4" cy="438.9" r="3.5" fill="#10b981"/>
-<circle cx="517.1" cy="438.9" r="3.5" fill="#10b981"/>
-<circle cx="581.9" cy="438.9" r="3.5" fill="#10b981"/>
-<circle cx="646.7" cy="438.9" r="3.5" fill="#10b981"/>
-<path d="M 193.3 266.3 L 258.1 295.8 L 322.9 368.8 L 387.6 412.3 L 452.4 438.9 L 517.1 438.9 L 581.9 438.9 L 646.7 438.9" fill="none" stroke="#f59e0b" stroke-width="2.3"/>
-<circle cx="193.3" cy="266.3" r="3.5" fill="#f59e0b"/>
-<circle cx="258.1" cy="295.8" r="3.5" fill="#f59e0b"/>
-<circle cx="322.9" cy="368.8" r="3.5" fill="#f59e0b"/>
-<circle cx="387.6" cy="412.3" r="3.5" fill="#f59e0b"/>
-<circle cx="452.4" cy="438.9" r="3.5" fill="#f59e0b"/>
-<circle cx="517.1" cy="438.9" r="3.5" fill="#f59e0b"/>
-<circle cx="581.9" cy="438.9" r="3.5" fill="#f59e0b"/>
-<circle cx="646.7" cy="438.9" r="3.5" fill="#f59e0b"/>
-<rect x="105" y="275" width="270" height="160" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" rx="4" opacity="0.96"/>
-<text x="240" y="293" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">Inset: 12-Node Cost Breakdown (ε=5e-3)</text>
-<path d="M 135.0 387.8 L 157.0 384.7 L 179.0 380.2 L 201.0 375.7 L 223.0 371.3 L 245.0 367.0 L 267.0 362.7 L 289.0 358.4 L 311.0 354.2 L 333.0 350.1 L 355.0 346.0" fill="none" stroke="#ef4444" stroke-width="2.2"/>
-<path d="M 135.0 401.3 L 157.0 392.6 L 179.0 384.1 L 201.0 375.6 L 223.0 367.2 L 245.0 358.9 L 267.0 350.7 L 289.0 342.6 L 311.0 334.5 L 333.0 326.5 L 355.0 318.6" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-dasharray="3,3"/>
-<path d="M 135.0 356.5 L 157.0 366.3 L 179.0 371.1 L 201.0 376.0 L 223.0 380.8 L 245.0 385.7 L 267.0 390.6 L 289.0 395.4 L 311.0 400.3 L 333.0 405.1 L 355.0 410.0" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="2,2"/>
-<text x="140" y="311" font-size="9" fill="#ef4444" font-weight="bold">— Total Cost</text>
-<text x="220" y="311" font-size="9" fill="#3b82f6" font-weight="bold">-- Quantum Cost</text>
-<text x="300" y="311" font-size="9" fill="#10b981" font-weight="bold">·· Classical Cost</text>
-<text x="240" y="427" text-anchor="middle" font-size="9" fill="#64748b">n_sub (Subgraph Size)</text>
-<text x="123" y="355" text-anchor="middle" transform="rotate(-90 123 355)" font-size="8" fill="#64748b">Cost</text>
-<text x="35" y="260" text-anchor="middle" transform="rotate(-90 35 260)" font-size="13" font-weight="600" fill="#334155">Mean Optimal Partition Size (n_sub*)</text>
-<text x="400" y="505" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">2-Qubit Gate Error Rate (ε_gate)</text>
-<rect x="630" y="76" width="150" height="130" rx="4" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
-<line x1="645" y1="101" x2="665" y2="101" stroke="#6366f1" stroke-width="2.5"/>
-<circle cx="655" cy="101" r="3.5" fill="#6366f1"/>
-<text x="675" y="105" font-size="11" fill="#1e293b">8 Nodes</text>
-<line x1="645" y1="121" x2="665" y2="121" stroke="#3b82f6" stroke-width="2.5"/>
-<circle cx="655" cy="121" r="3.5" fill="#3b82f6"/>
-<text x="675" y="125" font-size="11" fill="#1e293b">10 Nodes</text>
-<line x1="645" y1="141" x2="665" y2="141" stroke="#06b6d4" stroke-width="2.5"/>
-<circle cx="655" cy="141" r="3.5" fill="#06b6d4"/>
-<text x="675" y="145" font-size="11" fill="#1e293b">12 Nodes</text>
-<line x1="645" y1="161" x2="665" y2="161" stroke="#10b981" stroke-width="2.5"/>
-<circle cx="655" cy="161" r="3.5" fill="#10b981"/>
-<text x="675" y="165" font-size="11" fill="#1e293b">16 Nodes</text>
-<line x1="645" y1="181" x2="665" y2="181" stroke="#f59e0b" stroke-width="2.5"/>
-<circle cx="655" cy="181" r="3.5" fill="#f59e0b"/>
-<text x="675" y="185" font-size="11" fill="#1e293b">20 Nodes</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 480" width="1150" height="480" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
+<text x="575" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Dy-Part Scheduler Strategy &amp; Theoretical Cost Decomposition</text>
+<text x="575" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Partition Sizing Dynamics and Unimodal Trade-Off Between Quantum Infidelity and Cutting Cost</text>
+<text x="322.5" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Dynamic Partition Size Selection (n_sub*)</text>
+<rect x="80" y="75" width="485" height="345" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="80" y1="401.8421052631579" x2="565" y2="401.8421052631579" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="405.8421052631579" text-anchor="end" font-size="11" fill="#64748b">2</text>
+<line x1="80" y1="347.36842105263156" x2="565" y2="347.36842105263156" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="351.36842105263156" text-anchor="end" font-size="11" fill="#64748b">5</text>
+<line x1="80" y1="292.89473684210526" x2="565" y2="292.89473684210526" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="296.89473684210526" text-anchor="end" font-size="11" fill="#64748b">8</text>
+<line x1="80" y1="238.42105263157896" x2="565" y2="238.42105263157896" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="242.42105263157896" text-anchor="end" font-size="11" fill="#64748b">11</text>
+<line x1="80" y1="183.94736842105263" x2="565" y2="183.94736842105263" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="187.94736842105263" text-anchor="end" font-size="11" fill="#64748b">14</text>
+<line x1="80" y1="129.47368421052636" x2="565" y2="129.47368421052636" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="133.47368421052636" text-anchor="end" font-size="11" fill="#64748b">17</text>
+<line x1="80" y1="75" x2="565" y2="75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="79" text-anchor="end" font-size="11" fill="#64748b">20</text>
+<path d="M 160.8 347.4 L 207.0 347.4 L 253.2 347.4 L 299.4 373.4 L 345.6 382.5 L 391.8 399.4 L 438.0 401.8 L 484.2 401.8" fill="none" stroke="#6366f1" stroke-width="2.3"/>
+<circle cx="160.8" cy="347.4" r="3.5" fill="#6366f1"/>
+<circle cx="207.0" cy="347.4" r="3.5" fill="#6366f1"/>
+<circle cx="253.2" cy="347.4" r="3.5" fill="#6366f1"/>
+<circle cx="299.4" cy="373.4" r="3.5" fill="#6366f1"/>
+<circle cx="345.6" cy="382.5" r="3.5" fill="#6366f1"/>
+<circle cx="391.8" cy="399.4" r="3.5" fill="#6366f1"/>
+<circle cx="438.0" cy="401.8" r="3.5" fill="#6366f1"/>
+<circle cx="484.2" cy="401.8" r="3.5" fill="#6366f1"/>
+<path d="M 160.8 259.0 L 207.0 283.2 L 253.2 322.6 L 299.4 372.8 L 345.6 401.2 L 391.8 401.8 L 438.0 401.8 L 484.2 401.8" fill="none" stroke="#3b82f6" stroke-width="2.3"/>
+<circle cx="160.8" cy="259.0" r="3.5" fill="#3b82f6"/>
+<circle cx="207.0" cy="283.2" r="3.5" fill="#3b82f6"/>
+<circle cx="253.2" cy="322.6" r="3.5" fill="#3b82f6"/>
+<circle cx="299.4" cy="372.8" r="3.5" fill="#3b82f6"/>
+<circle cx="345.6" cy="401.2" r="3.5" fill="#3b82f6"/>
+<circle cx="391.8" cy="401.8" r="3.5" fill="#3b82f6"/>
+<circle cx="438.0" cy="401.8" r="3.5" fill="#3b82f6"/>
+<circle cx="484.2" cy="401.8" r="3.5" fill="#3b82f6"/>
+<path d="M 160.8 269.3 L 207.0 277.8 L 253.2 295.3 L 299.4 360.7 L 345.6 395.8 L 391.8 401.8 L 438.0 401.8 L 484.2 401.8" fill="none" stroke="#06b6d4" stroke-width="2.3"/>
+<circle cx="160.8" cy="269.3" r="3.5" fill="#06b6d4"/>
+<circle cx="207.0" cy="277.8" r="3.5" fill="#06b6d4"/>
+<circle cx="253.2" cy="295.3" r="3.5" fill="#06b6d4"/>
+<circle cx="299.4" cy="360.7" r="3.5" fill="#06b6d4"/>
+<circle cx="345.6" cy="395.8" r="3.5" fill="#06b6d4"/>
+<circle cx="391.8" cy="401.8" r="3.5" fill="#06b6d4"/>
+<circle cx="438.0" cy="401.8" r="3.5" fill="#06b6d4"/>
+<circle cx="484.2" cy="401.8" r="3.5" fill="#06b6d4"/>
+<path d="M 160.8 268.9 L 207.0 290.0 L 253.2 327.0 L 299.4 371.3 L 345.6 401.8 L 391.8 401.8 L 438.0 401.8 L 484.2 401.8" fill="none" stroke="#10b981" stroke-width="2.3"/>
+<circle cx="160.8" cy="268.9" r="3.5" fill="#10b981"/>
+<circle cx="207.0" cy="290.0" r="3.5" fill="#10b981"/>
+<circle cx="253.2" cy="327.0" r="3.5" fill="#10b981"/>
+<circle cx="299.4" cy="371.3" r="3.5" fill="#10b981"/>
+<circle cx="345.6" cy="401.8" r="3.5" fill="#10b981"/>
+<circle cx="391.8" cy="401.8" r="3.5" fill="#10b981"/>
+<circle cx="438.0" cy="401.8" r="3.5" fill="#10b981"/>
+<circle cx="484.2" cy="401.8" r="3.5" fill="#10b981"/>
+<path d="M 160.8 252.9 L 207.0 278.4 L 253.2 341.3 L 299.4 378.8 L 345.6 401.8 L 391.8 401.8 L 438.0 401.8 L 484.2 401.8" fill="none" stroke="#f59e0b" stroke-width="2.3"/>
+<circle cx="160.8" cy="252.9" r="3.5" fill="#f59e0b"/>
+<circle cx="207.0" cy="278.4" r="3.5" fill="#f59e0b"/>
+<circle cx="253.2" cy="341.3" r="3.5" fill="#f59e0b"/>
+<circle cx="299.4" cy="378.8" r="3.5" fill="#f59e0b"/>
+<circle cx="345.6" cy="401.8" r="3.5" fill="#f59e0b"/>
+<circle cx="391.8" cy="401.8" r="3.5" fill="#f59e0b"/>
+<circle cx="438.0" cy="401.8" r="3.5" fill="#f59e0b"/>
+<circle cx="484.2" cy="401.8" r="3.5" fill="#f59e0b"/>
+<line x1="80" y1="420" x2="80" y2="424" stroke="#94a3b8"/>
+<text x="80" y="438" text-anchor="middle" font-size="10" fill="#64748b">10⁻⁴</text>
+<line x1="241.66666666666666" y1="420" x2="241.66666666666666" y2="424" stroke="#94a3b8"/>
+<text x="241.66666666666666" y="438" text-anchor="middle" font-size="10" fill="#64748b">10⁻³</text>
+<line x1="403.3333333333333" y1="420" x2="403.3333333333333" y2="424" stroke="#94a3b8"/>
+<text x="403.3333333333333" y="438" text-anchor="middle" font-size="10" fill="#64748b">10⁻²</text>
+<line x1="565" y1="420" x2="565" y2="424" stroke="#94a3b8"/>
+<text x="565" y="438" text-anchor="middle" font-size="10" fill="#64748b">10⁻¹</text>
+<rect x="450" y="87" width="105" height="110" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
+<line x1="460" y1="105" x2="474" y2="105" stroke="#6366f1" stroke-width="2.2"/>
+<circle cx="467" cy="105" r="3" fill="#6366f1"/>
+<text x="482" y="109" font-size="10" fill="#1e293b">8 Nodes</text>
+<line x1="460" y1="123" x2="474" y2="123" stroke="#3b82f6" stroke-width="2.2"/>
+<circle cx="467" cy="123" r="3" fill="#3b82f6"/>
+<text x="482" y="127" font-size="10" fill="#1e293b">10 Nodes</text>
+<line x1="460" y1="141" x2="474" y2="141" stroke="#06b6d4" stroke-width="2.2"/>
+<circle cx="467" cy="141" r="3" fill="#06b6d4"/>
+<text x="482" y="145" font-size="10" fill="#1e293b">12 Nodes</text>
+<line x1="460" y1="159" x2="474" y2="159" stroke="#10b981" stroke-width="2.2"/>
+<circle cx="467" cy="159" r="3" fill="#10b981"/>
+<text x="482" y="163" font-size="10" fill="#1e293b">16 Nodes</text>
+<line x1="460" y1="177" x2="474" y2="177" stroke="#f59e0b" stroke-width="2.2"/>
+<circle cx="467" cy="177" r="3" fill="#f59e0b"/>
+<text x="482" y="181" font-size="10" fill="#1e293b">20 Nodes</text>
+<text x="867.5" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) 12-Node Cost Decomposition (ε = 1.5×10⁻³)</text>
+<rect x="625" y="75" width="485" height="345" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="625" y1="376.875" x2="1110" y2="376.875" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="617" y="380.875" text-anchor="end" font-size="11" fill="#64748b">0.005</text>
+<line x1="625" y1="290.625" x2="1110" y2="290.625" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="617" y="294.625" text-anchor="end" font-size="11" fill="#64748b">0.015</text>
+<line x1="625" y1="204.375" x2="1110" y2="204.375" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="617" y="208.375" text-anchor="end" font-size="11" fill="#64748b">0.025</text>
+<line x1="625" y1="118.12499999999994" x2="1110" y2="118.12499999999994" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="617" y="122.12499999999994" text-anchor="end" font-size="11" fill="#64748b">0.035</text>
+<path d="M 625.0 220.5 L 673.5 235.7 L 722.0 250.9 L 770.5 250.9 L 819.0 266.2 L 867.5 266.3 L 916.0 266.4 L 964.5 266.5 L 1013.0 266.7 L 1110.0 251.9" fill="none" stroke="#ef4444" stroke-width="2.6"/>
+<path d="M 625.0 394.1 L 673.5 368.4 L 722.0 342.7 L 770.5 317.0 L 819.0 291.5 L 867.5 266.0 L 916.0 240.6 L 964.5 215.3 L 1013.0 190.1 L 1110.0 139.8" fill="none" stroke="#3b82f6" stroke-width="2.0" stroke-dasharray="4,4"/>
+<path d="M 625.0 -40.0 L 673.5 36.7 L 722.0 113.3 L 770.5 151.7 L 819.0 228.3 L 867.5 266.7 L 916.0 305.0 L 964.5 343.3 L 1013.0 381.7 L 1110.0 420.0" fill="none" stroke="#10b981" stroke-width="2.0" stroke-dasharray="3,3"/>
+<circle cx="625.0" cy="220.5" r="3.5" fill="#ef4444"/>
+<circle cx="625.0" cy="394.1" r="3" fill="#3b82f6"/>
+<circle cx="625.0" cy="-40.0" r="3" fill="#10b981"/>
+<circle cx="673.5" cy="235.7" r="3.5" fill="#ef4444"/>
+<circle cx="673.5" cy="368.4" r="3" fill="#3b82f6"/>
+<circle cx="673.5" cy="36.7" r="3" fill="#10b981"/>
+<circle cx="722.0" cy="250.9" r="3.5" fill="#ef4444"/>
+<circle cx="722.0" cy="342.7" r="3" fill="#3b82f6"/>
+<circle cx="722.0" cy="113.3" r="3" fill="#10b981"/>
+<circle cx="770.5" cy="250.9" r="3.5" fill="#ef4444"/>
+<circle cx="770.5" cy="317.0" r="3" fill="#3b82f6"/>
+<circle cx="770.5" cy="151.7" r="3" fill="#10b981"/>
+<circle cx="819.0" cy="266.2" r="3.5" fill="#ef4444"/>
+<circle cx="819.0" cy="291.5" r="3" fill="#3b82f6"/>
+<circle cx="819.0" cy="228.3" r="3" fill="#10b981"/>
+<circle cx="867.5" cy="266.3" r="3.5" fill="#ef4444"/>
+<circle cx="867.5" cy="266.0" r="3" fill="#3b82f6"/>
+<circle cx="867.5" cy="266.7" r="3" fill="#10b981"/>
+<circle cx="916.0" cy="266.4" r="3.5" fill="#ef4444"/>
+<circle cx="916.0" cy="240.6" r="3" fill="#3b82f6"/>
+<circle cx="916.0" cy="305.0" r="3" fill="#10b981"/>
+<circle cx="964.5" cy="266.5" r="3.5" fill="#ef4444"/>
+<circle cx="964.5" cy="215.3" r="3" fill="#3b82f6"/>
+<circle cx="964.5" cy="343.3" r="3" fill="#10b981"/>
+<circle cx="1013.0" cy="266.7" r="3.5" fill="#ef4444"/>
+<circle cx="1013.0" cy="190.1" r="3" fill="#3b82f6"/>
+<circle cx="1013.0" cy="381.7" r="3" fill="#10b981"/>
+<circle cx="1110.0" cy="251.9" r="3.5" fill="#ef4444"/>
+<circle cx="1110.0" cy="139.8" r="3" fill="#3b82f6"/>
+<circle cx="1110.0" cy="420.0" r="3" fill="#10b981"/>
+<polygon points="819,252.23021170011725 826,264.23021170011725 812,264.23021170011725" fill="#f59e0b" stroke="#78350f" stroke-width="1.2"/>
+<rect x="754" y="224.23021170011725" width="130" height="24" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
+<text x="819" y="240.23021170011725" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">Optimum n_sub* = 6</text>
+<rect x="965" y="90" width="135" height="70" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
+<line x1="975" y1="106" x2="993" y2="106" stroke="#ef4444" stroke-width="2.4"/>
+<text x="999" y="110" font-size="10" font-weight="600" fill="#1e293b">Total Cost C_tot</text>
+<line x1="975" y1="126" x2="993" y2="126" stroke="#3b82f6" stroke-width="2.0" stroke-dasharray="4,4"/>
+<text x="999" y="130" font-size="10" font-weight="600" fill="#1e293b">Quantum Cost Q</text>
+<line x1="975" y1="146" x2="993" y2="146" stroke="#10b981" stroke-width="2.0" stroke-dasharray="3,3"/>
+<text x="999" y="150" font-size="10" font-weight="600" fill="#1e293b">Classical Cost C</text>
+<line x1="625" y1="420" x2="625" y2="424" stroke="#94a3b8"/>
+<text x="625" y="438" text-anchor="middle" font-size="10" fill="#64748b">2</text>
+<line x1="673.5" y1="420" x2="673.5" y2="424" stroke="#94a3b8"/>
+<text x="673.5" y="438" text-anchor="middle" font-size="10" fill="#64748b">3</text>
+<line x1="722" y1="420" x2="722" y2="424" stroke="#94a3b8"/>
+<text x="722" y="438" text-anchor="middle" font-size="10" fill="#64748b">4</text>
+<line x1="770.5" y1="420" x2="770.5" y2="424" stroke="#94a3b8"/>
+<text x="770.5" y="438" text-anchor="middle" font-size="10" fill="#64748b">5</text>
+<line x1="819" y1="420" x2="819" y2="424" stroke="#94a3b8"/>
+<text x="819" y="438" text-anchor="middle" font-size="10" fill="#64748b">6</text>
+<line x1="867.5" y1="420" x2="867.5" y2="424" stroke="#94a3b8"/>
+<text x="867.5" y="438" text-anchor="middle" font-size="10" fill="#64748b">7</text>
+<line x1="916" y1="420" x2="916" y2="424" stroke="#94a3b8"/>
+<text x="916" y="438" text-anchor="middle" font-size="10" fill="#64748b">8</text>
+<line x1="964.5" y1="420" x2="964.5" y2="424" stroke="#94a3b8"/>
+<text x="964.5" y="438" text-anchor="middle" font-size="10" fill="#64748b">9</text>
+<line x1="1013" y1="420" x2="1013" y2="424" stroke="#94a3b8"/>
+<text x="1013" y="438" text-anchor="middle" font-size="10" fill="#64748b">10</text>
+<line x1="1110" y1="420" x2="1110" y2="424" stroke="#94a3b8"/>
+<text x="1110" y="438" text-anchor="middle" font-size="10" fill="#64748b">12</text>
+<text x="35" y="247.5" text-anchor="middle" transform="rotate(-90 35 247.5)" font-size="12" font-weight="600" fill="#334155">Optimal Partition Size (n_sub*)</text>
+<text x="577" y="247.5" text-anchor="middle" transform="rotate(-90 577 247.5)" font-size="12" font-weight="600" fill="#334155">Heuristic Cost Function</text>
+<text x="322.5" y="465" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">2-Qubit Gate Error Rate (ε_gate)</text>
+<text x="867.5" y="465" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Candidate Subgraph Size (n_sub)</text>
 </svg>

@@ -1,88 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" style="background:#ffffff; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
-<text x="500" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Ternary Search vs. Exhaustive Linear Scan: Algorithmic Ablation Study</text>
-<rect x="70" y="60" width="410" height="340" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="275" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Partition Evaluations & Query Savings (%)</text>
-<rect x="520" y="60" width="410" height="340" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="725" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Wall-Clock Latency & Speedup Factor</text>
-<rect x="63" y="400" width="14" height="0" fill="#6ee7b7" opacity="0.35"/>
-<rect x="97.16666666666666" y="254.276" width="14" height="145.724" fill="#6ee7b7" opacity="0.35"/>
-<rect x="131.33333333333331" y="248.90400000000002" width="14" height="151.09599999999998" fill="#6ee7b7" opacity="0.35"/>
-<rect x="165.5" y="245.47" width="14" height="154.53" fill="#6ee7b7" opacity="0.35"/>
-<rect x="199.66666666666666" y="243.09" width="14" height="156.91" fill="#6ee7b7" opacity="0.35"/>
-<rect x="233.83333333333334" y="241.322" width="14" height="158.678" fill="#6ee7b7" opacity="0.35"/>
-<rect x="268" y="179.98600000000005" width="14" height="220.01399999999995" fill="#6ee7b7" opacity="0.35"/>
-<rect x="302.1666666666667" y="203.174" width="14" height="196.826" fill="#6ee7b7" opacity="0.35"/>
-<rect x="370.5" y="178.252" width="14" height="221.748" fill="#6ee7b7" opacity="0.35"/>
-<rect x="473" y="177.232" width="14" height="222.768" fill="#6ee7b7" opacity="0.35"/>
-<path d="M 70.0 346.9 L 104.2 325.6 L 138.3 304.4 L 172.5 283.1 L 206.7 261.9 L 240.8 240.6 L 275.0 219.4 L 309.2 198.1 L 377.5 155.6 L 480.0 91.9" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4,4"/>
-<path d="M 70.0 346.9 L 104.2 357.5 L 138.3 346.9 L 172.5 336.3 L 206.7 325.6 L 240.8 315.0 L 275.0 336.3 L 309.2 315.0 L 377.5 315.0 L 480.0 293.8" fill="none" stroke="#10b981" stroke-width="2.4"/>
-<circle cx="70.0" cy="346.9" r="4" fill="#dc2626"/>
-<circle cx="70.0" cy="346.9" r="4" fill="#10b981"/>
-<circle cx="104.2" cy="325.6" r="4" fill="#dc2626"/>
-<circle cx="104.2" cy="357.5" r="4" fill="#10b981"/>
-<circle cx="138.3" cy="304.4" r="4" fill="#dc2626"/>
-<circle cx="138.3" cy="346.9" r="4" fill="#10b981"/>
-<circle cx="172.5" cy="283.1" r="4" fill="#dc2626"/>
-<circle cx="172.5" cy="336.3" r="4" fill="#10b981"/>
-<circle cx="206.7" cy="261.9" r="4" fill="#dc2626"/>
-<circle cx="206.7" cy="325.6" r="4" fill="#10b981"/>
-<circle cx="240.8" cy="240.6" r="4" fill="#dc2626"/>
-<circle cx="240.8" cy="315.0" r="4" fill="#10b981"/>
-<circle cx="275.0" cy="219.4" r="4" fill="#dc2626"/>
-<circle cx="275.0" cy="336.3" r="4" fill="#10b981"/>
-<circle cx="309.2" cy="198.1" r="4" fill="#dc2626"/>
-<circle cx="309.2" cy="315.0" r="4" fill="#10b981"/>
-<circle cx="377.5" cy="155.6" r="4" fill="#dc2626"/>
-<circle cx="377.5" cy="315.0" r="4" fill="#10b981"/>
-<circle cx="480.0" cy="91.9" r="4" fill="#dc2626"/>
-<circle cx="480.0" cy="293.8" r="4" fill="#10b981"/>
-<path d="M 520.0 369.8 L 554.2 361.7 L 588.3 351.5 L 622.5 329.5 L 656.7 316.1 L 690.8 298.0 L 725.0 191.3 L 759.2 252.1 L 827.5 198.7 L 930.0 104.6" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4,4"/>
-<path d="M 520.0 370.8 L 554.2 370.0 L 588.3 363.8 L 622.5 356.9 L 656.7 344.4 L 690.8 331.6 L 725.0 346.3 L 759.2 233.9 L 827.5 312.8 L 930.0 271.8" fill="none" stroke="#10b981" stroke-width="2.4"/>
-<path d="M 520.0 354.1 L 554.2 333.7 L 588.3 328.6 L 622.5 303.9 L 656.7 314.1 L 690.8 315.9 L 725.0 111.8 L 759.2 366.9 L 827.5 246.2 L 930.0 246.2" fill="none" stroke="#2563eb" stroke-width="2.0"/>
-<circle cx="520.0" cy="369.8" r="3.5" fill="#dc2626"/>
-<circle cx="520.0" cy="370.8" r="3.5" fill="#10b981"/>
-<polygon points="520,350.1 524,357.1 516,357.1" fill="#2563eb"/>
-<circle cx="554.2" cy="361.7" r="3.5" fill="#dc2626"/>
-<circle cx="554.2" cy="370.0" r="3.5" fill="#10b981"/>
-<polygon points="554.1666666666666,329.7 558.1666666666666,336.7 550.1666666666666,336.7" fill="#2563eb"/>
-<circle cx="588.3" cy="351.5" r="3.5" fill="#dc2626"/>
-<circle cx="588.3" cy="363.8" r="3.5" fill="#10b981"/>
-<polygon points="588.3333333333334,324.6 592.3333333333334,331.6 584.3333333333334,331.6" fill="#2563eb"/>
-<circle cx="622.5" cy="329.5" r="3.5" fill="#dc2626"/>
-<circle cx="622.5" cy="356.9" r="3.5" fill="#10b981"/>
-<polygon points="622.5,299.95 626.5,306.95 618.5,306.95" fill="#2563eb"/>
-<circle cx="656.7" cy="316.1" r="3.5" fill="#dc2626"/>
-<circle cx="656.7" cy="344.4" r="3.5" fill="#10b981"/>
-<polygon points="656.6666666666666,310.15 660.6666666666666,317.15 652.6666666666666,317.15" fill="#2563eb"/>
-<circle cx="690.8" cy="298.0" r="3.5" fill="#dc2626"/>
-<circle cx="690.8" cy="331.6" r="3.5" fill="#10b981"/>
-<polygon points="690.8333333333334,311.85 694.8333333333334,318.85 686.8333333333334,318.85" fill="#2563eb"/>
-<circle cx="725.0" cy="191.3" r="3.5" fill="#dc2626"/>
-<circle cx="725.0" cy="346.3" r="3.5" fill="#10b981"/>
-<polygon points="725,107.84999999999997 729,114.84999999999997 721,114.84999999999997" fill="#2563eb"/>
-<circle cx="759.2" cy="252.1" r="3.5" fill="#dc2626"/>
-<circle cx="759.2" cy="233.9" r="3.5" fill="#10b981"/>
-<polygon points="759.1666666666667,362.85 763.1666666666667,369.85 755.1666666666667,369.85" fill="#2563eb"/>
-<circle cx="827.5" cy="198.7" r="3.5" fill="#dc2626"/>
-<circle cx="827.5" cy="312.8" r="3.5" fill="#10b981"/>
-<polygon points="827.5,242.15 831.5,249.15 823.5,249.15" fill="#2563eb"/>
-<circle cx="930.0" cy="104.6" r="3.5" fill="#dc2626"/>
-<circle cx="930.0" cy="271.8" r="3.5" fill="#10b981"/>
-<polygon points="930,242.15 934,249.15 926,249.15" fill="#2563eb"/>
-<text x="70" y="418" text-anchor="middle" font-size="11" fill="#64748b">6</text>
-<text x="520" y="418" text-anchor="middle" font-size="11" fill="#64748b">6</text>
-<text x="138.33333333333331" y="418" text-anchor="middle" font-size="11" fill="#64748b">10</text>
-<text x="588.3333333333334" y="418" text-anchor="middle" font-size="11" fill="#64748b">10</text>
-<text x="206.66666666666666" y="418" text-anchor="middle" font-size="11" fill="#64748b">14</text>
-<text x="656.6666666666666" y="418" text-anchor="middle" font-size="11" fill="#64748b">14</text>
-<text x="275" y="418" text-anchor="middle" font-size="11" fill="#64748b">18</text>
-<text x="725" y="418" text-anchor="middle" font-size="11" fill="#64748b">18</text>
-<text x="343.3333333333333" y="418" text-anchor="middle" font-size="11" fill="#64748b">22</text>
-<text x="793.3333333333333" y="418" text-anchor="middle" font-size="11" fill="#64748b">22</text>
-<text x="411.6666666666667" y="418" text-anchor="middle" font-size="11" fill="#64748b">26</text>
-<text x="861.6666666666667" y="418" text-anchor="middle" font-size="11" fill="#64748b">26</text>
-<text x="480" y="418" text-anchor="middle" font-size="11" fill="#64748b">30</text>
-<text x="930" y="418" text-anchor="middle" font-size="11" fill="#64748b">30</text>
-<text x="275" y="445" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Graph Dimension (|V|)</text>
-<text x="725" y="445" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Graph Dimension (|V|)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 480" width="1250" height="480" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
+<text x="625" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Algorithmic Efficiency: Ternary Search vs. Exhaustive Linear Scan</text>
+<text x="625" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Benchmarking Across 3-Regular Graphs from |V| = 6 to 30 Nodes (10 Repetitions Each)</text>
+<text x="326.25" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Partition Evaluations &amp; Query Savings (%)</text>
+<rect x="80" y="75" width="492.5" height="345" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="80" y1="420" x2="572.5" y2="420" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="424" text-anchor="end" font-size="11" fill="#64748b">0</text>
+<line x1="80" y1="333.75" x2="572.5" y2="333.75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="337.75" text-anchor="end" font-size="11" fill="#64748b">8</text>
+<line x1="80" y1="247.5" x2="572.5" y2="247.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="251.5" text-anchor="end" font-size="11" fill="#64748b">16</text>
+<line x1="80" y1="161.25" x2="572.5" y2="161.25" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="165.25" text-anchor="end" font-size="11" fill="#64748b">24</text>
+<line x1="80" y1="75" x2="572.5" y2="75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="79" text-anchor="end" font-size="11" fill="#64748b">32</text>
+<text x="580.5" y="424" text-anchor="start" font-size="11" fill="#059669">0%</text>
+<text x="580.5" y="337.75" text-anchor="start" font-size="11" fill="#059669">25%</text>
+<text x="580.5" y="251.5" text-anchor="start" font-size="11" fill="#059669">50%</text>
+<text x="580.5" y="165.25" text-anchor="start" font-size="11" fill="#059669">75%</text>
+<text x="580.5" y="79" text-anchor="start" font-size="11" fill="#059669">100%</text>
+<rect x="72" y="420" width="16" height="0" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="113.04166666666666" y="272.13300000000004" width="16" height="147.867" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="154.08333333333331" y="266.682" width="16" height="153.31799999999998" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="195.125" y="263.1975" width="16" height="156.8025" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="236.16666666666666" y="260.7825" width="16" height="159.2175" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="277.20833333333337" y="258.9885" width="16" height="161.0115" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="318.25" y="196.75050000000005" width="16" height="223.24949999999995" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="359.2916666666667" y="220.2795" width="16" height="199.7205" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="441.375" y="194.99099999999999" width="16" height="225.00900000000001" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<rect x="564.5" y="193.956" width="16" height="226.044" fill="#6ee7b7" opacity="0.45" stroke="#10b981" stroke-width="1"/>
+<path d="M 80.0 366.1 L 121.0 344.5 L 162.1 323.0 L 203.1 301.4 L 244.2 279.8 L 285.2 258.3 L 326.3 236.7 L 367.3 215.2 L 449.4 172.0 L 572.5 107.3" fill="none" stroke="#dc2626" stroke-width="2.3" stroke-dasharray="4,4"/>
+<path d="M 80.0 366.1 L 121.0 376.9 L 162.1 366.1 L 203.1 355.3 L 244.2 344.5 L 285.2 333.8 L 326.3 355.3 L 367.3 333.8 L 449.4 333.8 L 572.5 312.2" fill="none" stroke="#10b981" stroke-width="2.5"/>
+<circle cx="80.0" cy="366.1" r="4" fill="#dc2626"/>
+<circle cx="80.0" cy="366.1" r="4" fill="#10b981"/>
+<circle cx="121.0" cy="344.5" r="4" fill="#dc2626"/>
+<circle cx="121.0" cy="376.9" r="4" fill="#10b981"/>
+<circle cx="162.1" cy="323.0" r="4" fill="#dc2626"/>
+<circle cx="162.1" cy="366.1" r="4" fill="#10b981"/>
+<circle cx="203.1" cy="301.4" r="4" fill="#dc2626"/>
+<circle cx="203.1" cy="355.3" r="4" fill="#10b981"/>
+<circle cx="244.2" cy="279.8" r="4" fill="#dc2626"/>
+<circle cx="244.2" cy="344.5" r="4" fill="#10b981"/>
+<circle cx="285.2" cy="258.3" r="4" fill="#dc2626"/>
+<circle cx="285.2" cy="333.8" r="4" fill="#10b981"/>
+<circle cx="326.3" cy="236.7" r="4" fill="#dc2626"/>
+<circle cx="326.3" cy="355.3" r="4" fill="#10b981"/>
+<circle cx="367.3" cy="215.2" r="4" fill="#dc2626"/>
+<circle cx="367.3" cy="333.8" r="4" fill="#10b981"/>
+<circle cx="449.4" cy="172.0" r="4" fill="#dc2626"/>
+<circle cx="449.4" cy="333.8" r="4" fill="#10b981"/>
+<circle cx="572.5" cy="107.3" r="4" fill="#dc2626"/>
+<circle cx="572.5" cy="312.2" r="4" fill="#10b981"/>
+<rect x="92" y="87" width="210" height="70" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
+<line x1="102" y1="103" x2="120" y2="103" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4,4"/>
+<circle cx="111" cy="103" r="3" fill="#dc2626"/>
+<text x="126" y="107" font-size="10" font-weight="600" fill="#1e293b">Exhaustive Scan (O(|V|))</text>
+<line x1="102" y1="123" x2="120" y2="123" stroke="#10b981" stroke-width="2.4"/>
+<circle cx="111" cy="123" r="3" fill="#10b981"/>
+<text x="126" y="127" font-size="10" font-weight="600" fill="#1e293b">Ternary Search (O(log |V|))</text>
+<rect x="102" y="136" width="18" height="12" fill="#6ee7b7" stroke="#10b981" opacity="0.6"/>
+<text x="126" y="146" font-size="10" font-weight="600" fill="#047857">Evaluations Saved (%)</text>
+<text x="928.75" y="63" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Wall-Clock Latency (ms) &amp; Speedup Factor</text>
+<rect x="682.5" y="75" width="492.5" height="345" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="682.5" y1="420" x2="1175" y2="420" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="674.5" y="424" text-anchor="end" font-size="11" fill="#64748b">0.0ms</text>
+<line x1="682.5" y1="333.75" x2="1175" y2="333.75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="674.5" y="337.75" text-anchor="end" font-size="11" fill="#64748b">2.0ms</text>
+<line x1="682.5" y1="247.5" x2="1175" y2="247.5" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="674.5" y="251.5" text-anchor="end" font-size="11" fill="#64748b">4.0ms</text>
+<line x1="682.5" y1="161.25" x2="1175" y2="161.25" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="674.5" y="165.25" text-anchor="end" font-size="11" fill="#64748b">6.0ms</text>
+<line x1="682.5" y1="75" x2="1175" y2="75" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="674.5" y="79" text-anchor="end" font-size="11" fill="#64748b">8.0ms</text>
+<text x="1183" y="380.875" text-anchor="start" font-size="11" fill="#2563eb">1.0×</text>
+<text x="1183" y="294.625" text-anchor="start" font-size="11" fill="#2563eb">2.0×</text>
+<text x="1183" y="208.375" text-anchor="start" font-size="11" fill="#2563eb">3.0×</text>
+<text x="1183" y="122.125" text-anchor="start" font-size="11" fill="#2563eb">4.0×</text>
+<path d="M 682.5 387.4 L 723.5 378.7 L 764.6 367.7 L 805.6 344.0 L 846.7 329.5 L 887.7 310.1 L 928.8 195.0 L 969.8 260.5 L 1051.9 203.0 L 1175.0 101.5" fill="none" stroke="#dc2626" stroke-width="2.3" stroke-dasharray="4,4"/>
+<path d="M 682.5 388.5 L 723.5 387.7 L 764.6 380.9 L 805.6 373.5 L 846.7 360.0 L 887.7 346.3 L 928.8 362.1 L 969.8 240.9 L 1051.9 326.0 L 1175.0 281.8" fill="none" stroke="#10b981" stroke-width="2.5"/>
+<path d="M 682.5 373.4 L 723.5 352.7 L 764.6 347.6 L 805.6 322.5 L 846.7 332.9 L 887.7 334.6 L 928.8 127.6 L 969.8 386.4 L 1051.9 263.9 L 1175.0 263.9" fill="none" stroke="#2563eb" stroke-width="2.2"/>
+<circle cx="682.5" cy="387.4" r="3.5" fill="#dc2626"/>
+<circle cx="682.5" cy="388.5" r="3.5" fill="#10b981"/>
+<polygon points="682.5,369.425 686.5,376.425 678.5,376.425" fill="#2563eb"/>
+<circle cx="723.5" cy="378.7" r="3.5" fill="#dc2626"/>
+<circle cx="723.5" cy="387.7" r="3.5" fill="#10b981"/>
+<polygon points="723.5416666666666,348.725 727.5416666666666,355.725 719.5416666666666,355.725" fill="#2563eb"/>
+<circle cx="764.6" cy="367.7" r="3.5" fill="#dc2626"/>
+<circle cx="764.6" cy="380.9" r="3.5" fill="#10b981"/>
+<polygon points="764.5833333333334,343.55 768.5833333333334,350.55 760.5833333333334,350.55" fill="#2563eb"/>
+<circle cx="805.6" cy="344.0" r="3.5" fill="#dc2626"/>
+<circle cx="805.6" cy="373.5" r="3.5" fill="#10b981"/>
+<polygon points="805.625,318.5375 809.625,325.5375 801.625,325.5375" fill="#2563eb"/>
+<circle cx="846.7" cy="329.5" r="3.5" fill="#dc2626"/>
+<circle cx="846.7" cy="360.0" r="3.5" fill="#10b981"/>
+<polygon points="846.6666666666666,328.8875 850.6666666666666,335.8875 842.6666666666666,335.8875" fill="#2563eb"/>
+<circle cx="887.7" cy="310.1" r="3.5" fill="#dc2626"/>
+<circle cx="887.7" cy="346.3" r="3.5" fill="#10b981"/>
+<polygon points="887.7083333333334,330.6125 891.7083333333334,337.6125 883.7083333333334,337.6125" fill="#2563eb"/>
+<circle cx="928.8" cy="195.0" r="3.5" fill="#dc2626"/>
+<circle cx="928.8" cy="362.1" r="3.5" fill="#10b981"/>
+<polygon points="928.75,123.61250000000001 932.75,130.6125 924.75,130.6125" fill="#2563eb"/>
+<circle cx="969.8" cy="260.5" r="3.5" fill="#dc2626"/>
+<circle cx="969.8" cy="240.9" r="3.5" fill="#10b981"/>
+<polygon points="969.7916666666667,382.3625 973.7916666666667,389.3625 965.7916666666667,389.3625" fill="#2563eb"/>
+<circle cx="1051.9" cy="203.0" r="3.5" fill="#dc2626"/>
+<circle cx="1051.9" cy="326.0" r="3.5" fill="#10b981"/>
+<polygon points="1051.875,259.8875 1055.875,266.8875 1047.875,266.8875" fill="#2563eb"/>
+<circle cx="1175.0" cy="101.5" r="3.5" fill="#dc2626"/>
+<circle cx="1175.0" cy="281.8" r="3.5" fill="#10b981"/>
+<polygon points="1175,259.8875 1179,266.8875 1171,266.8875" fill="#2563eb"/>
+<rect x="694.5" y="87" width="200" height="70" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>
+<line x1="704.5" y1="103" x2="722.5" y2="103" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4,4"/>
+<circle cx="713.5" cy="103" r="3" fill="#dc2626"/>
+<text x="728.5" y="107" font-size="10" font-weight="600" fill="#1e293b">Exhaustive Latency (ms)</text>
+<line x1="704.5" y1="123" x2="722.5" y2="123" stroke="#10b981" stroke-width="2.4"/>
+<circle cx="713.5" cy="123" r="3" fill="#10b981"/>
+<text x="728.5" y="127" font-size="10" font-weight="600" fill="#1e293b">Ternary Latency (ms)</text>
+<line x1="704.5" y1="143" x2="722.5" y2="143" stroke="#2563eb" stroke-width="2.2"/>
+<polygon points="713.5,139 717.5,146 709.5,146" fill="#2563eb"/>
+<text x="728.5" y="147" font-size="10" font-weight="600" fill="#1d4ed8">Speedup Factor (×)</text>
+<line x1="80" y1="420" x2="80" y2="424" stroke="#94a3b8"/>
+<text x="80" y="438" text-anchor="middle" font-size="10" fill="#64748b">6</text>
+<line x1="682.5" y1="420" x2="682.5" y2="424" stroke="#94a3b8"/>
+<text x="682.5" y="438" text-anchor="middle" font-size="10" fill="#64748b">6</text>
+<line x1="121.04166666666666" y1="420" x2="121.04166666666666" y2="424" stroke="#94a3b8"/>
+<text x="121.04166666666666" y="438" text-anchor="middle" font-size="10" fill="#64748b">8</text>
+<line x1="723.5416666666666" y1="420" x2="723.5416666666666" y2="424" stroke="#94a3b8"/>
+<text x="723.5416666666666" y="438" text-anchor="middle" font-size="10" fill="#64748b">8</text>
+<line x1="162.08333333333331" y1="420" x2="162.08333333333331" y2="424" stroke="#94a3b8"/>
+<text x="162.08333333333331" y="438" text-anchor="middle" font-size="10" fill="#64748b">10</text>
+<line x1="764.5833333333334" y1="420" x2="764.5833333333334" y2="424" stroke="#94a3b8"/>
+<text x="764.5833333333334" y="438" text-anchor="middle" font-size="10" fill="#64748b">10</text>
+<line x1="203.125" y1="420" x2="203.125" y2="424" stroke="#94a3b8"/>
+<text x="203.125" y="438" text-anchor="middle" font-size="10" fill="#64748b">12</text>
+<line x1="805.625" y1="420" x2="805.625" y2="424" stroke="#94a3b8"/>
+<text x="805.625" y="438" text-anchor="middle" font-size="10" fill="#64748b">12</text>
+<line x1="244.16666666666666" y1="420" x2="244.16666666666666" y2="424" stroke="#94a3b8"/>
+<text x="244.16666666666666" y="438" text-anchor="middle" font-size="10" fill="#64748b">14</text>
+<line x1="846.6666666666666" y1="420" x2="846.6666666666666" y2="424" stroke="#94a3b8"/>
+<text x="846.6666666666666" y="438" text-anchor="middle" font-size="10" fill="#64748b">14</text>
+<line x1="285.20833333333337" y1="420" x2="285.20833333333337" y2="424" stroke="#94a3b8"/>
+<text x="285.20833333333337" y="438" text-anchor="middle" font-size="10" fill="#64748b">16</text>
+<line x1="887.7083333333334" y1="420" x2="887.7083333333334" y2="424" stroke="#94a3b8"/>
+<text x="887.7083333333334" y="438" text-anchor="middle" font-size="10" fill="#64748b">16</text>
+<line x1="326.25" y1="420" x2="326.25" y2="424" stroke="#94a3b8"/>
+<text x="326.25" y="438" text-anchor="middle" font-size="10" fill="#64748b">18</text>
+<line x1="928.75" y1="420" x2="928.75" y2="424" stroke="#94a3b8"/>
+<text x="928.75" y="438" text-anchor="middle" font-size="10" fill="#64748b">18</text>
+<line x1="367.2916666666667" y1="420" x2="367.2916666666667" y2="424" stroke="#94a3b8"/>
+<text x="367.2916666666667" y="438" text-anchor="middle" font-size="10" fill="#64748b">20</text>
+<line x1="969.7916666666667" y1="420" x2="969.7916666666667" y2="424" stroke="#94a3b8"/>
+<text x="969.7916666666667" y="438" text-anchor="middle" font-size="10" fill="#64748b">20</text>
+<line x1="449.375" y1="420" x2="449.375" y2="424" stroke="#94a3b8"/>
+<text x="449.375" y="438" text-anchor="middle" font-size="10" fill="#64748b">24</text>
+<line x1="1051.875" y1="420" x2="1051.875" y2="424" stroke="#94a3b8"/>
+<text x="1051.875" y="438" text-anchor="middle" font-size="10" fill="#64748b">24</text>
+<line x1="572.5" y1="420" x2="572.5" y2="424" stroke="#94a3b8"/>
+<text x="572.5" y="438" text-anchor="middle" font-size="10" fill="#64748b">30</text>
+<line x1="1175" y1="420" x2="1175" y2="424" stroke="#94a3b8"/>
+<text x="1175" y="438" text-anchor="middle" font-size="10" fill="#64748b">30</text>
+<text x="35" y="247.5" text-anchor="middle" transform="rotate(-90 35 247.5)" font-size="12" font-weight="600" fill="#334155">Required Evaluations</text>
+<text x="620.5" y="247.5" text-anchor="middle" transform="rotate(90 620.5 247.5)" font-size="12" font-weight="600" fill="#047857">Evaluations Saved (%)</text>
+<text x="632.5" y="247.5" text-anchor="middle" transform="rotate(-90 632.5 247.5)" font-size="12" font-weight="600" fill="#334155">Wall-Clock Latency (ms)</text>
+<text x="1223" y="247.5" text-anchor="middle" transform="rotate(90 1223 247.5)" font-size="12" font-weight="600" fill="#1d4ed8">Speedup Factor (×)</text>
+<text x="326.25" y="465" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Problem Graph Dimension (|V|)</text>
+<text x="928.75" y="465" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Problem Graph Dimension (|V|)</text>
 </svg>
