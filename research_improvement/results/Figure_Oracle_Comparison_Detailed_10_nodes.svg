@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 660" width="850" height="660" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
+<text x="425" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">10-Node Problem: Performance &amp; Baseline Advantage Comparison</text>
+<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Mean AR with &#177;1&#963; Shading and Relative Advantage Over Static Partitioning</text>
+<rect x="165" y="60" width="560" height="24" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="180" y1="72" x2="198" y2="72" stroke="#10b981" stroke-width="2.5"/>
+<circle cx="189" cy="72" r="3.5" fill="#10b981"/>
+<text x="204" y="76" font-size="11" font-weight="600" fill="#334155">Dy-Part (Dynamic)</text>
+<line x1="315" y1="72" x2="333" y2="72" stroke="#3b82f6" stroke-width="2.5"/>
+<circle cx="324" cy="72" r="3.5" fill="#3b82f6"/>
+<text x="339" y="76" font-size="11" font-weight="600" fill="#334155">Static (n_sub=4)</text>
+<line x1="450" y1="72" x2="468" y2="72" stroke="#f59e0b" stroke-width="2.5"/>
+<circle cx="459" cy="72" r="3.5" fill="#f59e0b"/>
+<text x="474" y="76" font-size="11" font-weight="600" fill="#334155">METIS Baseline</text>
+<line x1="585" y1="72" x2="603" y2="72" stroke="#ef4444" stroke-width="2.5"/>
+<circle cx="594" cy="72" r="3.5" fill="#ef4444"/>
+<text x="609" y="76" font-size="11" font-weight="600" fill="#334155">Random Baseline</text>
+<text x="80" y="92" font-size="13" font-weight="bold" fill="#1e293b">(a) Absolute Mean Approximation Ratio (&#177;1&#963; Confidence Bands)</text>
+<rect x="80" y="100" width="730" height="210" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="80" y1="286.6666666666667" x2="810" y2="286.6666666666667" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="290.6666666666667" text-anchor="end" font-size="11" fill="#64748b">0.6</text>
+<line x1="80" y1="240.00000000000006" x2="810" y2="240.00000000000006" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="244.00000000000006" text-anchor="end" font-size="11" fill="#64748b">0.7</text>
+<line x1="80" y1="193.33333333333337" x2="810" y2="193.33333333333337" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="197.33333333333337" text-anchor="end" font-size="11" fill="#64748b">0.8</text>
+<line x1="80" y1="146.6666666666667" x2="810" y2="146.6666666666667" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="150.6666666666667" text-anchor="end" font-size="11" fill="#64748b">0.9</text>
+<line x1="80" y1="100.00000000000006" x2="810" y2="100.00000000000006" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="104.00000000000006" text-anchor="end" font-size="11" fill="#64748b">1.0</text>
+<polygon points="201.7,100.0 271.2,100.0 340.7,105.3 410.2,114.7 479.8,129.6 549.3,162.2 618.8,210.1 688.3,271.5 688.3,284.1 618.8,228.9 549.3,175.9 479.8,156.3 410.2,137.9 340.7,149.7 271.2,148.6 201.7,149.8" fill="#10b981" opacity="0.18"/>
+<path d="M 201.7 121.4 L 271.2 124.0 L 340.7 127.5 L 410.2 126.3 L 479.8 143.0 L 549.3 169.0 L 618.8 219.5 L 688.3 277.8" fill="none" stroke="#10b981" stroke-width="2.3"/>
+<circle cx="201.7" cy="121.4" r="3.5" fill="#10b981"/>
+<circle cx="271.2" cy="124.0" r="3.5" fill="#10b981"/>
+<circle cx="340.7" cy="127.5" r="3.5" fill="#10b981"/>
+<circle cx="410.2" cy="126.3" r="3.5" fill="#10b981"/>
+<circle cx="479.8" cy="143.0" r="3.5" fill="#10b981"/>
+<circle cx="549.3" cy="169.0" r="3.5" fill="#10b981"/>
+<circle cx="618.8" cy="219.5" r="3.5" fill="#10b981"/>
+<circle cx="688.3" cy="277.8" r="3.5" fill="#10b981"/>
+<polygon points="201.7,100.0 271.2,100.0 340.7,102.9 410.2,112.0 479.8,130.7 549.3,164.0 618.8,212.5 688.3,275.1 688.3,288.2 618.8,245.9 549.3,195.6 479.8,172.5 410.2,156.4 340.7,145.4 271.2,142.1 201.7,140.5" fill="#3b82f6" opacity="0.18"/>
+<path d="M 201.7 118.2 L 271.2 119.9 L 340.7 124.1 L 410.2 134.2 L 479.8 151.6 L 549.3 179.8 L 618.8 229.2 L 688.3 281.7" fill="none" stroke="#3b82f6" stroke-width="2.3"/>
+<circle cx="201.7" cy="118.2" r="3.5" fill="#3b82f6"/>
+<circle cx="271.2" cy="119.9" r="3.5" fill="#3b82f6"/>
+<circle cx="340.7" cy="124.1" r="3.5" fill="#3b82f6"/>
+<circle cx="410.2" cy="134.2" r="3.5" fill="#3b82f6"/>
+<circle cx="479.8" cy="151.6" r="3.5" fill="#3b82f6"/>
+<circle cx="549.3" cy="179.8" r="3.5" fill="#3b82f6"/>
+<circle cx="618.8" cy="229.2" r="3.5" fill="#3b82f6"/>
+<circle cx="688.3" cy="281.7" r="3.5" fill="#3b82f6"/>
+<polygon points="201.7,100.0 271.2,100.0 340.7,103.4 410.2,111.8 479.8,132.2 549.3,161.9 618.8,217.2 688.3,275.9 688.3,290.9 618.8,241.0 549.3,192.6 479.8,169.0 410.2,156.9 340.7,151.3 271.2,144.4 201.7,132.7" fill="#f59e0b" opacity="0.18"/>
+<path d="M 201.7 112.9 L 271.2 120.1 L 340.7 127.3 L 410.2 134.4 L 479.8 150.6 L 549.3 177.2 L 618.8 229.1 L 688.3 283.4" fill="none" stroke="#f59e0b" stroke-width="2.3"/>
+<circle cx="201.7" cy="112.9" r="3.5" fill="#f59e0b"/>
+<circle cx="271.2" cy="120.1" r="3.5" fill="#f59e0b"/>
+<circle cx="340.7" cy="127.3" r="3.5" fill="#f59e0b"/>
+<circle cx="410.2" cy="134.4" r="3.5" fill="#f59e0b"/>
+<circle cx="479.8" cy="150.6" r="3.5" fill="#f59e0b"/>
+<circle cx="549.3" cy="177.2" r="3.5" fill="#f59e0b"/>
+<circle cx="618.8" cy="229.1" r="3.5" fill="#f59e0b"/>
+<circle cx="688.3" cy="283.4" r="3.5" fill="#f59e0b"/>
+<polygon points="201.7,100.0 271.2,100.0 340.7,105.8 410.2,115.9 479.8,134.0 549.3,165.6 618.8,214.3 688.3,274.6 688.3,286.8 618.8,245.8 549.3,194.6 479.8,160.7 410.2,142.5 340.7,134.0 271.2,127.2 201.7,141.3" fill="#ef4444" opacity="0.18"/>
+<path d="M 201.7 115.7 L 271.2 113.4 L 340.7 119.9 L 410.2 129.2 L 479.8 147.4 L 549.3 180.1 L 618.8 230.0 L 688.3 280.7" fill="none" stroke="#ef4444" stroke-width="2.3"/>
+<circle cx="201.7" cy="115.7" r="3.5" fill="#ef4444"/>
+<circle cx="271.2" cy="113.4" r="3.5" fill="#ef4444"/>
+<circle cx="340.7" cy="119.9" r="3.5" fill="#ef4444"/>
+<circle cx="410.2" cy="129.2" r="3.5" fill="#ef4444"/>
+<circle cx="479.8" cy="147.4" r="3.5" fill="#ef4444"/>
+<circle cx="549.3" cy="180.1" r="3.5" fill="#ef4444"/>
+<circle cx="618.8" cy="230.0" r="3.5" fill="#ef4444"/>
+<circle cx="688.3" cy="280.7" r="3.5" fill="#ef4444"/>
+<text x="80" y="352" font-size="13" font-weight="bold" fill="#1e293b">(b) Relative Advantage over Static Baseline (Percentage Points)</text>
+<rect x="80" y="360" width="730" height="210" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="80" y1="465" x2="810" y2="465" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4,4"/>
+<text x="72" y="469" text-anchor="end" font-size="11" font-weight="bold" fill="#0f172a">0%</text>
+<line x1="80" y1="535" x2="810" y2="535" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="539" text-anchor="end" font-size="11" fill="#64748b">-10%</text>
+<line x1="80" y1="395" x2="810" y2="395" stroke="#e2e8f0" stroke-dasharray="3,3"/>
+<text x="72" y="399" text-anchor="end" font-size="11" fill="#64748b">+10%</text>
+<path d="M 201.7 469.9 L 271.2 471.1 L 340.7 470.1 L 410.2 453.3 L 479.8 452.1 L 549.3 448.8 L 618.8 450.5 L 688.3 459.2" fill="none" stroke="#10b981" stroke-width="2.3"/>
+<rect x="198.166666666654" y="466.3707790410415" width="7" height="7" fill="#10b981"/>
+<rect x="267.6904761904705" y="467.60205089944066" width="7" height="7" fill="#10b981"/>
+<rect x="337.2142857142779" y="466.5697001906542" width="7" height="7" fill="#10b981"/>
+<rect x="406.73809523809115" y="449.7745263576507" width="7" height="7" fill="#10b981"/>
+<rect x="476.2619047619026" y="448.56087146457435" width="7" height="7" fill="#10b981"/>
+<rect x="545.785714285714" y="445.34541124003556" width="7" height="7" fill="#10b981"/>
+<rect x="615.3095238095235" y="446.9895052145689" width="7" height="7" fill="#10b981"/>
+<rect x="684.833333333333" y="455.6817836496563" width="7" height="7" fill="#10b981"/>
+<path d="M 201.7 457.1 L 271.2 465.3 L 340.7 469.8 L 410.2 465.3 L 479.8 463.5 L 549.3 461.2 L 618.8 464.8 L 688.3 467.6" fill="none" stroke="#f59e0b" stroke-width="2.3"/>
+<rect x="198.166666666654" y="453.58343364591275" width="7" height="7" fill="#f59e0b"/>
+<rect x="267.6904761904705" y="461.76067698562275" width="7" height="7" fill="#f59e0b"/>
+<rect x="337.2142857142779" y="466.2806722414801" width="7" height="7" fill="#f59e0b"/>
+<rect x="406.73809523809115" y="461.8068466695962" width="7" height="7" fill="#f59e0b"/>
+<rect x="476.2619047619026" y="459.98809431862634" width="7" height="7" fill="#f59e0b"/>
+<rect x="545.785714285714" y="457.66453654694755" width="7" height="7" fill="#f59e0b"/>
+<rect x="615.3095238095235" y="461.31923598917126" width="7" height="7" fill="#f59e0b"/>
+<rect x="684.833333333333" y="464.08821175699563" width="7" height="7" fill="#f59e0b"/>
+<path d="M 201.7 461.2 L 271.2 455.2 L 340.7 458.6 L 410.2 457.6 L 479.8 458.7 L 549.3 465.5 L 618.8 466.2 L 688.3 463.5" fill="none" stroke="#ef4444" stroke-width="2.3"/>
+<rect x="198.166666666654" y="457.6993922581021" width="7" height="7" fill="#ef4444"/>
+<rect x="267.6904761904705" y="451.73718389639515" width="7" height="7" fill="#ef4444"/>
+<rect x="337.2142857142779" y="455.1321917991355" width="7" height="7" fill="#ef4444"/>
+<rect x="406.73809523809115" y="454.0953323759583" width="7" height="7" fill="#ef4444"/>
+<rect x="476.2619047619026" y="455.1608528235019" width="7" height="7" fill="#ef4444"/>
+<rect x="545.785714285714" y="461.9702797618687" width="7" height="7" fill="#ef4444"/>
+<rect x="615.3095238095235" y="462.72968386432063" width="7" height="7" fill="#ef4444"/>
+<rect x="684.833333333333" y="459.9617793784183" width="7" height="7" fill="#ef4444"/>
+<line x1="80" y1="570" x2="80" y2="575" stroke="#94a3b8"/>
+<text x="80" y="588" text-anchor="middle" font-size="11" fill="#64748b">10&#8315;&#8308;</text>
+<line x1="323.3333333333333" y1="570" x2="323.3333333333333" y2="575" stroke="#94a3b8"/>
+<text x="323.3333333333333" y="588" text-anchor="middle" font-size="11" fill="#64748b">10&#8315;&#179;</text>
+<line x1="566.6666666666666" y1="570" x2="566.6666666666666" y2="575" stroke="#94a3b8"/>
+<text x="566.6666666666666" y="588" text-anchor="middle" font-size="11" fill="#64748b">10&#8315;&#178;</text>
+<line x1="810" y1="570" x2="810" y2="575" stroke="#94a3b8"/>
+<text x="810" y="588" text-anchor="middle" font-size="11" fill="#64748b">10&#8315;&#185;</text>
+<text x="32" y="205" text-anchor="middle" transform="rotate(-90 32 205)" font-size="12" font-weight="600" fill="#334155">Mean AR</text>
+<text x="32" y="465" text-anchor="middle" transform="rotate(-90 32 465)" font-size="12" font-weight="600" fill="#334155">Delta vs Static (pp)</text>
+<text x="425" y="645" text-anchor="middle" font-size="13" font-weight="600" fill="#334155">2-Qubit Gate Error Rate (&#949;_gate)</text>
+</svg>
