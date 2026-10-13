@@ -3,7 +3,7 @@
 # Usage: sbatch slurm/run_benchmark_array.sh
 #SBATCH --job-name=dypart_bm_arr
 #SBATCH --account=PWSU0516
-#SBATCH --time=02:30:00
+#SBATCH --time=03:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2

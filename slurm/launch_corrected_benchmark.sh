@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${SCRIPT_DIR}/.."
 
 mkdir -p logs/phase2_benchmark results
-rm -f results/benchmark_part_*.csv
+# Preserves existing partition files to enable fast resumption of incomplete runs
 
 echo "Submitting 30-worker array job for Full Multi-Scale Benchmark (4 methods x 5 sizes x 8 noise x 30 seeds = 4,800 runs)..."
 ARRAY_JOB_ID=$(sbatch --parsable slurm/run_benchmark_array.sh)

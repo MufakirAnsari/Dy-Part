@@ -143,7 +143,20 @@ def main() -> None:
 
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else "results", exist_ok=True)
 
-    if not os.path.exists(output_path):
+    existing_runs = set()
+    all_results = []
+    if os.path.exists(output_path):
+        try:
+            existing_df = pd.read_csv(output_path)
+            for _, r in existing_df.iterrows():
+                key = (str(r["method"]), int(r["num_nodes"]), round(float(r["noise_level"]), 6), int(r["seed_id"]))
+                existing_runs.add(key)
+                all_results.append(r.to_dict())
+            logger.info("Found %d already completed runs in %s; resuming remaining.", len(existing_runs), output_path)
+        except Exception as exc:
+            logger.warning("Could not read existing file %s: %s", output_path, exc)
+            pd.DataFrame(columns=COLUMNS).to_csv(output_path, index=False)
+    else:
         pd.DataFrame(columns=COLUMNS).to_csv(output_path, index=False)
 
     logger.info("=" * 65)
@@ -156,13 +169,15 @@ def main() -> None:
     logger.info("Output:       %s", output_path)
     logger.info("=" * 65)
 
-    all_results = []
     for seed_id in range(start_seed, end_seed):
         logger.info("\n%s RUNNING SEED %d [%d, %d) %s\n", "=" * 20, seed_id, start_seed, end_seed, "=" * 20)
         for nodes in node_sizes:
             graph = nx.random_regular_graph(d=3, n=nodes, seed=42 + seed_id)
             for noise in noise_levels:
                 for method in methods:
+                    run_key = (str(method), int(nodes), round(float(noise), 6), int(seed_id))
+                    if run_key in existing_runs:
+                        continue
                     base_info = {"seed_id": seed_id}
                     try:
                         res = run_single_benchmark_experiment(
@@ -174,6 +189,7 @@ def main() -> None:
                         )
                         res.update(base_info)
                         all_results.append(res)
+                        existing_runs.add(run_key)
                         # Incremental write
                         pd.DataFrame([res])[COLUMNS].to_csv(output_path, mode="a", header=False, index=False)
                     except Exception as exc:
