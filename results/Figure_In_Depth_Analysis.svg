@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 500" width="850" height="500" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">
 <text x="425" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">VQE Solution Quality vs. Scheduler Cost Weight &#945; (10-Node Graph)</text>
-<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Grid Search Across 2,000 Total Runs (10 Seeds per Point, &#949; = 5&#215;10&#8315;&#179;)</text>
+<text x="425" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Sensitivity to Quantum Weight &#945; at &#946;* = 1.0, &#947;* = 0.10 (10 Seeds per Point, &#949; = 5&#215;10&#8315;&#179;)</text>
 <rect x="80" y="75" width="730" height="365" fill="#f8fafc" stroke="#cbd5e1"/>
 <line x1="80" y1="440" x2="810" y2="440" stroke="#e2e8f0" stroke-dasharray="3,3"/>
 <text x="72" y="444" text-anchor="end" font-size="11" fill="#64748b">0.70</text>
@@ -12,22 +12,22 @@
 <text x="72" y="224.9999999999998" text-anchor="end" font-size="11" fill="#64748b">0.85</text>
 <line x1="80" y1="147.99999999999972" x2="810" y2="147.99999999999972" stroke="#e2e8f0" stroke-dasharray="3,3"/>
 <text x="72" y="151.99999999999972" text-anchor="end" font-size="11" fill="#64748b">0.90</text>
-<polygon points="80.0,129.1 165.9,125.1 251.8,123.0 337.6,124.6 423.5,122.0 509.4,118.7 595.3,118.7 681.2,118.9 767.1,114.6 810.0,112.9 810.0,193.3 767.1,211.2 681.2,218.5 595.3,227.1 509.4,229.8 423.5,231.2 337.6,230.3 251.8,235.3 165.9,236.1 80.0,240.0" fill="#2563eb" opacity="0.18"/>
-<path d="M 80.0 184.5 L 165.9 180.6 L 251.8 179.2 L 337.6 177.4 L 423.5 176.6 L 509.4 174.3 L 595.3 172.9 L 681.2 168.7 L 767.1 162.9 L 810.0 153.1" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-<circle cx="80.0" cy="184.5" r="4" fill="#2563eb"/>
-<circle cx="165.9" cy="180.6" r="4" fill="#2563eb"/>
-<circle cx="251.8" cy="179.2" r="4" fill="#2563eb"/>
-<circle cx="337.6" cy="177.4" r="4" fill="#2563eb"/>
-<circle cx="423.5" cy="176.6" r="4" fill="#2563eb"/>
-<circle cx="509.4" cy="174.3" r="4" fill="#2563eb"/>
-<circle cx="595.3" cy="172.9" r="4" fill="#2563eb"/>
-<circle cx="681.2" cy="168.7" r="4" fill="#2563eb"/>
-<circle cx="767.1" cy="162.9" r="4" fill="#2563eb"/>
-<circle cx="810.0" cy="153.1" r="4" fill="#2563eb"/>
-<polygon points="595.2941176470589,160.87220099361957 605.2941176470589,180.87220099361957 585.2941176470589,180.87220099361957" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
-<rect x="485.2941176470589" y="117.87220099361957" width="220" height="34" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
-<text x="595.2941176470589" y="131.87220099361957" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f">Pareto Optimum (&#945;* = 0.70)</text>
-<text x="595.2941176470589" y="145.87220099361957" text-anchor="middle" font-size="10" fill="#92400e">Mean AR = 0.8830 &#177; 0.0371</text>
+<polygon points="80.0,130.7 165.9,118.6 251.8,121.5 337.6,125.6 423.5,130.6 509.4,126.9 595.3,127.5 681.2,114.7 767.1,113.7 810.0,113.6 810.0,169.5 767.1,178.1 681.2,183.6 595.3,134.9 509.4,143.6 423.5,181.4 337.6,203.6 251.8,240.4 165.9,231.8 80.0,242.4" fill="#2563eb" opacity="0.18"/>
+<path d="M 80.0 186.5 L 165.9 175.2 L 251.8 180.9 L 337.6 164.6 L 423.5 156.0 L 509.4 135.2 L 595.3 131.2 L 681.2 149.2 L 767.1 145.9 L 810.0 141.6" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="80.0" cy="186.5" r="4" fill="#2563eb"/>
+<circle cx="165.9" cy="175.2" r="4" fill="#2563eb"/>
+<circle cx="251.8" cy="180.9" r="4" fill="#2563eb"/>
+<circle cx="337.6" cy="164.6" r="4" fill="#2563eb"/>
+<circle cx="423.5" cy="156.0" r="4" fill="#2563eb"/>
+<circle cx="509.4" cy="135.2" r="4" fill="#2563eb"/>
+<circle cx="595.3" cy="131.2" r="4" fill="#2563eb"/>
+<circle cx="681.2" cy="149.2" r="4" fill="#2563eb"/>
+<circle cx="767.1" cy="145.9" r="4" fill="#2563eb"/>
+<circle cx="810.0" cy="141.6" r="4" fill="#2563eb"/>
+<polygon points="595.2941176470589,119.21820887235515 605.2941176470589,139.21820887235515 585.2941176470589,139.21820887235515" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+<rect x="485.2941176470589" y="76.21820887235515" width="220" height="34" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
+<text x="595.2941176470589" y="90.21820887235515" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f">Pareto Optimum (&#945;* = 0.70)</text>
+<text x="595.2941176470589" y="104.21820887235515" text-anchor="middle" font-size="10" fill="#92400e">Mean AR = 0.9115 &#177; 0.0025</text>
 <line x1="80" y1="440" x2="80" y2="445" stroke="#94a3b8"/>
 <text x="80" y="460" text-anchor="middle" font-size="11" fill="#64748b">0.10</text>
 <line x1="165.88235294117646" y1="440" x2="165.88235294117646" y2="445" stroke="#94a3b8"/>

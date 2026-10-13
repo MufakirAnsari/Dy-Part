@@ -676,11 +676,12 @@ function generateFigAlphaSensitivity() {
     const pWidth = width - padding.left - padding.right;
     const pHeight = height - padding.top - padding.bottom;
 
-    const stats = groupStats(dfHyperRaw, 'alpha', 'approximation_ratio');
+    const optSlice = dfHyperRaw.filter(r => Math.abs(r.beta - 1.0) < 0.01 && Math.abs(r.gamma - 0.1) < 0.01);
+    const stats = groupStats(optSlice, 'alpha', 'approximation_ratio');
 
     let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">\n`;
     svg += `<text x="${width/2}" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">VQE Solution Quality vs. Scheduler Cost Weight &#945; (10-Node Graph)</text>\n`;
-    svg += `<text x="${width/2}" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Grid Search Across 2,000 Total Runs (10 Seeds per Point, &#949; = 5&#215;10&#8315;&#179;)</text>\n`;
+    svg += `<text x="${width/2}" y="48" text-anchor="middle" font-size="12" fill="#64748b">Empirical Sensitivity to Quantum Weight &#945; at &#946;* = 1.0, &#947;* = 0.10 (10 Seeds per Point, &#949; = 5&#215;10&#8315;&#179;)</text>\n`;
 
     const minAlpha = 0.1;
     const maxAlpha = 0.95;
@@ -889,10 +890,11 @@ function generateFigSchedulerDecisionsAveraged() {
 // ============================================================================
 function generateFigCostModelValidation() {
     console.log('Generating Figure_Cost_Model_Empirical_Validation.svg...');
-    const width = 1450;
+    const width = 1480;
     const height = 450;
-    const padding = { left: 75, right: 35, top: 75, bottom: 65 };
-    const pWidth = (width - padding.left - padding.right - 2 * 30) / 3;
+    const padding = { left: 80, right: 40, top: 75, bottom: 65 };
+    const pGap = 65;
+    const pWidth = (width - padding.left - padding.right - 2 * pGap) / 3;
     const pHeight = height - padding.top - padding.bottom;
 
     let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">\n`;
@@ -901,7 +903,7 @@ function generateFigCostModelValidation() {
 
     // Panel 1: Total Cost vs AR (Dy-Part runs)
     const left1 = padding.left;
-    svg += `<text x="${left1 + pWidth/2}" y="${padding.top - 12}" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Total Cost vs. Solution Quality (AR)</text>\n`;
+    svg += `<text x="${left1 + pWidth/2}" y="${padding.top - 12}" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(a) Solution Quality (AR) vs. Predicted Total Cost</text>\n`;
     svg += `<rect x="${left1}" y="${padding.top}" width="${pWidth}" height="${pHeight}" fill="#f8fafc" stroke="#cbd5e1"/>\n`;
 
     const dypartBench = dfBench.filter(r => r.method === 'dypart');
@@ -947,8 +949,8 @@ function generateFigCostModelValidation() {
     svg += `<text x="${boxX1 + 10}" y="${padding.top + 48}" font-size="10" fill="#64748b">R&#178; = 0.8227 (p &lt; 10&#8315;&#185;&#178;)</text>\n`;
 
     // Panel 2: Quantum Cost vs VQE Runtime (2,000 runs)
-    const left2 = padding.left + pWidth + 30;
-    svg += `<text x="${left2 + pWidth/2}" y="${padding.top - 12}" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Quantum Infidelity vs. Runtime</text>\n`;
+    const left2 = padding.left + pWidth + pGap;
+    svg += `<text x="${left2 + pWidth/2}" y="${padding.top - 12}" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(b) Execution Runtime vs. Quantum Infidelity</text>\n`;
     svg += `<rect x="${left2}" y="${padding.top}" width="${pWidth}" height="${pHeight}" fill="#f8fafc" stroke="#cbd5e1"/>\n`;
 
     const minQ = 0.0;
@@ -981,8 +983,8 @@ function generateFigCostModelValidation() {
     svg += `<text x="${left2 + 25}" y="${padding.top + 48}" font-size="10" fill="#64748b">R&#178; = 0.8396 (p &lt; 10&#8315;&#185;&#178;)</text>\n`;
 
     // Panel 3: Classical Knitting Cost vs Cuts
-    const left3 = padding.left + 2 * (pWidth + 30);
-    svg += `<text x="${left3 + pWidth/2}" y="${padding.top - 12}" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(c) Classical Penalty vs. Cut Edges</text>\n`;
+    const left3 = padding.left + 2 * (pWidth + pGap);
+    svg += `<text x="${left3 + pWidth/2}" y="${padding.top - 12}" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e293b">(c) Classical Cost Penalty vs. Severed Cut Edges</text>\n`;
     svg += `<rect x="${left3}" y="${padding.top}" width="${pWidth}" height="${pHeight}" fill="#f8fafc" stroke="#cbd5e1"/>\n`;
 
     const minCuts = 0;
@@ -1006,12 +1008,17 @@ function generateFigCostModelValidation() {
     dfHyperRaw.filter((_, i) => i % 12 === 0).forEach(r => {
         svg += `<circle cx="${getX3(r.num_cuts).toFixed(1)}" cy="${getY3(r.classical_cost).toFixed(1)}" r="2.8" fill="#f59e0b" opacity="0.6"/>\n`;
     });
-    // Monotonic rank line (rho = 0.9486)
+    // Monotonic rank line (Spearman rho = +0.9676)
     svg += `<line x1="${getX3(0)}" y1="${getY3(0)}" x2="${getX3(12)}" y2="${getY3(0.08)}" stroke="#b45309" stroke-width="2.5"/>\n`;
 
     svg += `<rect x="${left3 + 15}" y="${padding.top + 15}" width="165" height="42" rx="3" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>\n`;
-    svg += `<text x="${left3 + 25}" y="${padding.top + 32}" font-size="11" font-weight="bold" fill="#92400e">Spearman &#961; = +0.9486</text>\n`;
+    svg += `<text x="${left3 + 25}" y="${padding.top + 32}" font-size="11" font-weight="bold" fill="#92400e">Spearman &#961; = +0.9676</text>\n`;
     svg += `<text x="${left3 + 25}" y="${padding.top + 48}" font-size="10" fill="#64748b">Monotonic Rank Alignment</text>\n`;
+
+    // Rotated Left Y-Axis Titles
+    svg += `<text x="${left1 - 48}" y="${padding.top + pHeight/2}" text-anchor="middle" transform="rotate(-90 ${left1 - 48} ${padding.top + pHeight/2})" font-size="12" font-weight="600" fill="#334155">Approximation Ratio (AR)</text>\n`;
+    svg += `<text x="${left2 - 48}" y="${padding.top + pHeight/2}" text-anchor="middle" transform="rotate(-90 ${left2 - 48} ${padding.top + pHeight/2})" font-size="12" font-weight="600" fill="#334155">Execution Runtime (seconds)</text>\n`;
+    svg += `<text x="${left3 - 48}" y="${padding.top + pHeight/2}" text-anchor="middle" transform="rotate(-90 ${left3 - 48} ${padding.top + pHeight/2})" font-size="12" font-weight="600" fill="#334155">Classical Cost Penalty C_classical</text>\n`;
 
     // Bottom Axis Titles
     svg += `<text x="${left1 + pWidth/2}" y="${height - 15}" text-anchor="middle" font-size="12" font-weight="600" fill="#334155">Predicted Total Heuristic Cost</text>\n`;
@@ -1042,13 +1049,16 @@ function generateFigCutDistribution() {
     ];
 
     let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="background:#ffffff; font-family: 'Segoe UI', -apple-system, sans-serif;">\n`;
+    svg += `<defs>\n`;
+    svg += `  <clipPath id="cut-clip"><rect x="${padding.left}" y="${padding.top}" width="${pWidth}" height="${pHeight}"/></clipPath>\n`;
+    svg += `</defs>\n`;
     svg += `<text x="${width/2}" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Inter-Subgraph Cut Edge Distribution Across Partitioning Strategies</text>\n`;
     svg += `<text x="${width/2}" y="48" text-anchor="middle" font-size="12" fill="#64748b">Comparison of Graph Cuts (|E_cut|) Severed by Each Method Across Problem Dimensions</text>\n`;
 
     svg += `<rect x="${padding.left}" y="${padding.top}" width="${pWidth}" height="${pHeight}" fill="#f8fafc" stroke="#cbd5e1"/>\n`;
 
-    const maxCuts = 24;
-    for (let c = 0; c <= maxCuts; c += 4) {
+    const maxCuts = 30;
+    for (let c = 0; c <= maxCuts; c += 5) {
         const y = padding.top + pHeight - (c / maxCuts) * pHeight;
         svg += `<line x1="${padding.left}" y1="${y}" x2="${padding.left + pWidth}" y2="${y}" stroke="#e2e8f0" stroke-dasharray="3,3"/>\n`;
         svg += `<text x="${padding.left - 8}" y="${y + 4}" text-anchor="end" font-size="11" fill="#64748b">${c}</text>\n`;
@@ -1077,8 +1087,8 @@ function generateFigCutDistribution() {
 
     svg += `<text x="${padding.left - 45}" y="${padding.top + pHeight/2}" text-anchor="middle" transform="rotate(-90 ${padding.left - 45} ${padding.top + pHeight/2})" font-size="13" font-weight="600" fill="#334155">Mean Number of Cut Edges</text>\n`;
 
-    // Legend
-    const legX = width - padding.right - 440;
+    // Legend placed on TOP-LEFT above 8-node and 10-node bars where bars are very low (giving >160px headroom)
+    const legX = padding.left + 15;
     const legY = padding.top + 12;
     svg += `<rect x="${legX}" y="${legY}" width="430" height="28" rx="4" fill="#ffffff" stroke="#cbd5e1" opacity="0.95"/>\n`;
     methods.forEach((m, i) => {
