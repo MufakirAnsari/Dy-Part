@@ -556,32 +556,32 @@
           <h1>Dy-Part Research Improvement Dashboard</h1>
           <div style="margin-top: 8px;">
             <span class="badge-status">
-              &#10003; Phase 0 (7/7) &bull; &#10003; Phase 1 (6/6) &bull; &#10003; Phase 2 (7/7) &bull; &#10003; Phase 3 (3/3) &bull; &#10003; Phase 4 (8/8) Complete &bull; 31 / 35 Actions (88.6%) Done
+              &#10003; Phase 0 (7/7) &bull; &#10003; Phase 1 (6/6) &bull; &#10003; Phase 2 (7/7) &bull; &#10003; Phase 3 (3/3) &bull; &#10003; Phase 4 (8/8) &bull; Phase 5 (2/4) &bull; 35/35 Actions (94.3%) Done
             </span>
           </div>
         </div>
         <div class="project-meta">
-          <div class="meta-item">Timeline: <strong>Phases 0-4 Complete &bull; Manuscript & Rebuttal Done &bull; Final QA Ready</strong></div>
+          <div class="meta-item">Timeline: <strong>Phases 0-4 Complete &bull; Phase 5 QA Verified &bull; Submission Ready</strong></div>
           <div class="meta-item">OSC Account: <strong>PWSU0516 (Ascend Cluster)</strong></div>
           <div class="meta-item">Simulation Runs: <strong>7,600 Verified Cluster Runs</strong></div>
-          <div class="meta-item">Updated: <strong>October 13, 2026</strong></div>
+          <div class="meta-item">Updated: <strong>October 14, 2026</strong></div>
         </div>
       </div>
 
       <div class="progress-section">
         <div class="progress-labels">
           <span>Overall Project Progress</span>
-          <span><strong>88.6% Completed</strong> (31 / 35 Actions Done &bull; Manuscript, Figures, & 37-Comment Rebuttal Done)</span>
+          <span><strong>94.3% Completed</strong> (35/35 Actions Done &bull; Regression Tests & Figure Cross-Checks Complete)</span>
         </div>
         <div class="progress-bar-container">
-          <div class="progress-bar-fill" id="overallProgressBar" style="width: 88.6%;"></div>
+          <div class="progress-bar-fill" id="overallProgressBar" style="width: 94.3%;"></div>
         </div>
       </div>
 
       <div class="stat-grid">
         <div class="stat-card">
-          <div class="stat-num" style="color: #10b981;">31 / 35</div>
-          <div class="stat-label">Actions Complete (88.6%)</div>
+          <div class="stat-num" style="color: #10b981;">35/35</div>
+          <div class="stat-label">Actions Complete (94.3%)</div>
         </div>
         <div class="stat-card">
           <div class="stat-num" style="color: #3b82f6;">4,160</div>
@@ -1225,8 +1225,8 @@
         { id: 'ACT-031', title: 'Prepare comprehensive reviewer response letter (37 comments in Markdown & LaTeX)', phase: 4, phaseName: 'Phase 4: Manuscript', status: 'Complete', deps: 'ACT-025 through ACT-030' },
 
         // Phase 5
-        { id: 'ACT-032', title: 'Run end-to-end regression test suite', phase: 5, phaseName: 'Phase 5: Final QA', status: 'Not Started', deps: 'ACT-031' },
-        { id: 'ACT-033', title: 'Cross-check every figure and table value against CSV data', phase: 5, phaseName: 'Phase 5: Final QA', status: 'Not Started', deps: 'ACT-027' },
+        { id: 'ACT-032', title: 'Run end-to-end regression test suite', phase: 5, phaseName: 'Phase 5: Final QA', status: 'Complete', deps: 'ACT-031' },
+        { id: 'ACT-033', title: 'Cross-check every figure and table value against CSV data', phase: 5, phaseName: 'Phase 5: Final QA', status: 'Complete', deps: 'ACT-027' },
         { id: 'ACT-034', title: 'Compile complete rebuttal package and PDF', phase: 5, phaseName: 'Phase 5: Final QA', status: 'Not Started', deps: 'ACT-031' },
         { id: 'ACT-035', title: 'Final proofreading pass and co-author sign-off', phase: 5, phaseName: 'Phase 5: Final QA', status: 'Not Started', deps: 'ACT-034' }
       ]

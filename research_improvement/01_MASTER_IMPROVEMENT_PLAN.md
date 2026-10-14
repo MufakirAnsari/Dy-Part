@@ -101,8 +101,8 @@ The good news: the *idea* behind Dy-Part is sound. The framework architecture is
 
 | Action | ID | Issues | Effort | Status |
 |--------|-----|--------|--------|--------|
-| Run full test suite | ACT-032 | All | Small | Not started |
-| Cross-check every figure against data CSV | ACT-033 | All | Small | Not started |
+| Run full test suite | ACT-032 | All | Small | Complete |
+| Cross-check every figure against data CSV | ACT-033 | All | Small | Complete |
 | Build complete rebuttal letter | ACT-034 | All | Medium | Not started |
 | Final proofreading pass | ACT-035 | All | Small | Not started |
 
