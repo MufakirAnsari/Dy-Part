@@ -311,11 +311,6 @@ Dy-Part/
 │   ├── test_partitioner_determinism.py# Validates 100/100 deterministic node ordering
 │   ├── test_logging.py               # Validates dual logging & Slurm ID metadata
 │   └── test_vqe_executor.py          # Validates executor initialization & compatibility
-├── research_improvement/             # Journal Submission & Peer Review Documentation
-│   ├── Reviewer_Response_Letter.tex  # 18-page self-contained LaTeX response letter (0 ACT IDs)
-│   ├── REVIEWER_RESPONSE_LETTER.md   # Clean markdown response letter with full bibliography
-│   ├── Cover_Letter.tex              # Publication-grade academic LaTeX cover letter
-│   └── COVER_LETTER.md               # Clean markdown cover letter
 ├── results/                          # Publication Datasets & Mainframe Plots
 │   ├── corrected_benchmark.csv       # Complete 4,160-run benchmark dataset
 │   ├── hyperparam_grid_search.csv    # Complete 2,000-run hyperparameter grid search dataset
@@ -326,9 +321,6 @@ Dy-Part/
 │   ├── Figure_Oracle_Comparison_Detailed_10_nodes.png # Static oracle Pareto frontier
 │   ├── Figure_Scheduler_Decisions_Averaged.png # Partition size downscaling trajectory
 │   └── Figure_Ternary_Search_Ablation.png # Ternary search ablation figure
-├── sn-article.tex                    # Revised Springer Nature LaTeX manuscript
-├── sn-bibliography.bib               # Complete BibTeX bibliography database
-├── sn-jnl.cls                        # Springer Nature document class
 ├── requirements.txt                  # Pinned Python package dependencies
 ├── environment.yml                   # Conda environment specification
 ├── setup.py                          # Setuptools configuration (pip install -e .)
