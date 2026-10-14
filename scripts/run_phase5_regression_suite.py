@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """scripts/run_phase5_regression_suite.py
 
-End-to-End Comprehensive Regression Test Suite for Dy-Part (ACT-032).
+End-to-End Comprehensive Regression Test Suite for Dy-Part.
 Executes across 9 rigorous verification modules:
 1. Partitioner Determinism & Conservation (TEST-001)
 2. Analytical Cost Model Monotonicity (TEST-002)
@@ -11,7 +11,7 @@ Executes across 9 rigorous verification modules:
 6. 4,160-Run Benchmark Dataset Integrity (TEST-010)
 7. 2,000-Run Hyperparameter Grid Search Validation (TEST-014)
 8. Multi-Scale Algorithmic Ablation Verification (TEST-015)
-9. LaTeX Manuscript Syntax, Braces, Environments, and Citation Integrity (TEST-013)
+9. LaTeX Publication Syntax, Braces, Environments, and Citation Integrity (TEST-013)
 """
 
 import csv
@@ -207,8 +207,8 @@ class Test8_AblationSummaryIntegrity(unittest.TestCase):
         self.assertGreater(data["average_speedup"], 1.7)
 
 
-class Test9_ManuscriptIntegrity(unittest.TestCase):
-    """TEST-013: Audits LaTeX manuscript syntax, structure, and citations."""
+class Test9_PublicationIntegrity(unittest.TestCase):
+    """TEST-013: Audits LaTeX publication syntax, structure, and citations."""
 
     def test_latex_braces_and_environments(self):
         tex_path = os.path.join(BASE_DIR, "sn-article.tex")
@@ -257,6 +257,6 @@ class Test9_ManuscriptIntegrity(unittest.TestCase):
 
 if __name__ == "__main__":
     print("=" * 70)
-    print("      DY-PART END-TO-END REGRESSION TEST SUITE (ACT-032)")
+    print("      DY-PART END-TO-END REGRESSION TEST SUITE")
     print("=" * 70)
     unittest.main(verbosity=2)

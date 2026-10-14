@@ -7,7 +7,7 @@
 [![HPC Validated](https://img.shields.io/badge/HPC-OSC%20Ascend%20(AMD%20EPYC%207763)-orange.svg)](slurm/)
 [![Empirical Validation](https://img.shields.io/badge/Cost%20Model%20R%5E2-0.8227-brightgreen.svg)](results/Figure_Cost_Model_Empirical_Validation.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Status: Peer Review Revision](https://img.shields.io/badge/Status-Under%20Revision-informational.svg)](https://github.com/MufakirAnsari/Dy-Part)
+[![Documentation](https://img.shields.io/badge/docs-latest-blue.svg)](README.md)
 
 **Dy-Part** is an automated, noise-aware graph partitioning framework for distributed Variational Quantum Eigensolver (VQE) architectures targeting combinatorial optimization problems—such as Max-Cut—on Noisy Intermediate-Scale Quantum (NISQ) devices.
 
@@ -43,8 +43,7 @@ Conventional quantum workload partitioning strategies rely on static, topology-o
 - [9. Verification & Automated Test Suites](#9-verification--automated-test-suites)
   - [9.1 End-to-End Regression Test Suite (19 Tests)](#91-end-to-end-regression-test-suite-19-tests)
   - [9.2 Unit Test Suite (21 Tests)](#92-unit-test-suite-21-tests)
-- [10. Manuscript Revisions & Peer Review Traceability](#10-manuscript-revisions--peer-review-traceability)
-- [11. Citation, License & Acknowledgments](#11-citation-license--acknowledgments)
+- [10. Citation, License & Acknowledgments](#10-citation-license--acknowledgments)
 
 ---
 
@@ -253,8 +252,8 @@ Across all 4,160 experimental runs in our benchmark dataset, the maximum observe
 
 Head-to-head ablation between ternary search and exhaustive scan across 10 graph dimensions:
 
-| Graph Scale $|V|$ | Exhaustive Evals | Ternary Evals | Reduction (%) | Exhaustive Time (ms) | Ternary Time (ms) | Speedup ($\times$) |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Graph Scale (N) | Exhaustive Evals | Ternary Evals | Reduction (%) | Exhaustive Time (ms) | Ternary Time (ms) | Speedup |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 6 | 5 | 5 | 0.00% | 0.98 | 0.97 | 1.01× |
 | 8 | 7 | 5 | 28.57% | 1.34 | 1.03 | 1.30× |
 | 10 | 9 | 5 | 44.44% | 1.83 | 1.15 | 1.59× |
@@ -461,7 +460,7 @@ python scripts/run_phase5_regression_suite.py
 
 ```text
 ======================================================================
-      DY-PART END-TO-END REGRESSION TEST SUITE (ACT-032)
+      DY-PART END-TO-END REGRESSION TEST SUITE
 ======================================================================
 test_determinism_across_100_runs (__main__.Test1_PartitionerDeterminism) ... ok
 test_node_and_edge_conservation (__main__.Test1_PartitionerDeterminism) ... ok
@@ -480,8 +479,8 @@ test_exact_row_count_and_methods (__main__.Test6_BenchmarkDatasetIntegrity) ... 
 test_seed_counts_per_graph_size (__main__.Test6_BenchmarkDatasetIntegrity) ... ok
 test_grid_search_runs_and_optima (__main__.Test7_HyperparamGridSearchIntegrity) ... ok
 test_ablation_metrics (__main__.Test8_AblationSummaryIntegrity) ... ok
-test_authors_and_affiliations (__main__.Test9_ManuscriptIntegrity) ... ok
-test_latex_braces_and_environments (__main__.Test9_ManuscriptIntegrity) ... ok
+test_authors_and_affiliations (__main__.Test9_PublicationIntegrity) ... ok
+test_latex_braces_and_environments (__main__.Test9_PublicationIntegrity) ... ok
 
 ----------------------------------------------------------------------
 Ran 19 tests in 0.084s
@@ -498,34 +497,17 @@ All 21 unit tests pass with zero warnings, covering Hamiltonian operators, cost 
 
 ---
 
-## 10. Manuscript Revisions & Peer Review Traceability
-
-This repository reflects the complete, verified revision campaign addressing all comments from Reviewers 1 through 5:
-
-| Reviewer Critique | Defect / Vulnerability | Scientific Resolution | Code / Documentation Link |
-| :--- | :--- | :--- | :--- |
-| **REV-R2-04 / REV-R3-05** | Approximation Ratio $> 1.0$ observed in preliminary scripts | Refactored VQE energy evaluation; strictly clamped $\text{AR} \in [0.0, 1.0]$ via exact ground-state diagonalization | [`vqe_framework/utils/hamiltonian_constructor.py`](vqe_framework/utils/hamiltonian_constructor.py) |
-| **REV-R2-05 / REV-R3-04** | Small benchmark scale (limited to 12 qubits) | Expanded to 16-node and 20-node graphs across 8 noise levels (4,160 runs total) | [`experiments/run_corrected_benchmark.py`](experiments/run_corrected_benchmark.py) |
-| **REV-R3-01** | Heuristic cost model lacked empirical validation | Conducted correlation analysis: $R^2 = 0.8227$, $r = -0.9071$, $\rho = 0.9486$ | [`results/cost_model_empirical_validation.md`](results/cost_model_empirical_validation.md) |
-| **REV-R3-02** | $O(\log \|V\|)$ complexity claim was unjustified | Provided formal trisection proofs and 10-scale ablation ($1.77\times$ speedup, sub-4.2 ms latency) | [`results/ternary_ablation_table.md`](results/ternary_ablation_table.md) |
-| **REV-R3-03** | Only one naive baseline ($n_{\text{sub}}=4$) was evaluated | Integrated industry-standard METIS and random assignment baselines across all 4,160 runs | [`vqe_framework/utils/metis_partitioner.py`](vqe_framework/utils/metis_partitioner.py) |
-| **REV-R4-02** | Unexplained outlier at $\alpha = 0.90$ in preliminary 10-node sweep | Conducted 2,000-run grid search across 200 parameter configurations; outlier resolved | [`results/optimal_hyperparameters.json`](results/optimal_hyperparameters.json) |
-| **REV-R5-02 / REV-R5-04** | Advantage over static baseline was not statistically validated | Executed multi-factor ANOVA ($p < 10^{-7}$) and paired Wilcoxon signed-rank tests ($p < 0.05$) | [`results/statistical_significance_report.md`](results/statistical_significance_report.md) |
-
----
-
-## 11. Citation, License & Acknowledgments
+## 10. Citation, License & Acknowledgments
 
 ### Citation
-If you use the Dy-Part framework, benchmark datasets, or scheduling algorithms in your research, please cite our manuscript:
+If you use the Dy-Part framework, benchmark datasets, or scheduling algorithms in your research, please cite our paper:
 
 ```bibtex
 @article{ansari2026dypart,
   title={Dy-Part: A Dynamic, Noise-Aware Scheduler for Optimizing Hybrid Quantum-Classical Algorithms},
   author={Ansari, Mufakir Qamar and Ansari, Mudabir Qamar},
   journal={Springer Nature},
-  year={2026},
-  note={Under Major Revision}
+  year={2026}
 }
 ```
 
