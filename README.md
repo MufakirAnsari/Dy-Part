@@ -117,6 +117,15 @@ We conducted a head-to-head runtime and query complexity ablation comparing our 
 
 ## 2. System Architecture
 
+<p align="center">
+  <img src="results/graphviz.png" alt="The Dy-Part Framework Workflow Architecture" width="100%"/>
+</p>
+
+> **Figure 6:** The Dy-Part framework workflow architecture. **Phase 1 (Offline Classical Pre-computation):** An offline classical scheduler executes logarithmic ternary search trisection over allowable partition bounds, evaluating candidate partition costs via the noise-aware analytical cost model with partition memoization caching. **Phase 2 (Online Hybrid Execution):** The optimal partition plan $P^*$ orchestrates distributed quantum VQE subproblems across independent hardware registers before classically stitching boundary cuts to reconstruct the global ground state and bounded Max-Cut approximation ratio $\text{AR} \in [0.0, 1.0]$.
+
+<details>
+<summary><b>Click to view text-based ASCII dataflow</b></summary>
+
 ```
                        Input Graph G = (V, E)
                    + Hardware Noise Calibration (ε_gate, ε_readout)
@@ -148,6 +157,8 @@ We conducted a head-to-head runtime and query complexity ablation comparing our 
                                   ▼
                 Global Reconstructed Energy & Bounded AR ∈ [0.0, 1.0]
 ```
+
+</details>
 
 The Dy-Part pipeline operates through four modular phases:
 1. **Device Calibration Ingestion:** Receives physical hardware noise metrics ($\epsilon_{\text{gate}}$, $\epsilon_{\text{readout}}$) from QPU backend calibration data.
